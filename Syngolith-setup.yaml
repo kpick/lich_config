@@ -1,0 +1,998 @@
+---
+# https://elanthipedia.play.net/Ranger#Circle_Requirements
+
+slack_username: kyle.schriver@gmail.com
+
+hunting_file_list:
+- ranged
+- primary
+- back
+- primary
+- back-fast
+- primary
+- secondary
+#- money
+#- money
+
+hunting_buddies:
+- Tabish
+- Togdor
+#- Syngolith
+- Gratia
+- Zsa
+- Hallowtooth
+- Mairon
+- Schriel
+- Agodius
+- Whagone
+
+#-- Crossing --#
+#hometown: Crossing
+#safe_room: 6208
+#prehunt_buffs: 1645   # [Birch Copse, Aevren Mod - 1645]
+#prehunt_buffs: 851   # [Wilds, Pine Needle Path - 851]
+#prehunt_buffs: 13147 # [Ranger's Guild, The Tree House -13145]
+#lockpick_room_id: 850
+
+#-- Rossman --#
+#hometown: Rossman's Landing
+#safe_room: 7672
+#prehunt_buffs: 7685
+#lockpick_room_id: 7668
+
+#-- Boar Clan --#
+#hometown: Hibarnhvidar
+hometown: Shard
+safe_room: &safe_room 4069
+prehunt_buffs: *safe_room
+lockpick_room_id: *safe_room
+
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+  - Large Edged
+  - Small Edged
+  - Bow
+  - Evasion
+  - Brawling
+  - Offhand Weapon
+  - Light Thrown
+  - Staves
+  - Small Blunt
+  - Slings
+  - Polearms
+  - Heavy Thrown
+
+weapon_training:
+  Small Edged: dagger
+  Bow: reflex bow
+  Brawling: ''
+ #Light Thrown: six-weighted cuska
+  #Small Blunt: six-weighted cuska
+  #Staves: white nightstick
+  #Large Edged: aldamdin longsword
+  #Slings: spidersilk sling
+  #Twohanded Edged: ivory-hilted longsword
+
+dual_load: true
+
+
+empty_hunting_room_messages:
+- Anyone here? I'm about to set up a hunting camp.
+- Anyone hiding here? I'm here to restore nature's balance... by force.
+- Anyone already hunting here? I'm going to thin the herd.
+
+gear:
+  # Armor
+  - :adjective: sculpted
+    :name: leathers
+    :is_leather: true
+    :hinders_lockpicking: true
+    :is_worn: true
+  - :adjective: leather
+    :name: cowl
+    :is_leather: true
+    :hinders_lockpicking: true
+    :is_worn: true
+  - :adjective: leather
+    :name: gloves
+    :is_leather: true
+    :hinders_lockpicking: true
+    :is_worn: true
+  - :adjective: triangular
+    :name: sipar
+    :is_leather: false
+    :hinders_lockpicking: true
+    :is_worn: true
+  # Alt armor
+  #- :adjective: scale
+  #  :name: gloves
+  #  :is_leather: false
+  #  :hinders_lockpicking: true
+  #  :is_worn: true
+  #- :adjective: chain
+  #  :name: gloves
+  #  :is_leather: false
+  #  :hinders_lockpicking: true
+  #  :is_worn: true
+  #- :adjective: heavy
+  #  :name: gauntles
+  #  :is_leather: false
+  #  :hinders_lockpicking: true
+  #  :is_worn: true
+  # Brawling
+  - :name: femur
+    :adjective: calcified
+    :hinders_lockpicking: false
+    :is_leather: true
+    :is_worn: true
+  - :adjective: shalswar
+    :name: handwraps
+    :is_leather: true
+    :hinders_lockpicking: true
+    :is_worn: true
+  - :adjective: gryphon
+    :name: blades
+    :is_leather: true
+    :hinders_lockpicking: false
+    :is_worn: true
+  - :name: footwraps
+    :is_leather: true
+    :is_worn: true
+    :hinders_lockpicking: false
+  - :adjective: wolf
+    :name: spikes
+    :is_leather: true
+    :is_worn: true
+    :hinders_lockpicking: false
+  # Weapons
+  - :name: dagger
+    :is_leather: false
+    :hinders_lockpicking: true
+    :is_worn: false
+    :wield: true
+  - :adjective: spidersilk
+    :name: sling
+    :is_leather: true
+    :hinders_lockpicking: true
+    :is_worn: false
+  - :adjective: six-weighted
+    :name: cuska
+    :is_leather: false
+    :hinders_lockpicking: true
+    :is_worn: false
+  - :adjective: aldamdin
+    :name: longsword
+    :is_leather: false
+    :hinders_lockpicking: true
+    :is_worn: false
+    :wield: true
+  - :adjective: glaes
+    :name: greatsword
+    :is_leather: false
+    :hinders_lockpicking: true
+    :is_worn: false
+    :wield: true
+  #- :adjective: war
+  #  :name: sword
+  #  :is_leather: false
+  #  :hinders_lockpicking: true
+  #  :is_worn: false
+  #  :wield: true
+  #  :swappable: true
+  - :adjective: tyrium-tipped
+    :name: spear
+    :is_leather: true
+    :hinders_lockpicking: false
+    :is_worn: true
+    :wield: false
+  - :adjective: reflex
+    :name: bow
+    :is_leather: true
+    :wield: false
+    :is_worn: false
+  - :adjective: white
+    :name: nightstick
+    :is_leather: false
+    :is_worn: false
+    :wield: true
+  # Noncombat Gear
+  - :name: rope
+    :adjective: lace
+    :is_leather: true
+
+gear_sets:
+  standard:
+    - sculpted leathers
+    - leather cowl
+    - leather gloves
+    - triangular sipar
+    #- reflex bow
+    - tyrium-tipped spear
+    - shalswar handwraps
+    - gryphon blades
+    - footwraps
+    - wolf spikes
+    - calcified femur
+  stealing: #[]
+    #- reflex bow
+    - tyrium-tipped spear
+  swimming:
+    - triangular sipar
+    #- reflex bow
+    - tyrium-tipped spear
+    - shalswar handwraps
+    - tyrium-tipped spear
+    - gryphon blades
+    - footwraps
+    - wolf spikes
+    - calcified femur
+#cycle_armors:
+#  Chain Armor:
+#  - chain gloves
+#  Light Armor:
+#  - leather gloves
+#  Brigandine:
+#  - scale gloves
+#  Plate Armor:
+#  - heavy gauntlets
+#cycle_armors_time: 30
+
+
+# Combat settings
+stop_hunting_if_bleeding: true
+stealth_attack_aimed_action: snipe
+
+buff_spells:
+  See the Wind:
+    abbrev: stw
+    recast: -1
+    use_auto_mana: true
+  Instinct:
+    abbrev: inst
+    recast: -1
+    use_auto_mana: true
+  Senses of the Tiger:
+    abbrev: sott
+    recast: -1
+    use_auto_mana: true
+  Claws of the Cougar:
+    abbrev: cotc
+    recast: -1
+    use_auto_mana: true
+  Earth Meld:
+    abbrev: em
+    recast: -1
+    use_auto_mana: true
+  # Athleticism:
+  #   abbrev: athlet
+  #   recast: -1
+  #   use_auto_mana: true
+  Hands of Lirisa:
+    abbrev: hol
+    recast: -1
+    use_auto_mana: true
+  Skein of Shadows:
+    abbrev: sks
+    recast: -1
+    use_auto_mana: true
+  #Wolf Scent:
+  #  abbrev: ws
+  #  recast: -1
+  #  use_auto_mana: true
+  Wisdom of the Pack:
+    abbrev: wotp
+    recast: -1
+    use_auto_mana: true
+  Oath of the Firstborn:
+    abbrev: oath
+    recast: -1
+    use_auto_mana: true
+  #Cheetah Swiftness:
+  #  abbrev: cs
+  #  recast: -1
+  #  mana: 5
+  #  cyclic: true
+  Bear Strength:
+    abbrev: bes
+    recast: -1
+    mana: 5
+    cyclic: true
+  Essence of Yew:
+    abbrev: ey
+    recast: 1
+    use_auto_mana: true
+   
+waggle_sets:
+  pick:
+    Hands of Lirisa:
+      abbrev: hol
+      use_auto_mana: true
+  prehunt_buffs:
+    Instinct:
+      abbrev: inst
+      mana: 20
+    Senses of the Tiger:
+      abbrev: sott
+      mana: 20
+      use_auto_mana: true
+    Claws of the Cougar:
+      abbrev: cotc
+      mana: 20
+      use_auto_mana: true
+    Skein of Shadows:
+      abbrev: sks
+      mana: 20
+    Wisdom of the Pack:
+      abbrev: wotp
+      mana: 20
+    Oath of the Firstborn:
+      abbrev: oath
+      mana: 20
+    Essence of Yew:
+      abbrev: ey
+      mana: 20
+
+prep_scaling_factor: 0.85
+offensive_spells:
+  - skill: Targeted Magic
+    name: Eagle's Cry
+    abbrev: ec
+    use_auto_mana: true
+  - skill: Targeted Magic
+    name: Stampede
+    abbrev: stamp
+    use_auto_mana: true
+  - skill: Debilitation
+    name: Devolve
+    abbrev: de
+    use_auto_mana: true
+  - skill: Debilitation
+    name: Harawep's Bonds
+    abbrev: hb
+    use_auto_mana: true
+    expire: The spiders lose their interest in
+    harmless: true
+  - skill: Debilitation
+    name: Swarm
+    abbrev: swarm
+    use_auto_mana: true
+  - skill: Debilitation
+    name: Grizzly Claws
+    abbrev: griz
+    use_auto_mana: true
+    #cast_only_to_train: true
+    harmless: true
+  - skill: Debilitation
+    name: Deadfall
+    abbrev: df
+    use_auto_mana: true
+  - skill: Targeted Magic
+    name: Devitalize
+    abbrev: dev
+    use_auto_mana: true
+
+dance_skill: Small Edged
+dance_actions:
+  - circle
+  - analyze
+  - gouge
+dance_actions_stealth:
+  - circle
+  - analyze
+  - hide
+  - elbow
+
+aim_fillers:
+  Bow:
+  - analyze
+  Crossbow:
+  - analyze
+aim_fillers_stealh:
+  Bow:
+  - hide
+  - stalk
+  - analyze
+  Crossbow:
+  - hide
+  - stalk
+  - analyze
+
+training_abilities:
+  Hunt:
+    :check: Perception
+    :cooldown: 80
+  Perc:
+    :check: Attunement
+    :cooldown: 120
+  Stealth:
+    :check: Stealth
+    :cooldown: 60
+  App Quick:
+    :check: Appraisal
+    :cooldown: 60
+  Herbs:
+    :cooldown: 480
+
+skinning:
+  skin: true
+  arrange_all: true
+  arrange_count: 1
+  tie_bundle: true
+
+# Non-combat settings
+exp_timers:
+  Attunement: 130
+  Stealth: 300
+  Locksmithing: 600
+
+training_spells:
+  Utility:
+    abbrev: em
+  Warding:
+    abbrev: sks
+  Augmentation:
+    abbrev: hol
+
+train_with_spells: true
+
+#use_research: false
+research_skills:
+  #- Augmentation
+  - Utility
+
+crossing_training:
+  - First Aid
+  - Performance
+  - Outdoorsmanship
+  #- Mechanical Lore
+  - Outfitting
+  - Engineering
+  - Locksmithing
+  - Appraisal
+  - Perception
+  - Thievery
+  - Athletics
+  # - Scholarship
+  #- Augmentation
+  #- Warding
+  #- Utility
+  #- Attunement
+  #- Scouting
+
+have_climbing_rope_lace: true  # This setting tells the ;athletics-lace script to train in your safe room with a climbing rope 
+
+appraisal_training:
+- pouches
+
+
+charged_maneuvers:
+  Brawling: palmstrike
+  Crossbow: powershot
+  Slings: powershot
+  Small Edged: cleave
+  Large Edged: cleave
+  Twohanded Edged: cleave
+  Small Blunt: crash
+  Large Blunt: crash
+  Twohanded Blunt: crash
+  Staves: twirl
+  Polearms: impale
+
+storage_containers:
+  - backpack
+  - spidersilk sack
+  - quiver
+  - sheath
+  - bag
+
+train_workorders:
+ - Tailoring
+ - Shaping
+
+outfitting_tools:
+  - knitting needle
+shaping_tools:
+  - carving knife
+  - shaper
+  - drawknife
+  - rasp
+carving_tools:
+  - chisels
+  - rifflers
+  - rasp
+
+engineering_belt:
+  name: cotton odaj
+  items:
+    - carving knife
+    - rasp
+    - riffers
+    - bone saw
+    - chisels
+    - shaper
+    - drawknife
+
+stealing_bag: backpack
+crafting_container: backpack
+spare_gem_pouch_container: backpack
+gem_pouch_adjective: 
+full_pouch_container: spidersilk sack
+mark_crafted_goods: false
+braid_item: vine
+forage_item: rock
+
+exit_on_skills_capped: false
+
+listen: true
+#classes_to_teach:
+#- First Aid
+#- Stealth
+
+priority_defense: Evasion
+#stance_override: 82 60 40
+
+cambrinth: cambrinth armband
+stored_cambrinth: false
+cambrinth_cap: 50
+favor_goal: 40
+favor_god: Everild
+#Kuniyo - Aspect of Everild
+#Misiumos - Kaldaran god of forrest + frost
+fatigue_regen_threshold: 85
+fatigue_regen_action: analyze
+
+offensive_spell_mana_threshold: 40
+training_spell_mana_threshold: 50
+buff_spell_mana_threshold: 35
+quit_on_status_warning: true
+status_monitor_no_window: true
+
+sell_loot_money_on_hand: 4 gold
+loot_additions:
+  - coffer
+  - strongbox
+  - chest
+  - caddy
+  - trunk
+  - casket
+  - skippet
+  - crate
+  - box
+  - lump
+  - clump
+  - clumps
+  - quadrello
+  - stone spike
+  - shard
+  - map
+  - scroll
+  - tablet
+  - roll
+  - leaf
+  - arrow
+  - potency crystal
+  - infuser stone
+  - singed page
+  - broken book spine
+  - shattered bloodlock
+  - front cover
+  - page
+  - cover
+  - spine
+  - bloodlock
+  - blunt-tipped arrow
+  #- stones
+
+# loot_subtractions:
+#   - rock
+sell_loot_bundle: true
+sell_loot_pouch: false
+
+# Lockpicking settings
+stop_pick_on_mindlock: false
+pick_blind: false
+use_lockpick_ring: true
+skip_lockpick_ring_refill: false
+lockpick_container: lockpick ring
+lockpick_type: stout iron #ordinary
+harvest_traps: false
+picking_box_source: backpack
+picking_box_storage: backpack
+picking_pet_box_source: backpack
+#lockpick_dismantle: slam 
+#lockpick_dismantle: whistle
+lockpick_ignore_difficulty: false
+hand_armor: leather gloves
+footwear: boots
+
+trail_override:
+ - 1164
+ - 1283
+
+textbook: true
+textbook_type: textbook
+
+saferoom_health_threshold: 30
+depart_on_death: false
+health_threshold: 35
+
+
+scroll_stackers:
+- folio
+- small poke
+#- tome
+#- scroll booklet
+#- yellow notebook
+#- scroll case
+
+#restock:
+#  milk:
+#    name: fresh milk
+#    size: 1
+#    stackable: false
+#    room: 19240
+#    price: 18
+#    quantity: 5
+
+
+
+mining_buddy_vein_list:
+#- Silver
+- Gold
+- Platinum
+- Tyrium
+- Lumium
+- Damite
+- Kertig
+- Haralun
+- Glaes
+- Animite
+- Muracite
+- Quelium
+
+mine_use_packet: false
+mining_skip_populated: true
+mine_for_outdoorsmanship: false
+mining_implement: shovel
+mines_to_mine:
+- fang_cove
+
+#safe_room_empath: Phopheret
+repair_every: 3
+
+
+#This section is for the restocking of herbs with herbstock
+#It will add items to your inventory, and some herbs are not stackable
+herbs:
+#  MAURIGAS BOTANICALS
+  jadice_flower:
+    name: jadice flower
+    size: 6
+    stackable: true
+    room: 8259
+    price: 812
+    quantity: 10
+  plovik_leaf:
+    name: plovik leaf
+    size: 6
+    stackable: true
+    room: 8259
+    price: 812
+    quantity: 10
+  nilos_salve:
+    name: nilos salve
+    size: 6
+    stackable: true
+    room: 8259
+    price: 812
+    quantity: 10
+  hulnik_grass:
+    name: hulnik grass
+    size: 6
+    stackable: true
+    room: 8259
+    price: 812
+    quantity: 10
+  nemoih_root:
+    name: nemoih root
+    size: 6
+    stackable: true
+    room: 8259
+    price: 875
+    quantity: 10
+  georin_salve:
+    name: georin salve
+    size: 6
+    stackable: true
+    room: 8259
+    price: 875
+    quantity: 10
+  sufil_sap:
+    name: sufil sap
+    size: 6
+    stackable: true
+    room: 8259
+    price: 875
+    quantity: 10
+  yelith_root:
+    name: yelith root
+    size: 6
+    stackable: true
+    room: 8259
+    price: 937
+    quantity: 10
+  ithor_potion:
+    name: ithor potion
+    size: 6
+    stackable: true
+    room: 8259
+    price: 937
+    quantity: 10
+  muljin_sap:
+    name: muljin sap
+    size: 6
+    stackable: true
+    room: 8259
+    price: 937
+    quantity: 12
+  junliar_stem:
+    name: junliar stem
+    size: 6
+    stackable: true
+    room: 8259
+    price: 937
+    quantity: 10
+  blocil_potion:
+    name: blocil potion
+    size: 6
+    stackable: false
+    room: 8259
+    price: 937
+    quantity: 10
+  riolur_leaf:
+    name: riolur leaf
+    size: 6
+    stackable: true
+    room: 8259
+    price: 1000
+    quantity: 10
+
+#  MIDWIFE NESSAS COTTAGE
+  qun_pollen:
+    name: qun pollen
+    size: 6
+    stackable: true
+    room: 1898
+    price: 500
+    quantity: 12
+  genich_stem:
+    name: genich stem
+    size: 6
+    stackable: false
+    room: 1898
+    price: 500
+    quantity: 12
+  nuloe_stem:
+    name: nuloe stem
+    size: 6
+    stackable: true
+    room: 1898
+    price: 500
+    quantity: 12
+  cebi_root:
+    name: cebi root
+    size: 6
+    stackable: true
+    room: 1898
+    price: 625
+    quantity: 12
+  hulij_elixir:
+    name: hulij elixir
+    size: 6
+    stackable: false
+    room: 1898
+    price: 563
+    quantity: 12
+  hisan_salve:
+    name: hisan salve
+    size: 6
+    stackable: true
+    room: 1898
+    price: 625
+    quantity: 12
+  jadice_pollen:
+    name: jadice pollen
+    size: 6
+    stackable: true
+    room: 1898
+    price: 500
+    quantity: 12
+  ojhenik_potion:
+    name: ojhenik potion
+    size: 6
+    stackable: false
+    room: 1898
+    price: 562
+    quantity: 12
+
+#  Shard Herb Shop - use one or the other, not both.
+  jadice_flower:
+    name: jadice flower
+    size: 6
+    stackable: true
+    room: 13997
+    price: 586
+    quantity: 10
+  plovik_leaf:
+    name: plovik leaf
+    size: 6
+    stackable: true
+    room: 13997
+    price: 586
+    quantity: 10
+  nilos_salve:
+    name: nilos salve
+    size: 6
+    stackable: true
+    room: 13997
+    price: 586
+    quantity: 6
+  hulnik_grass:
+    name: hulnik grass
+    size: 6
+    stackable: true
+    room: 13997
+    price: 586
+    quantity: 6
+  nemoih_root:
+    name: nemoih root
+    size: 6
+    stackable: true
+    room: 13997
+    price: 631
+    quantity: 6
+  georin_salve:
+    name: georin salve
+    size: 6
+    stackable: true
+    room: 13997
+    price: 631
+    quantity: 6
+  sufil_sap:
+    name: sufil sap
+    size: 6
+    stackable: true
+    room: 13997
+    price: 631
+    quantity: 6
+  yelith_root:
+    name: yelith root
+    size: 6
+    stackable: true
+    room: 13997
+    price: 676
+    quantity: 10
+  ithor_potion:
+    name: ithor potion
+    size: 6
+    stackable: true
+    room: 13997
+    price: 676
+    quantity: 10
+  muljin_sap:
+    name: muljin sap
+    size: 6
+    stackable: true
+    room: 13997
+    price: 937
+    quantity: 6
+  junliar_stem:
+    name: junliar stem
+    size: 6
+    stackable: true
+    room: 13997
+    price: 676
+    quantity: 6
+  # blocil_potion:  Not available in Shard.
+  #   name: blocil potion
+  #   size: 6
+  #   stackable: false
+  #   room: 13997
+  #   price: 937
+  #   quantity: 6
+  riolur_leaf:
+    name: riolur leaf
+    size: 6
+    stackable: true
+    room: 13997
+    price: 721
+    quantity: 6
+  qun_pollen:
+    name: qun pollen
+    size: 6
+    stackable: true
+    room: 13997
+    price: 405
+    quantity: 6
+  genich_stem:
+    name: genich stem
+    size: 6
+    stackable: false
+    room: 13997
+    price: 405
+    quantity: 10
+  nuloe_stem:
+    name: nuloe stem
+    size: 6
+    stackable: true
+    room: 13997
+    price: 451
+    quantity: 10
+  cebi_root:
+    name: cebi root
+    size: 6
+    stackable: true
+    room: 13997
+    price: 451
+    quantity: 6
+  hulij_elixir:
+    name: hulij elixir
+    size: 6
+    stackable: false
+    room: 13997
+    price: 4541
+    quantity: 6
+  hisan_salve:
+    name: hisan salve
+    size: 6
+    stackable: true
+    room: 13997
+    price: 541
+    quantity: 6
+  jadice_pollen:
+    name: jadice pollen
+    size: 6
+    stackable: true
+    room: 13997
+    price: 451
+    quantity: 10
+  ojhenik_potion:
+    name: ojhenik potion
+    size: 6
+    stackable: false
+    room: 13997
+    price: 451
+    quantity: 10
+
+burgle_settings:
+  room: 6329                                 # pick your own room, you should pick a room that no guard will ''ever'' enter.  Picking rooms guards can come to is a failure on setup, not the script.
+  entry_type: lockpick                      # lockpick | rope | cycle
+  use_lockpick_ring: true                   # if you use a worn lockpick stacker
+  lockpick_container: lockpick ring         # name of your lockpick stacker
+  max_search_count: 2                       # max number of total searches to do including retries
+  retry: false                              # retry if you don't find loot.  default: false
+  loot: pawn                                # drop | keep | bin | pawn   default: keep 
+  loot_container: backpack                # container to keep loot in while burglering
+  safe_mode: true                           # stop searching and try to get out as quickly as possible when hearing footsteps. Default: true
+  room_blacklist:                           # array of rooms to ignore. Case sensitive.
+  #  - Kitchen
+  item_whitelist:                           # array of full item names (adj + noun) of items to keep no matter what.  Case Sensitive.  
+    - worn book
+    - memory orb
+    - blunt-tipped arrows
+    - blunt stones
+    - keepsake box
+    - quill
+    - burin
+    - sipar
+    - sieve
+    - mortar
+    - pestle
+  before:                                   # array of scripts to run, similar to #hunting-buddy, before the burgle (will be called right before buffing)
+  #  - yourscripthere with args here
+  #- put "untie h rope" 
+  after:                                    # array of scripts to run, similar to #hunting-buddy, after the burgle, (will be called right before script ends)
+  #  - anotherscript here
+  #- put "tie h rope to rucksack"
+#waggle_sets:
+#  burgle:

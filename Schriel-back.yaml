@@ -1,0 +1,30 @@
+weapon_training:
+  Slings: hide sling
+  Small Blunt: bola
+  Polearms: light spear
+  Staves: nightstick
+cycle_armors:
+
+dance_action:
+- bob
+dance_skill: Slings
+dance_threshold: 0
+
+stances:
+  Slings:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+
+
+# Hunting settings
+hunting_info:
+- :zone: leucro2
+  :duration: 40
+  before:
+  after:
+  stop_on:
+  - Slings
+  - Small Blunt
+  - Polearms
+

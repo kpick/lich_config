@@ -1,0 +1,41 @@
+---
+# See https://github.com/rpherbig/dr-scripts/wiki/YAML-Settings for documentation
+
+
+dance_action:
+- bob
+dance_skill: Large Edged
+dance_threshold: 0
+
+
+weapon_training:
+  Large Edged: bastard sword
+  Polearms: light spear
+cycle_armors:
+  Light Armor:
+  - rugged greaves
+  Brigandine:
+  - scale greaves
+  Plate Armor:
+  - light greaves
+
+# Hunting settings
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Large Edged
+- Polearms
+- Tactics
+hunting_info:
+- :zone: young_ogres
+  :duration: 60
+  stop_on:
+  - Large Edged
+
+offensive_spells:
+- skill: Targeted Magic
+  name: Fire Shard
+  target_enemy:
+  abbrev: fs
+  mana: 15
+  cambrinth:
+  -  4

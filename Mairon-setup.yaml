@@ -1,0 +1,785 @@
+---
+# https://elanthipedia.play.net/Necromancer#Circle_Requirements
+
+# 3 Magics: Augmentation or Targeted Magic, Arcana, Attunement
+# 5 Weapons (only Small Edged is needed to circle): Brawling, Light Thrown, Small Edged, Small Blunt, Crossbow
+# 2 Armors (only 1 is needed to circle): Light Armor, Shield Usage
+# 7 Survivals: Stealth, Outdoorsmanship, Athletics, Perception, Skinning, Evasion, First Aid
+# 3 Lores (only 2 are needed to circle): Tactics, Scholarship, Appraisal
+
+# Eventually you will need to train 2 more Magics to circle (for a total of 5)
+# However, you will probably end up training them all since they each have very useful spells
+# The other Magic skills are: Augmentation or Targeted Magic, Warding, Debilitation, Utility
+
+# For your first spell, you should choose either Acid Splash or Obfuscation (uncomment whichever you choose below)
+# If you choose Acid Splash, you will have an easier time reaching circle 2, but your rituals will be more obvious
+# If you choose Obfuscation, you will need to listen to a Targeted Magic class to hit circle 2, but your rituals will be hidden from others
+
+
+hometown: Riverhaven
+
+# Combat settings
+combat_trainer_target_increment: 20
+combat_trainer_action_count: 50
+repair_every_counter: 3
+#stances:
+#  Crossbow:
+stance_override:
+skinning:
+  skin: true
+  arrange_all: true
+  tie_bundle: true
+thanatology:
+  ritual_type: cycle
+  heal: true
+  store: true  
+  harvest_container: backpack   
+  harvest_count: 5
+combat_analyze_retry_count: 3
+manipulate_threshold:
+training_abilities:
+  Hunt: 80
+  Tactics: 30
+  Stealth: 60
+  Perc: 120
+
+
+# Spellcasting (and Khri) settings ###################################
+offensive_spells:
+# - skill: Targeted Magic
+#   name: Acid Splash
+#   abbrev: ACS
+#   mana: 2
+#   cambrinth:
+#   - 1
+-  skill: Targeted Magic
+   name: Vivisection
+   abbrev: vivisection
+   use_auto_mana: true
+   use_stealth: true
+   mana_type: arcane
+-  skill: Debilitation
+   name: Viscous Solution
+   abbrev: VS
+   use_auto_mana: true
+# - skill: Targeted Magic
+#   name: Strange Arrow
+#   abbrev: STRA
+#   use_auto_mana: true
+# - skill: Debilitation
+#   name: Heighten Pain
+#   abbrev: hp
+#   use_auto_mana: true
+
+stop_hunting_if_bleeding: false  
+necromancer_healing:  
+  Devour:  
+    abbrev: devo  
+    use_auto_mana: true
+
+buff_spells:
+  Ease Burden:
+    abbrev: ease
+    recast_every: 300
+    harmless: true
+    use_auto_mana: true
+#  Manifest Force:
+#    abbrev: maf
+#    recast_every: 300
+#    use_auto_mana: true
+  Obfuscation:
+    abbrev: ob
+    recast_every: 300
+    use_auto_mana: true
+  Gauge Flow:
+    abbrev: gaf
+    recast_every: 300
+    use_auto_mana: true
+  Lay Ward:
+    abbrev: lw
+    recast_every: 300
+    use_auto_mana: true
+  Rite of Grace:
+    abbrev: rog
+    use_auto_mana: true
+    cyclic: true
+  Quicken the Earth:
+    abbrev: QE
+    use_auto_mana: true
+    recast: -1
+    expire: You sense your Quicken the Earth spell fade.
+    before:
+    - message: perform cut
+      matches: You draw a slight cut acrosa
+    - message: push purse
+      matches: You push the release catch on your wrist purse
+
+#  Eyes of the Blind:
+#    abbrev: eotb
+#    recast: 1
+#    mana: 4
+#    cambrinth:
+#    - 3
+
+waggle_sets:
+#  zombie:
+#    Call from Beyond:  
+#      mana: 30         
+#      cambrinth:       
+#      - 32   
+#  attunement: 
+#    Eyes of the Blind:
+#      abbrev: eotb
+#      use_auto_mana: true
+#   Rite of Grace:
+#      abbrev: rog
+#     use_auto_mana: true
+  athletics:
+    Eyes of the Blind:
+      abbrev: eotb
+      use_auto_mana: true
+    Rite of Grace:
+      abbrev: rog
+      use_auto_mana: true
+  gaf:
+    Gauge Flow:
+      abbrev: gaf
+      use_auto_mana: true
+
+train_with_spells: true
+training_spells:
+  Utility:
+    abbrev: gaf
+    symbiosis: false
+    use_auto_mana: true
+  Warding:
+    symbiosis: false
+    abbrev: maf
+    use_auto_mana: true
+  Augmentation:
+    symbiosis: false
+    abbrev: ob
+    use_auto_mana: true
+
+zombie:                  
+  make: false            # Make a zombie during combat? Uses CfB settings from the zombie spell set.
+  summon: false          # Summon zombie during combat? 
+  stance: offense        # Zombie stance to set once summoned
+  behavior: aggressive   # Zombie behavior to set once summoned
+
+dance_action:
+- bob
+dance_skill: Large Edged
+dance_threshold: 0
+
+performance_monitor_weapons: true
+#retreat_threshold: 5
+use_weak_attacks: false
+loot_bodies: true
+dump_junk: false
+priority_defense:
+#hide_type: hide
+force_unhide: false
+skip_last_kill: false
+
+aim_fillers:
+  Crossbow:
+  - bob
+  Bow:
+  - bob
+  - analyze
+  - bob
+  Slings:
+  - bob
+stances:
+  Bow:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Crossbow:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Slings:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Offhand Weapon:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Light Thrown:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Heavy Thrown:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+
+hunting_file_list:
+- tm
+- first
+- back
+- setup
+
+weapon_training:
+#  Brawling: ''
+#  Small Edged: sabre
+  Light Thrown: triple bola
+  Large Edged: broadsword
+  Offhand Weapon: sabre
+  Small Blunt: triple bola
+  Heavy Thrown: light spear
+  Crossbow: forester's stonebow
+  Staves: nightstick
+  Slings: leather sling
+#  Polearms: light spear
+cycle_armors:
+  Chain Armor:
+  - chain greaves
+  Brigandine:
+  - scale greaves
+#  Plate Armor:
+#  - light greaves
+
+# Hunting settings
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+#- Brawling
+#- Light Thrown 
+- Perception
+#- Heavy Thrown
+#- Small Edged
+#- Skinning
+- Tactics
+#- Crossbow
+#- Staves
+#- Slings
+#- Polearms
+- Attunement
+- Locksmithing
+- Outdoorsmanship
+- Stealth
+- Appraisal
+- First Aid
+hunting_info:
+- :zone: orc_bandits
+  :duration: 60
+  stop_on:
+ # - Brawling
+ # - Small Edged
+#  - Light Thrown 
+#  - Offhand Weapon
+  - Heavy Thrown
+  - Tactics
+#  - Skinning
+  - Staves
+#  - Polearms
+  - Crossbow
+  - Slings
+  before:
+  - buff athletics
+  - xclimb
+  - go2 357
+  - fill-dirt
+
+#priority_skills_lower_limit: 8
+empty_hunting_room_messages:
+- Is anyone else in here?
+- I hope no one else is here, I really want to kill something.
+- Is anyone hunting here? Speak now or hold your peace.
+- This looks like a good room. I hope I'm not taking it from anyone.
+- My eyes aren't so good. Did I miss someone in the room?
+prehunt_buffs:
+
+scroll_stackers:
+- scroll case
+
+
+
+prep_scaling_factor: .85
+
+# Repair settings
+repair_withdrawal_amount: 10_000
+skip_repair: false
+repair_timer: 600
+repair_every: 1
+
+# Safe-room settings
+safe_room_id: 6218
+safe_room_take:
+safe_room_give:
+safe_room_tip_threshold:
+safe_room_tip_amount:
+safe_room_empath:
+
+# Looting settings
+loot_additions:
+- cambrinth lump
+- package
+- sraeth runestone
+- gold ring
+- kirmhiro draught
+- signet ring
+- witch ball
+- satin pillow
+- license
+- writ
+- permit
+- pass
+- profile
+- seastars
+- pendant
+- card
+- jasper
+- heliodor
+- tasialm
+- seastar
+- papyrus roll
+- silver nugget
+- gold nugget
+- platinum nugget
+- lumium nugget
+- ninium nugget
+- electrum nugget
+- muracite nugget
+- darkstone nugget
+- damite nugget
+- kertig nugget
+- haralun nugget
+- glaes nugget
+#- lead nugget
+#- lead bar
+- damite
+- howlite
+- animite nugget
+#- covellite nugget
+#- oravir nugget
+#- pewter bar
+- pulzones
+- quadrello
+- razor-legged spiders
+- glaes stars
+- smooth rock
+- quartzite shard
+- gold-hued stars
+- silver-edged stars
+- smoooth stone
+- blunt stone
+- card
+- earstuds
+loot_subtractions:
+loot_specials:
+
+
+# Non-combat settings
+cambrinth: cambrinth pendant
+cambrinth_cap: 32
+listen: true
+listen_observe: true
+safe_room: 6871
+hide_to_steal: true
+hand_armor: gloves
+footwear:
+exit_on_skills_capped: false
+forage_item: rock
+#cyclic_cycle_skills:
+train_with_spells: true
+training_nonspells:
+crossing_training:
+- Attunement
+- Augmentation
+- Warding
+- Utility
+- Athletics
+- Outdoorsmanship
+- Appraisal
+- Locksmithing
+- Scholarship
+- Outfitting
+#these may be duplicates of the other work order calls - potentially remove if wo-disc doesn't fix it
+#- Alchemy
+#- Engineering
+#- Performance
+#- Forging
+- Outfitting
+outdoor_room: 793
+textbook: true
+textbook_type: textbook
+symbiosis_learning_threshold: 2
+#compost_room: 991
+mine_for_outdoorsmanship: true
+appraisal_training:
+- art
+full_pouch_container: haversack
+#classes_to_teach: stealth
+avoid_athletics_in_justice: false
+attunement_rooms:
+
+# Stealing settings
+
+# Crafting settings
+crafting_container: backpack
+crafting_items_in_container: backpack
+forging_tools:
+- diagonal-peen hammer
+- tong
+- bellow
+- shovel
+outfitting_tools:
+- knitting needle
+shaping_tools:
+- carving knife
+- shaper
+- drawknife
+- rasp
+alchemy_tools:
+- mortar
+- pestle
+- bowl
+- mixing stick
+- sieve
+carving_tools:
+- chisels
+- rifflers
+- rasp
+- bone saw
+forging_belt:
+engineering_belt:
+outfitting_belt:
+alchemy_belt:
+mark_crafted_goods: false
+engineering_room:
+outfitting_room:
+alchemy_room:
+use_own_ingot_type:
+deed_own_ingot: false
+
+# Workorder settings
+train_workorders:
+# - Shaping
+# - Remedies
+# - Blacksmithing
+ - Tailoring
+workorder_diff: challenging
+#carving_workorder_material_type: stone
+workorder_min_items: 2
+workorder_max_items: 3
+workorder_recipes:
+
+# Lumber settings
+forests_to_chop:
+- neg_to_kaerna
+- cougars
+lumber_skip_populated: true
+lumber_buddy_chop_every_room: false
+lumber_buddy_tree_list:
+# MISC
+#- Durian
+# common
+# - Ash #shortbows
+# - Birch #composite
+# - Maple #longbows
+# - Oak #martial
+# rare
+- Cherry #shortbows
+- Ramin #longbows
+- Hickory #Composite
+- Lelori #Composite
+- Sandalwood #Composite
+#- Ironwood #martial
+# very rare
+- Bloodwood
+- Copperwood
+- Mistwood
+- Goldwood
+- Azurelle
+- Silverwood
+lumber_implement: axe
+lumber_use_packet: true
+lumber_while_training: false
+
+
+# Mining settings
+mines_to_mine:
+#- wicked_burrow
+#- stone_clan
+#- waterfall
+- dark_tunnels
+- wicked_burrow_premie
+#- fang_cove
+mining_skip_populated: true
+mining_buddy_mine_every_room: false
+mining_buddy_vein_list:
+# uncommon
+# - Lead
+- Silver
+# rare
+- Gold
+- Platinum
+- Lumium
+- Niniam
+- Electrum
+- Muracite
+- Darkstone
+# very rare
+- Damite
+- Kertig
+- Haralun
+- Glaes
+- Animite
+mining_ignored_stone_sizes:
+- pebble
+mining_implement: shovel
+mine_use_packet: true
+mine_while_training: true
+
+
+# Lockpicking settings
+stop_pick_on_mindlock: false
+use_lockpick_ring: true
+skip_lockpick_ring_refill: false
+lockpick_container: lockpick ring
+lockpick_type: stout
+harvest_traps: false
+picking_box_source: backpack
+picking_box_storage: backpack
+picking_pet_box_source: haversack
+lockpick_dismantle: 
+lockpick_buffs:
+lockpick_room_id: 6003
+lockpick_ignore_difficulty: false
+box_loot_limit: 15
+
+# Sell loot settings
+sell_loot_pouch: false
+sell_loot_bundle: false
+sell_loot_money_on_hand: 30 silver
+sell_loot_skip_bank: false
+sell_pouches_for_trading: false
+sale_pouches_container: 
+
+
+# Misc settings
+storage_containers:
+gear:
+- :adjective: quilted
+  :name: shirt
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: quilted
+  :name: hood
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: quilted
+  :name: gloves
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: quilted
+  :name: mask
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: triangular
+  :name: sipar
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: scale
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: chain
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: light
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: 
+  :name: broadsword
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: 
+  :name: sabre
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: triple
+  :name: bola
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: light
+  :name: spear
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: 
+  :name: nightstick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: leather
+  :name: sling
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: forester's
+  :name: stonebow
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+  :swappable: false
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: hand
+  :name: claws
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: elbow
+  :name: spikes
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+gear_sets:
+  standard:
+  - quilted shirt
+  - quilted hood
+  - quilted mask
+  - quilted gloves
+  - chain greaves
+  - triangular sipar
+  - parry stick
+  - hand claws
+  - elbow spikes
+  swimming:
+  - quilted shirt
+  - quilted hood
+  - quilted mask
+  - quilted gloves
+  - chain greaves
+  - triangular sipar
+  - parry stick
+  - hand claws
+  - elbow spikes
+  stealing:
+  - parry stick
+
+
+spare_gem_pouch_container: backpack
+gem_pouch_adjective: red
+
+trail_override:
+ignored_npcs:
+
+#favor_goal: 
+#favor_god: 
+
+cleaning_cloth: chamois cloth
+
+listen_skills:
+- Large Edged
+- Twohanded Edged
+- Small Blunt
+- Light Thrown
+- Brawling
+- Offhand Weapon
+- First Aid
+#- Stealth
+- Bows
+- Evasion
+- Parry Ability
+- Small Edged
+- Light Armor
+- Chain Armor
+- Shield Usage
+- Debilitation
+- Brigandine
+- Plate Armor
+- Large Blunt
+- Twohanded Blunt
+- Slings
+- Crossbow
+- Staves
+- Polearms
+- Heavy Thrown
+- Locksmithing
+- Skinning
+- Forging
+- Engineering
+- Outfitting
+- Alchemy
+
+
+
+health_threshold: 4
+saferoom_health_threshold: 5
+depart_on_death: true
+afk_justice_threshold: 4
+quit_on_status_warning: true
+status_monitor_no_window: false
+
+climbing_target:
+have_climbing_rope: false
+
+learned_column_count: 2
+sort_auto_head: true
+
+hunting_buddies:
+ - Schriel
+ - Kyver
+ - Agodius
+ - Whagone
+ - Vagon
+
+dirt_stacker: wrist purse
+
+burgle_settings:
+  room: 357                                 # pick your own room, you should pick a room that no guard will ''ever'' enter.  Picking rooms guards can come to is a failure on setup, not the script.
+  entry_type: lockpick                      # lockpick | rope | cycle
+  use_lockpick_ring: true                   # if you use a worn lockpick stacker
+  lockpick_container: lockpick ring         # name of your lockpick stacker
+  max_search_count: 2                       # max number of total searches to do including retries
+  retry: false                              # retry if you don't find loot.  default: false
+  loot: keep                                # drop | keep | bin | pawn   default: keep 
+  loot_container: backpack                # container to keep loot in while burglering
+  safe_mode: true                           # stop searching and try to get out as quickly as possible when hearing footsteps. Default: true
+  room_blacklist:                           # array of rooms to ignore. Case sensitive.
+  #  - Kitchen
+  item_whitelist:                           # array of full item names (adj + noun) of items to keep no matter what.  Case Sensitive.  
+    - worn book
+    - memory orb
+    - blunt-tipped bolts
+    - blunt-tipped arrows
+    - blunt stones
+    - keepsake box
+    - quill
+  before:                                   # array of scripts to run, similar to #hunting-buddy, before the burgle (will be called right before buffing)
+  #  - yourscripthere with args here
+  #- put "untie h rope" 
+  after:                                    # array of scripts to run, similar to #hunting-buddy, after the burgle, (will be called right before script ends)
+  #  - anotherscript here
+  #- put "tie h rope to rucksack"
+#waggle_sets:
+#  burgle:
+  

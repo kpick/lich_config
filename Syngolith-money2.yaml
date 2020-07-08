@@ -1,0 +1,129 @@
+---
+# https://elanthipedia.play.net/Ranger#Circle_Requirements
+
+weapon_training:
+  Small Edged: dagger
+  Bow: reflex bow
+  Brawling: '' 
+  # Slings: spidersilk sling
+
+prehunt_buffs: 4357
+stance_override: 100 0 87
+
+ignored_npcs:
+- dirt construct
+
+dance_skill: Bow
+hunting_info:
+- :zone: mountain_giants
+  :duration: 120
+  args:
+#    - r1
+  before:
+  - go2 4357
+  - buff prehunt
+  stop_on:
+  #after:
+    #- walk-to-safe
+    #- first-aid
+    #- collect rock
+    #- pick
+    #- athletics
+    #- athletics
+
+offensive_spells:
+  - skill: Targeted Magic
+    name: Eagle's Cry
+    abbrev: ec
+    mana: 15
+  - skill: Debilitation
+    name: Harawep
+    abbrev: hb
+    mana: 10
+    expire: The spiders lose their interest in
+    #harmless: true
+  - skill: Debilitation
+    name: Devolve
+    abbrev: de
+    mana: 10
+#  - skill: Debilitation
+#    name: Grizzly Claws
+#    abbrev: griz
+#    use_auto_mana: true
+#    #cast_only_to_train: true
+#    harmless: true
+  - skill: Debilitation
+    name: Deadfall
+    abbrev: df
+    mana: 10
+
+use_stealth_attacks: true
+
+training_abilities:
+  App Quick:
+    :check: Appraisal
+    :cooldown: 120
+
+buff_spells:
+  Compost:
+    abbrev: compost
+    recast_every: 180
+    mana: 10
+  See the Wind:
+    abbrev: stw
+    recast: 1
+    mana: 10
+  Instinct:
+    abbrev: inst
+    recast: 1
+    mana: 10
+  Senses of the Tiger:
+    abbrev: sott
+    recast: 1
+    use_auto_mana: true
+  Claws of the Cougar:
+    abbrev: cotc
+    recast: 1
+    mana: 20
+  Earth Meld:
+    abbrev: em
+    recast: 1
+    mana: 10
+  # Athleticism:
+  #   abbrev: athlet
+  #   recast: 1
+  #   use_auto_mana: true
+  Hands of Lirisa:
+    abbrev: hol
+    recast: 1
+    mana: 10
+  Skein of Shadows:
+    abbrev: sks
+    recast: 1
+    mana: 20
+  #Wolf Scent:
+  #  abbrev: ws
+  #  recast: -1
+  #  use_auto_mana: true
+  Wisdom of the Pack:
+    abbrev: wotp
+    recast: -1
+    use_auto_mana: true
+  Oath of the Firstborn:
+    abbrev: oath
+    recast: 1
+    mana: 20
+  #Cheetah Swiftness:
+  #  abbrev: cs
+  #  recast: -1
+  #  mana: 5
+  #  cyclic: true
+  Bear Strength:
+    abbrev: bes
+    recast: -1
+    mana: 5
+    cyclic: true
+  Essence of Yew:
+    abbrev: ey
+    recast: 1
+    mana: 10

@@ -1,0 +1,56 @@
+---
+# See https://github.com/rpherbig/dr-scripts/wiki/YAML-Settings for documentation
+
+
+stance_override:
+
+dance_action:
+- bob
+dance_skill: Small Blunt
+dance_threshold: 0
+
+weapon_training:
+#  Brawling: ''
+#  Small Edged: sabre
+#  Polearms: light spear
+  Light Thrown: triple bola
+  Large Edged: broadsword
+  Offhand Weapon: sabre
+  Small Blunt: triple bola
+  Heavy Thrown: light spear
+  Crossbow: forester's stonebow
+  Staves: nightstick
+  Slings: leather sling
+ # Polearms: light spear
+cycle_armors:
+  Chain Armor:
+  - chain greaves
+  Brigandine:
+  - scale greaves
+#  Plate Armor:
+#  - light greaves
+
+# Hunting settings
+hunting_info:
+- :zone: orc_bandits
+  :duration: 30
+  before:
+  - sell-loot
+  - go2 357
+  - fill-dirt
+  - go2 13809
+  - pick
+  - first
+  - attune
+  stop_on:
+#  - Evasion
+#  - Parry Ability
+#  - Shield Usage
+#  - Light Armor
+  - Crossbow
+  - Small Blunt
+  - Staves
+  - Slings
+  - Heavy Thrown
+  - Light Thrown
+

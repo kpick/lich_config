@@ -1,0 +1,52 @@
+---
+
+# Combat settings
+stance_override:
+combat_analyze_retry_count: 3
+manipulate_threshold:
+skinning:
+  skin: true
+  arrange_all: true
+  arrange_count: 1
+  tie_bundle: true
+use_weak_attacks: false
+
+dance_action:
+- bob
+dance_skill: Small Edged
+dance_threshold: 0
+
+
+weapon_training:
+  Brawling: ''
+  Small Edged: sabre
+  Polearms: light spear
+#  Heavy Thrown: light spear
+#  Light Thrown: triple bola
+  
+cycle_armors:
+  Chain Armor:
+  - chain greaves
+  Brigandine:
+  - scale greaves
+
+# Hunting settings
+hunting_info:
+- :zone: orc_bandits
+  :duration: 30
+  before:
+  - sell-loot
+  - go2 357
+  - fill-dirt
+  - go2 13809
+  - pick
+  - first
+  - attune
+#  - xclimb
+  stop_on:
+  - Evasion
+  - Light Armor
+  - Shield Usage
+  - Small Edged
+  - Polearms
+

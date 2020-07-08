@@ -1,0 +1,59 @@
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+
+dance_action:
+- bob
+dance_skill: Small Edged
+dance_threshold: 0
+
+weapon_training:
+  Small Edged: gladius
+cycle_armors:
+  Chain Armor:
+  - chain greaves
+  Brigandine:
+  - scale greaves
+  Plate Armor:
+  - light greaves
+
+stances:
+  Small Edged:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+
+# Hunting settings
+hunting_info:
+#- :zone: orc_reivers
+- :zone: black_goblins
+  :duration: 20
+  before:
+  - safe-room
+  - go2 6003
+  - pick
+  - go2 6003
+  - sell-loot
+  stop_on:
+  - Skinning
+  after:
+  - go2 6003
+  - safe-room
+  - appraisal
+  - burgle start rope
+  - go2 6003
+  - appraisal
+  - workorders shaping
+backstab: Small Edged
+ambush: true
+
+buff_nonspells:
+  khri:
+  - Focus
+  - Hasten
+  - Prowess
+  - Avoidance
+  - Dampen
+  - Elusion
+  - Strike

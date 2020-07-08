@@ -1,0 +1,72 @@
+---
+
+# Combat settings
+
+dance_action:
+- bob
+dance_skill: Small Edged
+dance_threshold: 0
+
+
+weapon_training:
+  Small Edged: sabre
+  
+cycle_armors:
+  Chain Armor:
+  - chain greaves
+  Brigandine:
+  - scale greaves
+
+# Hunting settings
+hunting_info:
+- :zone: orc_reivers
+#- :zone: orc_bandits
+  :duration: 30
+  before:
+  - mining
+  - go2 13809
+  - research utility
+  - research warding
+  - research augmentation
+  - sell-loot
+  - go2 357
+  - fill-dirt
+  - go2 13809
+  - pick
+  - first
+  - attune
+#  - xclimb
+  stop_on:
+  - Evasion
+  - Small Edged
+
+offensive_spells:
+-  skill: Targeted Magic
+   name: Vivisection
+   abbrev: vivisection
+   use_auto_mana: true
+   use_stealth: true
+   mana_type: arcane
+-  skill: Debilitation
+   name: Viscous Solution
+   abbrev: VS
+   use_auto_mana: true
+
+buff_spells:
+#  Manifest Force:
+#    abbrev: maf
+#    recast: 1
+#    use_auto_mana: true
+  Obfuscation:
+    abbrev: ob
+    recast: 1
+    use_auto_mana: true
+  Quicken the Earth:
+    abbrev: QE
+    use_auto_mana: true
+    recast: 1
+    before:
+    - message: perform cut
+      matches: You draw a slight cut acrosa
+    - message: push purse
+      matches: You push the release catch on your wrist purse

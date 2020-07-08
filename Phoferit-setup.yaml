@@ -1,0 +1,341 @@
+---
+favor_god: Hodierna
+favor_goal: 25
+depart_on_death: false
+health_threshold: 9
+repair_withdrawal_amount: 5000
+
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+  - Evasion
+  - Shield Usage
+  - Small Blunt
+  - Tactics
+
+
+hunting_info:
+- :zone: endrus_serpents
+  args:
+  - d0
+  - construct
+  stop_on:
+  - Evasion
+  - Targeted Magic
+  - Small Blunt
+#  - Stealth
+
+offensive_spells:
+ - skill: Targeted Magic
+   name: Paralysis
+   abbrev: paralysis
+   use_auto_mana: true
+   harmless: true
+ - skill: Debilitation
+   name: Lethargy
+   abbrev: LETHARGY
+   harmless: true
+   use_auto_mana: true
+
+
+weapon_training:
+  Large Blunt: greathammer
+  Small Blunt: bola
+  Small Edged: cutlass  
+  Slings: sling 
+  Brawling: ''
+  Light Thrown: bola  
+
+dance_skill: Brawling
+dance_actions:
+- bob
+- circle
+- weave
+- shove
+
+gear_sets:
+  standard:
+  - target shield
+  - leathers
+  - cowl
+  - gloves
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+  stealing:
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+  naked: []
+
+buff_spells:
+  Refresh:
+    abbrev: REFRESH
+    recast: 3
+    #recast_every: 600
+    mana: 8
+    cambrinth:
+     - 3
+     - 3
+    harmless: true
+  Iron Constitution:
+    abbrev: ic
+    recast: 3
+    mana: 5
+    harmless: true
+    cambrinth:
+     - 2
+     - 2
+  Mental Focus:
+    abbrev: MEF
+    recast: 1
+    mana: 5
+    cambrinth:
+    - 3
+    - 3
+  Aggressive Stance:
+    abbrev: AGS
+    recast: 1
+    mana: 5
+    cambrinth:
+    - 3
+    - 3
+  #Absolution:
+  #  recast: 40
+  #  mana: 420
+  #  focus: tree statuette
+  #  worn_focus: false
+
+manipulate_threshold: 1
+#use_weak_attacks: true
+priority_defense: Evasion
+dont_stalk: false
+training_abilities:
+  Hunt: 180
+#  Stealth: 40
+  Perc: 120
+  App Quick: 60
+  Analyze: 120
+  Perc Health: 120
+  Recall: 1800
+
+crossing_training:
+- Outdoorsmanship
+- Engineering
+- Outfitting
+- Forging
+- Empathy
+- First Aid
+- Appraisal
+- Athletics
+- Attunement
+- Sorcery
+- Augmentation
+- Utility
+- Locksmithing
+- Scholarship
+- Performance
+- Perception
+- Arcana
+- Warding
+#- Life Magic
+#- Fundamental
+#- Stream
+
+listen: false
+listen_observe: false
+
+train_with_spells: true
+training_spells:
+  Augmentation:
+    symbiosis: false
+    abbrev: REFRESH
+  Utility:
+    abbrev: HW
+    symbiosis: false
+    cast: cast chest
+  Warding:
+    abbrev: ic  
+use_research: false
+cambrinth: pendant
+stored_cambrinth: false
+prep_scaling_factor: 0.85
+
+textbook: true
+textbook_type: volume
+
+bin_stolen: false
+hand_armor: gloves
+braid_item: grass
+
+outfitting_room: 6003
+engineering_room: 6003
+safe_room: 6004
+picking_pet_box_source: pack
+skip_lockpick_ring_refill: false
+picking_box_source: ruck
+picking_box_storage: ruck
+lockpick_type: stout #iron
+stop_pick_on_mindlock: true
+lockpick_dismantle:
+lockpick_ignore_difficulty: false
+harvest_traps: false
+lockpick_buffs:
+
+gem_pouch_adjective: fuzzy
+spare_gem_pouch_container: ruck
+
+outfitting_room: 
+engineering_room: 
+train_workorders:
+- Tailoring
+- Shaping
+- Blacksmithing
+crafting_container: ruck
+forging_belt:
+  name: odaj
+  items:
+    - hammer
+    - tongs
+    - bellows
+    - shovel
+    - rod
+engineering_belt:
+  name: carp belt
+  items:
+    - carving knife
+    - shaper
+    - drawknife
+    - rasp
+forging_tools:
+- hammer
+- tongs
+- bellows
+- shovel
+- stirring rod
+outfitting_tools:
+- knitting needle
+shaping_tools:
+- carving knife
+- shaper
+- drawknife
+- rasp
+
+storage_containers:
+- ruck
+- pack
+
+gear:
+# ARMOR
+- :adjective: target
+  :name: shield
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: 
+  :name: cowl
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: 
+  :name: leathers
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: 
+  :name: gloves
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+#BRAWLING
+- :adjective: parry
+  :name: stick
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: brass
+  :name: knuckles
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: elbow
+  :name: spikes
+  :hinders_lockpicking: false
+  :is_worn: true
+#WEAPONS
+- :adjective: 
+  :name: cutlass
+  :hinders_lockpicking: false
+  :wield: true
+  :lodges: true
+- :adjective: 
+  :name: bola
+  :hinders_lockpicking: false
+  :wield: true
+  :lodges: false
+- :adjective: 
+  :name: greathammer
+  :hinders_lockpicking: false
+  :wield: true
+  :swappable: false
+- :adjective:
+  :name: cutlass
+  :hinders_lockpicking: false
+  :wield: true
+- :adjective:
+  :name: bludgeon
+  :hinders_lockpicking: false
+  :wield: true
+- :adjective:
+  :name: sling
+  :hinders_lockpicking: false
+  :wield: true
+  :is_leather: true
+
+
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 3
+  tie_bundle: true
+loot_additions:
+- shard
+- shards
+- cougar arrow
+- cougar arrows
+hunting_buddies:
+
+footwear: boots 
+dump_junk: true
+ 
+exp_timers:
+  Stealth:
+    cooldown: 300
+  First Aid:
+    cooldown: 300
+  Locksmithing:
+    cooldown: 600
+  Thievery:
+    cooldown: 3600
+  Augmentation:
+    cooldown: 60
+  Utility:
+    cooldown: 60
+  Outdoorsmanship:
+    cooldown: 600
+  Mechanical Lore:
+    cooldown: 120
+ 
+quit_on_status_warning: true
+status_monitor_no_window: true
+
+use_harness_when_arcana_locked: true
+ 
+empath_healing:
+  HEAL:
+  - 15
+  - 3
+  - 2
+
+
+ignored_npcs:
+- warrior
+- Owl
+- Great Owl

@@ -1,0 +1,48 @@
+---
+hunting_info:
+- :zone: [blue_prereni_stones, elder_prereni_stones, blue_dappled_prereni, ice_adders]
+#- :zone: bloodvines_hib
+  :duration: 20
+  # args:
+  #  - r4
+  stop_on:
+    #- Twohanded Edged
+    - Heavy Thrown
+    - Polearms
+    - Light Thrown
+    - Small Blunt
+    - Staves
+    - Slings
+  #before:
+  #  - athletics-lace
+  after:
+    - walk-to-safe
+    - go2 4069
+    - first-aid
+    - collect rock
+    - pick
+    - athletics
+    - burgle start
+
+#7672
+weapon_training:
+  Light Thrown: six-weighted cuska
+  Small Blunt: six-weighted cuska
+  Staves: white nightstick
+  # Twohanded Edged: war sword
+  Twohanded Edged: glaes greatsword
+  Polearms: tyrium-tipped spear
+  Heavy Thrown: tyrium-tipped spear
+  Slings: spidersilk sling
+
+dance_skill: Polearms
+#offhand_thrown: true
+
+use_stealth_attacks: false
+training_abilities:
+  Hunt: 80
+  Perc: 120
+  App Quick: 60
+fatigue_regen_threshold: 75
+fatigue_regen_action: bob
+

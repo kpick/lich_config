@@ -1,0 +1,91 @@
+---
+#intended for hunting with primrary weapons
+backstab: Small Blunt
+#ambush: true
+use_stealth_attacks: false
+dance_action:
+- bob
+dance_skill: Brawling
+dance_threshold: 0
+use_weak_attacks: false
+hunting_info:
+#- :zone: orc_raiders
+- :zone: mountain_giants
+  :duration: 20
+  args:
+  - d0
+  before:
+  - go2 4357
+  - pick
+  after:
+  - go2 6003
+  - burgle start rope
+  stop_on:
+
+loot_subtractions:
+- arrow
+- arrows
+
+ignored_npcs:
+- dirt construct
+
+
+weapon_training:
+  Brawling: ''
+  Large Edged: bastard sword
+#  Heavy Thrown: light spear
+  Offhand Weapon: light spear
+  Crossbow: battle crossbow
+  Light Thrown: bola
+#  Small Blunt: bola
+offhand_thrown: true
+gear_sets:
+  standard:
+  - quilted shirt
+  - leather cowl
+  - quilted gloves
+  - chain greaves
+  - parry stick
+  - spiked knuckles
+  - knee spikes
+  - elbow spikes
+  - small shield
+  stealing:
+  - parry stick
+
+stances:
+#  Bow:
+#  - Evasion
+#  - Shield Usage
+#   - Parry
+  Crossbow:
+  - Evasion
+  - Shield
+  - Parry
+  Slings:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Offhand Weapon:
+  - Evasion
+  - Shield
+  - Parry
+  Brawling:
+  - Evasion
+  - Parry
+  - Shield
+  Large Edged:
+  - Evasion
+  - Shield
+  - Parry
+
+cycle_armors:
+  Chain Armor:
+  - chain greaves
+  Brigandine:
+  - scale greaves
+  Plate Armor:
+  - light greaves
+
+# Spellcasting (and Khri) settings
+kneel_khri: false

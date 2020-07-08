@@ -1,0 +1,310 @@
+---
+# https://elanthipedia.play.net/Moon_mage#Circle_Requirements
+# 4 Magics: Augmentation, Attunement, Arcana, Targeted Magic/Debilitation (Does not include Lunar Magic or Astrology)
+# 4 Survivals: Perception, Athletics, Evasion, Skinning (Does not include Thievery)
+# 3 Lores: Appraisal, Tactics, Mechanical Lore (Does not include Scholarship)
+# 2 Additional: Astrology, Scholarship
+
+# It is recommended to get a target or debilitation spell for your second circle. (e.g. Dinazen Olkar or Calm)
+# Please see the 'offensive_spells:' setting below for a commented (unused) example. Uncomment to begin usage (remove #'s).
+
+# Eventually you will need to train 3 more Magics to circle (for a total of 7)
+# Eventually you will need to train 1 more Survival to circle (for a total of 5)
+
+textbook: true
+textbook_type: manual
+picking_box_source: backpack
+picking_box_storage: sack
+box_loot_limit: 0
+full_pouch_container: sack
+
+# Hunting settings
+training_manager_hunting_priority: false
+training_manager_priority_skills:
+- Targeted Magic
+- Debilitation
+- Evasion
+- Large Edged
+- Astrology
+- Attunement
+hunting_info:
+- :zone: grass_eels
+  :duration: 40
+  before:
+  - go2 6004
+  - astrology
+  - pick
+  stop_on:
+  - Brawling
+  - Shield Usage
+  - Evasion
+  - Skinning
+  - Tactics
+  after: 
+  - burgle start
+
+# Gear settings
+gear:
+# - :adjective: example
+#   :name: gear
+#   :is_leather: true
+#   :hinders_lockpicking: false
+#   :is_worn: true
+- :adjective: rugged
+  :name: jerkin
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: chain
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: scale
+  :name: vambraces
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: target
+  :name: shield
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: light
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: chain
+  :name: balaclava
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+## Brawling
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: brass
+  :name: knuckles
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: elbow
+  :name: spikes
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+## Weapons
+- :adjective: throwing
+  :name: spike
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: true
+- :adjective: bastard
+  :name: sword
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: true
+- :adjective: light
+  :name: spear
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+
+
+gear_sets:
+  standard:
+  - rugged jerkin
+  - chain gloves
+  - chain balaclava
+  - light greaves
+  - scale vambraces
+  - target shield
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+
+# Combat settings
+
+# Uncomment (remove #'s) to train Targeted Magic/Debilitation with the listed spells (or change to use different spells).
+offensive_spells:
+  - skill: Targeted Magic
+    name: Dinazen Olkar
+    abbrev: do
+    cast_only_to_train: true
+    mana: 2
+  - skill: Debilitation
+    name: Sleep
+    abbrev: sleep
+    mana: 1
+    harmless: true
+
+buff_spells:
+  Moonblade:
+    recast_every: 1000
+    use_auto_mana: true
+  Shadows:
+    abbrev: shadows
+    recast: 5
+    use_auto_mana: true
+ #   cambrinth:
+ #   - 1
+  Psychic Shield:
+    abbrev: psy
+    recast: 5
+    use_auto_mana: true
+ #   cambrinth:
+ #   - 1
+  Gauge Flow:
+    abbrev: gaf
+    recast: 3
+    mana: 8
+#    cambrinth:
+#    - 1
+#  Manifest Force:
+#    abbrev: maf
+#    recast: 3
+#    mana: 8
+# #   cambrinth:
+# #   - 1
+#  Ease Burden:
+#    abbrev: ease
+#    recast: 3
+#    mana: 8
+# #   cambrinth:
+# #   - 1
+
+dance_skill: Brawling
+training_abilities:
+  Stealth: 60
+  Tactics: 20
+  PercMana: 60
+  Hunt: 80
+  Astrology: 300
+
+summoned_weapons:
+#  - name: Staves
+  - name: Twohanded Edged
+  - name: Small Edged
+  - name: Large Edged
+  - name: Small Blunt
+
+weapon_training:
+#Physical weapons
+  Brawling: ''
+#  Large Edged: bastard sword
+#  Twohanded Edged: bastard sword
+#  Targeted Magic: bastard sword
+#  Small Edged: throwing spike
+#  Small Blunt: throwing spike
+  Polearms: light spear
+  Offhand Weapon: light spear
+  Light Thrown: throwing spike
+  Heavy Thrown: light spear
+#MagicWeapons
+  Small Edged: moonblade
+  Small Blunt: moonblade
+  Large Edged: moonblade
+  Twohanded Edged: moonblade
+#  Staves: moonblade
+  
+offhand_thrown: true
+#use_stealth_attacks: true
+
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 5
+  tie_bundle: true
+
+# Non-combat settings
+exp_timers:
+  Astrology: 200
+  Attunement: 130
+appraisal_training:
+- pouches
+- bundle
+- gear
+
+divination_tool:
+  name: prism
+  container: backpack
+
+waggle_sets:
+  astrology:
+    Clear Vision:
+      abbrev: cv
+      mana: 10
+    Piercing Gaze:
+      abbrev: pg
+      mana: 10
+
+crossing_training:
+- Astrology
+- Augmentation
+- Warding
+- Utility
+- Scholarship
+- Attunement
+- Appraisal
+- Athletics
+- Perception
+- Performance
+- First Aid
+have_telescope: false
+
+safe_room: 19162
+
+training_spells:
+  Augmentation:
+    abbrev: cv
+    use_auto_mana: true
+    recast: 5
+  Warding:
+    abbrev: psy
+    use_auto_mana: true
+    recast: 5
+  Utility:
+    abbrev: pg
+    use_auto_mana: true
+    recast: 5
+cambrinth: anklet
+cambrinth_cap: 12
+waggle_force_cambrinth: false
+favor_god: Meraud
+favor_goal: 10
+
+
+burgle_settings:
+  room: 6202                                 # pick your own room, you should pick a room that no guard will ''ever'' enter.  Picking rooms guards can come to is a failure on setup, not the script.
+  entry_type: lockpick                      # lockpick | rope | cycle
+  use_lockpick_ring: true                   # if you use a worn lockpick stacker
+  lockpick_container: lockpick ring         # name of your lockpick stacker
+  max_search_count: 2                       # max number of total searches to do including retries
+  retry: false                              # retry if you don't find loot.  default: false
+  loot: pawn                                # drop | keep | bin | pawn   default: keep 
+  loot_container: backpack                # container to keep loot in while burglering
+  safe_mode: true                           # stop searching and try to get out as quickly as possible when hearing footsteps. Default: true
+  room_blacklist:                           # array of rooms to ignore. Case sensitive.
+  #  - Kitchen
+  item_whitelist:                           # array of full item names (adj + noun) of items to keep no matter what.  Case Sensitive.  
+    - worn book
+    - memory orb
+    - blunt-tipped bolts
+    - blunt-tipped arrows
+    - blunt stones
+    - keepsake box
+    - quill
+    - heavy bracer
+    - bracer
+  before:                                   # array of scripts to run, similar to #hunting-buddy, before the burgle (will be called right before buffing)
+  #  - yourscripthere with args here
+  #- put "untie h rope" 
+  after:                                    # array of scripts to run, similar to #hunting-buddy, after the burgle, (will be called right before script ends)
+  #  - anotherscript here
+  #- put "tie h rope to rucksack"
+

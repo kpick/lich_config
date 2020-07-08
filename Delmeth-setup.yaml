@@ -1,0 +1,291 @@
+---
+# https://elanthipedia.play.net/Thief#Circle_Requirements
+
+# 1 Magic: Augmentation
+# 4 Weapons (only 2 are needed to circle): Brawling, Small Edged, Small Blunt, Light Thrown
+# 2 Armors (only 1 is needed to circle): Light Armor, Shield Usage
+# 8 Survivals: Stealth, Thievery, Athletics, Perception, Skinning, Evasion, Locksmithing, Backstab
+# 3 Lores: Appraisal, Tactics, Scholarship
+
+# Eventually you will need to train 1 more Magic to circle (for a total of 2)
+# However, you will probably end up training them all since they each have very useful abilities
+# The other Magic skills are: Utility, Debilitation
+
+# Hunting settings
+training_manager_hunting_priority: false
+training_manager_priority_skills:
+  - Small Edged
+  - Light Thrown
+  - Brawling
+  - Crossbow
+  - Backstab
+  - Tactics
+  - Stealth
+  - Appraisal
+  - Perception
+
+hunting_info:
+- :zone: endrus_serpents
+  stop_on:
+  - Small Edged
+  - Light Thrown
+
+# Combat settings
+backstab: Small Edged
+combat_analyze_retry_count: 3
+dance_skill: Large Edged
+combat_trainer_target_increment: 15
+combat_trainer_action_count: 28
+training_abilities:
+  Tactics: 30
+  Hunt: 80
+  App Quick: 60
+  Analyze: 70
+#  Ambush Choke: 60
+
+
+storage_containers:
+  - pack
+
+stealing_towns:
+  - Crossing
+  - Arthe Dale
+  - Kaerna Village
+  - Leth Deriel
+#  - Tiger Clan
+#  - Knife Clan
+#  - Aesry
+#  - Riverhaven
+#  - Shard
+#  - Horse Clan
+
+
+crafting_container: pack
+outfitting_room: 
+engineering_room: 
+alchemy_room: 6004 
+train_workorders:
+- Tailoring
+- Remedies
+outfitting_tools:
+- knitting needle
+alchemy_tools:
+- mortar
+- pestle
+- bowl
+- mixing stick
+- sieve
+workorder_diff: challenging
+#carving_workorder_material_type: stone
+workorder_min_items: 2
+workorder_max_items: 2
+alchemy_belt:
+  name: grass toolstrap
+  items:
+  - mortar
+  - pestle
+  - mixing stick
+  - sieve
+  - jar
+
+dirt_stacker: belt purse
+
+hometown: 'Crossing'
+safe_room: 6004
+
+# Gear settings
+gear:
+- :adjective: quilted
+  :name: hauberk
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: chain
+  :name: bala
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: chain
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: round
+  :name: sipar
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: brass
+  :name: knuckles
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: elbow
+  :name: spikes
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: wide
+  :name: dagger
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: stout
+  :name: broadsword
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: triple
+  :name: bola
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: 
+  :name: crossbow
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+  :swappable: false
+gear_sets:
+  standard:
+  - quilted hauberk
+  - chain bala
+  - chain gloves
+  - round sipar
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+  stealing:
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+
+ambush: true
+weapon_training:
+  Brawling: ''
+  Small Edged: wide dagger
+  Light Thrown: wide dagger
+  Crossbow: crossbow
+  Offhand Weapon: wide dagger  
+  Small Blunt: triple bola
+  Large Edged: stout broadsword  
+priority_weapons:
+  - Small Edged
+  - Light Thrown
+  - Crossbow
+
+kneel_khri: true
+buff_nonspells:
+  khri:
+  - Focus
+  - Darken
+  - Dampen
+  - Hasten
+  - Terrify
+#  - Plunder
+#  - Sight
+#  - Prowess
+#  - Avoidance
+
+
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 3
+  tie_bundle: true
+
+picking_box_source: pack
+picking_box_storage: pack
+stop_pick_on_mindlock: true
+harvest_traps: true
+lockpick_type: stout
+pick_blind: false
+lockpick_container: lockpick ring
+
+
+exp_timers:
+  Stealth: 300
+  Locksmithing: 600
+  Augmentation: 600
+  Utility: 600
+  Thievery: 600
+
+train_with_burgle: true
+burgle_settings:
+  room: 6202                                 # pick your own room, you should pick a room that no guard will ''ever'' enter.  Picking rooms guards can come to is a failure on setup, not the script.
+  entry_type: lockpick                      # lockpick | rope | cycle
+  use_lockpick_ring: true                   # if you use a worn lockpick stacker
+  lockpick_container: lockpick ring         # name of your lockpick stacker
+  max_search_count: 2                       # max number of total searches to do including retries
+  retry: false                              # retry if you don't find loot.  default: false
+  loot: pawn                                # drop | keep | bin | pawn   default: keep 
+  loot_container: pack                # container to keep loot in while burglering
+  safe_mode: true                           # stop searching and try to get out as quickly as possible when hearing footsteps. Default: true
+  room_blacklist:                           # array of rooms to ignore. Case sensitive.
+    - Kitchen
+  item_whitelist:                           # array of full item names (adj + noun) of items to keep no matter what.  Case Sensitive.  
+    - worn book
+    - memory orb
+    - blunt-tipped bolts
+    - blunt-tipped arrows
+    - blunt stones
+    - keepsake box
+    - quill
+  before:                                   # array of scripts to run, similar to #hunting-buddy, before the burgle (will be called right before buffing)
+  #  - yourscripthere with args here
+  #- put "untie h rope" 
+  after:                                    # array of scripts to run, similar to #hunting-buddy, after the burgle, (will be called right before script ends)
+  #  - anotherscript here
+  #- put "tie h rope to rucksack"
+waggle_sets:
+  burgle:
+    - Plunder
+    - Darken
+    - Focus
+    - Dampen
+
+
+gem_pouch_adjective: black
+
+train_with_spells: false
+training_nonspells:
+  Augmentation: Khri Focus
+  Utility: Khri Hasten
+  Warding: Khri Dampen
+crossing_training:
+  - Thievery
+  - Augmentation
+  - Locksmithing
+  - Perception
+  - Appraisal
+  - Athletics
+  - Scholarship
+  - Outdoorsmanship
+  - Performance
+  - Utility
+  - Warding
+  - Augmentation
+  - Outfitting
+  - Alchemy
+
+bin_stolen: true
+stealing_bag: pack
+steal_past_mindlock: true
+npc_stealing_attempt_count: 0
+dont_steal_list:
+stealing_buffs:
+  khri:
+  - Focus
+  - Hasten
+  - Plunder
+
+favor_goal: 10
+favor_god: Damaris

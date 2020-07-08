@@ -1,0 +1,31 @@
+dance_action:
+- bob
+dance_skill: Small Edged
+dance_threshold: 2
+
+weapon_training:
+  Small Edged: scimitar
+
+#stances:
+#  Small Edged:
+#  - Evasion
+#  - Parry Ability
+#  - Shield Usage
+
+
+weapon_training:
+  Small Edged: scimitar
+  Brawling: ''
+
+# Hunting settings
+hunting_info:
+- :zone: quartz_gargs
+  :duration: 60
+  before:
+  - workorders shaping
+  - sell-loot
+  - xclimb
+  - attune
+  stop_on:
+  - Light Armor
+  - Shield Usage

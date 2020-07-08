@@ -1,0 +1,552 @@
+---
+# https://elanthipedia.play.net/mediawiki/index.php/Warrior_Mage#Circle_Requirements
+# 3 Magics: Arcana, Targeted Magic, Attunement
+# 5 Weapons (only 3 are needed to circle): Brawling, Heavy Thrown, Polearms, Large Edged, Twohanded Edged
+# 2 Armors (only 1 is needed to circle): Light Armor, Shield Usage
+# 4 Survivals: Athletics, Perception, Skinning, Stealth
+# 3 Lores: Appraisal, Tactics, Scholarship
+# Eventually you will need to train 2 more Magics to circle (for a total of 5)
+# However, you will probably end up training them all since they each have very useful spells
+# The other Magic skills are: Augmentation, Warding, Debilitation, Utility
+# Hunting settings
+
+slack_username: kyle.schriver@gmail.com
+
+force_healer_town: Fang Cove
+
+#prehunt_buffs: 4358 #Room number where you can cast buffs before beginning hunt. List buffs under waggle_sets: with same heading prehunt_buffs:.
+hunting_room_min_mana: 10
+hunting_room_strict_mana: false
+sell_loot_skip_bank: false
+footwear: boots
+sell_loot_money_on_hand: 20 silver
+box_loot_limit: 10
+
+#31508
+
+hometown: Shard
+
+saferoom_health_threshold: 8
+
+waggle_sets:
+  default:
+    Sure Footing:
+      abbrev: SUF
+      recast: 1
+      mana: 12
+      cambrinth:
+      - 2
+    Swirling Winds:
+      abbrev: SW
+      recast: 1
+      mana: 12
+      cambrinth:
+      - 2
+    Ethereal Shield:
+      abbrev: es
+      recast: 1
+      mana: 12
+      cambrinth:
+      - 2
+  prehunt_buffs:
+    Ethereal Shield:
+      abbrev: ES
+      mana: 40
+    Swirling Winds:
+      abbrev: SW
+      mana: 40
+      harmless: true
+    Sure Footing:
+      abbrev: SUF
+      mana: 40
+    Tailwind:
+      abbrev: tw
+      mana: 40
+    Zephyr:
+      abbrev: zephyr
+      mana: 40
+    Y'ntrel Sechra:
+      abbrev: ys
+      mana: 40
+    Aegis of Granite:
+      abbrev: aeg
+      mana: 420
+      recast: -1
+      expire: The Earth energy flows from your body, returning to its rightful place in the ground beneath your feet.
+      before:
+      - message: take sigil-stamped boot from rucksack
+        matches: You get a sigil-stamped oilskin boot filled with aquamarine glass from inside your rucksack.
+      - message: invoke boot
+        matches: You make sweeping gestures through the air, gathering mana streams with each swing.
+      after: 
+      - message: put sigil-stamped boot in rucksack
+        matches: You put your boot in your rucksack.
+
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+    - Large Edged
+    - Evasion
+    - Heavy Thrown
+    - Small Edged
+    - Light Thrown
+    - Tactics
+    - Shield Usage
+    - Brawling
+    - Warding
+    - Augmentation
+
+hunting_info:
+- :zone: black_marble_gargoyles #mountain_giants #[orc_chiefs, orc_raiders_upstairs] #orc_reivers #[shard_gryphons2, shard_gryphons2] #orc_reivers
+  :duration: 45
+  args:
+  - d0
+  before:
+  - go2 6446
+  - safe-room
+  - sell-loot
+  - attune
+  #- go2 7659
+  #- go2 6445
+  - go2 4358
+  - buff prehunt
+  stop_on:
+  - Large Edged
+  - Heavy Thrown
+  after:
+  - release_cyclics
+  - go2 6446
+  - safe-room
+  - workorders blacksmithing
+
+hunting_file_list:
+- setup
+#- back
+#- money
+#- money
+
+gem_pouch_adjective: gem
+safe_room: 6446
+safe_room_empath: 
+cambrinth: bracer
+cambrinth_cap: 32
+storage_containers:
+- ruck
+- grey bag
+- carryall
+
+# Gear settings
+gear:
+#ARMOR
+- :adjective: 
+  :name: coif
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: 
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective:
+  :name: sipar
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective:
+  :name: leathers
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:  
+#BRAWLING
+- :adjective:
+  :name: armguard
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: 
+  :name: knuckles
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: 
+  :name: blades
+  :hinders_lockpicking: false
+  :is_worn: true
+  :is_leather: true
+#WEAPONS
+- :adjective: steel
+  :name: tachi
+  :is_leather: false
+  :hinders_lockpicking: false
+  :wield: true
+  :lodges: true
+- :adjective: short 
+  :name: sword
+  :is_leather: false
+  :hinders_lockpicking: false
+  :wield: true
+  :lodges: true
+- :adjective: battle
+  :name: stonebow
+  :is_leather: true
+  :is_worn: true  
+- :adjective: leather
+  :name: sling
+  :is_leather: true
+  :wield: true
+  
+gear_sets:
+  standard:
+  - leathers
+  - coif
+  - gloves
+  - sipar
+  - armguard
+  - knuckles
+  - blades
+  - battle stonebow
+
+loot_additions:
+- cambrinth lump
+- package
+- sraeth runestone
+- gold ring
+- kirmhiro draught
+- signet ring
+- witch ball
+- satin pillow
+- license
+- writ
+- permit
+- pass
+- profile
+- seastars
+- pendant
+- card
+- jasper
+- heliodor
+- tasialm
+- seastar
+- papyrus roll
+- silver nugget
+- gold nugget
+- platinum nugget
+- lumium shard
+- ninium shard
+- electrum nugget
+- muracite nugget
+- darkstone shard
+- damite lump
+- kertig tear
+- haralun lump
+- glaes fragment
+- animite nugget
+- pulzones
+- quadrello
+- crumpled page
+- singed page
+- broken book spine
+- shattered bloodlock
+- front cover
+- page
+- cover
+- spine
+- bloodlock
+- front cover
+loot_bodies: true
+
+# Combat settings
+offensive_spells:
+- skill: Targeted Magic
+  name: Chain Lightning
+  abbrev: cl
+  mana: 20
+
+- skill: Debilitation
+  name: Electrostatic Eddy
+  abbrev: ee
+  mana: 6
+  cyclic: true
+
+#- skill: Debilitation
+#  name: Arc Light
+#  abbrev: al
+#  use_auto_mana: true
+  
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 1
+  tie_bundle: true
+
+dance_skill: Large Edged
+combat_trainer_target_increment: 15
+combat_trainer_action_count: 28
+training_abilities:
+  Tactics: 30
+  Hunt: 80
+  Perc: 120
+  App Quick: 60
+  Analyze: 70
+
+buffs: &buffs
+  Swirling Winds:
+    abbrev: SW
+    recast: 1
+    harmless: true
+    mana: 20
+    cambrinth:
+      - 15
+  Sure Footing:
+    abbrev: SUF
+    recast: 1
+    mana: 20
+    cambrinth:
+      - 15
+  Ethereal Shield:
+    abbrev: ES
+    recast: 1
+    mana: 20
+    harmless: true
+    cambrinth:
+      - 15
+  Y'ntrel Sechra:
+    abbrev: YS
+    recast: 1
+    mana: 15
+    cambrinth:
+    - 15
+  Substratum:
+    abbrev: SUB
+    recast: 2
+    mana: 20
+    cambrinth:
+      - 15
+  Tailwind:
+    abbrev: TW
+    recast: 2
+    mana: 20
+    cambrinth:
+      - 15
+  Veil of Ice:
+    mana: 15
+    cambrinth:
+    - 10
+
+buff_spells:
+  Zephyr:
+    abbrev: ZEPHYR
+    mana: 20
+    cambrinth:
+    - 10
+    expire: the breeze fades from the area
+  Ethereal Fissure:
+    abbrev: ETF
+    mana: 30
+    cambrinth:
+    - 4
+    harmless: true
+    expire: fissure collapses in on itself, winking out of existence
+    cast: cast air
+#  Electrostatic Eddy:
+#    abbrev: EE
+#    recast: 0
+#    mana: 6
+#    harmless: true
+#    cyclic: true
+#    expire: You release your connection to the
+  << : *buffs
+  Swirling Winds:
+    abbrev: SW
+    mana: 40
+  Sure Footing:
+    abbrev: SUF
+    recast: 1
+    mana: 40
+#  Zephyr:
+#    abbrev: zephyr
+#    use_auto_mana: true
+#    recast: 1
+  Y'ntrel Sechra:
+    mana: 40
+    recast: 1
+ # Aegis of Granite:
+ #   abbrev: aeg
+ #   mana: 420
+ #   recast: -1
+ #   expire: The Earth energy flows from your body, returning to its rightful place in the ground beneath your feet.
+ #   before:
+ #   - message: take sigil-stamped boot from rucksack
+ #     matches: You get a sigil-stamped oilskin boot filled with aquamarine glass from inside your rucksack.
+#    - message: invoke boot
+#      matches: You make sweeping gestures through the air, gathering mana streams with each swing.
+ #   after: 
+ #   - message: put sigil-stamped boot in rucksack
+#      matches: You put your boot in your rucksack.
+
+
+buff_nonspells:
+
+weapon_training:
+  Large Edged: broadsword
+  Small Edged: scimitar  
+  Heavy Thrown: javelin
+  Brawling: ''
+  Light Thrown: bola
+#offhand_thrown: true
+
+charged_maneuvers:
+  Brawling: palmstrike
+  Bow: powershot
+  Slings: powershot
+  Small Edged: cleave
+  Large Edged: cleave
+  Twohanded Edged: cleave
+  Small Blunt: crash
+  Large Blunt: crash
+  Twohanded Blunt: crash
+  Staves: twirl
+  Polearms: impale
+
+# Non-combat settings
+crossing_training:
+ - Summoning
+ - Warding
+ - Utility
+ - Appraisal
+ - First Aid
+ - Outdoorsmanship
+ - Elemental Magic
+ - Attunement
+ - Arcana
+ - Stealth
+ - Augmentation
+ - Athletics
+ - Scholarship
+ - Perception
+ #- Locksmithing
+ - Performance
+ - Sorcery
+ - Enchanting
+ - Forging
+
+exp_timers:
+  First Aid: 120
+  Locksmithing: 300
+  Attunement: 120
+  Utility: 120
+  Augmentation: 120
+
+training_spells:
+  Augmentation:
+    abbrev: SW
+    symbiosis: true
+  Utility:
+    abbrev: gaf
+    symbiosis: true
+  Warding:
+    abbrev: VOI
+    symbiosis: false
+
+
+#crossing_training_sorcery_room: 1234
+#crossing_training_sorcery: CV 10
+
+textbook: true
+textbook_type: tome
+
+crafting_container: rucksack
+train_workorders: 
+ - Blacksmithing
+ - Artificing
+workorder_diff: challenging
+crafting_container: rucksack
+forging_tools:
+- hammer
+- tongs
+- bellows
+- shovel
+- rod
+forging_belt:
+  name: forger belt
+  items:
+    - hammer
+    - tongs
+    - bellows
+    - shovel
+    - rod
+
+outfitting_tools:
+- sewing needle
+- yardstick
+- awl
+- knitting needle
+
+shaping_tools:
+- carving knife
+- shaper
+- drawknife
+- rasp
+
+enchanting_tools:
+- burin
+- augmenting loop
+- fragile fount
+
+sell_loot_pouch: false
+full_pouch_container: carryall
+
+picking_box_source: carry
+picking_pet_box_source: bag
+picking_box_storage: carry
+stop_pick_on_mindlock: true
+harvest_traps: true
+lockpick_type: ordinary
+pick_blind: false
+lockpick_container: lockpick ring
+lockpick_dismantle: fire
+picking_lockbox: keepsake box
+
+#summoned_weapons_ingot: animite
+summoned_weapons_element: electric
+summoned_weapons:
+- name: Large Edged
+- name: Heavy Thrown
+- name: Small Edged
+- name: Light Thrown
+
+stop_pick_on_mindlock: true
+mark_crafted_goods: false
+
+use_research: true
+research_skills:
+  - Warding
+  - Utility
+  - Augmentation
+  - Elemental Magic
+
+hunting_buddies:
+ - Kyver
+ - Mairon
+ - Schriel
+ - Syngolith
+ - Togdor
+ - Whagone
+
+favor_god: Meraud
+favor_goal: 40
+listen: false
+
+ignored_npcs:
+- owl
+- shadowling
+

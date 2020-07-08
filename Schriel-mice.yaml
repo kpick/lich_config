@@ -1,0 +1,49 @@
+dance_action:
+- bob
+dance_skill: Small Edged
+dance_threshold: 1
+
+weapon_training:
+  Small Edged: scimitar
+cycle_armors:
+  Chain Armor:
+  - chain greaves
+  Brigandine:
+  - scale greaves
+  Plate Armor:
+  - light greaves
+
+stances:
+  Small Edged:
+  - Evasion
+  - Parry Ability
+  - Shield Usage
+
+# Hunting settings
+hunting_info:
+#- :zone: orc_reivers
+- :zone: mechanical_mice
+  :duration: 20
+  before:
+  - safe-room
+  - go2 6003
+  - pick
+#  - xclimb
+  - go2 6003
+#  - first-aid
+  - sell-loot
+  stop_on:
+  - Small Edged
+  - Evasion
+  - Backstab
+  after:
+  - go2 6003
+  - appraisal
+  - safe-room
+  - burgle start rope
+ # - athletics undergondola
+  - go2 6003
+  - appraisal
+  - workorders shaping
+backstab: Small Edged
+ambush: true

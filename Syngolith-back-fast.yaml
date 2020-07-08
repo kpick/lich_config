@@ -1,0 +1,47 @@
+---
+#orc_scouts orc_bandits orc_reivers orc_raiders
+hunting_info:
+- :zone: [elder_prereni_stones, elder_blue_dappled_prereni, ice_adders]
+  :duration: 15
+  # args:
+  #  - r4
+  stop_on:
+    - Twohanded Edged
+  #before:
+  #  - athletics-lace
+  after:
+    - walk-to-safe
+    - go2 4069
+    - first-aid
+    - collect rock
+    - pick
+    - athletics
+
+weapon_training:
+  Twohanded Edged: glaes greatsword
+  # Twohanded Edged: war sword
+  # Light Thrown: six-weighted cuska
+  # Small Blunt: six-weighted cuska
+  # Staves: white nightstick
+  # Slings: spidersilk sling
+
+dance_skill: Twohanded Edged
+#offhand_thrown: true
+
+use_stealth_attacks: false
+training_abilities:
+  Hunt: 80
+  Perc: 120
+  App Quick: 60
+fatigue_regen_threshold: 75
+fatigue_regen_action: bob
+
+#cycle_armors:
+#  Light Armor:
+#    - leather gloves
+#  Chain Armor:
+#    - chain gloves
+#  Brigandine:
+#    - scale gloves
+#  Plate Armor:
+#    - heavy gauntlets

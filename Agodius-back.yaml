@@ -1,0 +1,49 @@
+---
+hunting_info:
+- :zone: reavers
+  args:
+  - d0
+  stop_on:
+  - Staves
+  
+training_abilities:
+  Perc: 180
+  App Quick: 60
+  Recall: 1800
+
+buff_nonspells:
+
+offensive_spells:
+- skill: Targeted Magic
+  name: Fire Ball
+  abbrev: FB
+  mana: 15
+  recast_every: 45
+- skill: Debilitation
+  name: Arc Light
+  abbrev: al
+  mana: 1
+  recast_every: 30
+
+dance_skill: Staves
+weapon_training:
+  Staves: quarterstaff
+  Polearms: lance
+  Twohanded Edged: marauder blade
+  Large Blunt: hara
+  Twohanded Blunt: maul
+  Small Blunt: mallet
+  Crossbow: battle stonebow
+  Slings: leather sling  
+#  Offhand Weapon: short sword
+
+
+summoned_weapons_element: electric
+summoned_weapons:
+ - name: Polearms
+ - name: Staves
+ - name: Twohanded Edged
+ - name: Large Blunt
+ - name: Twohanded Blunt 
+ - name: Small Blunt
+

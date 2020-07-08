@@ -1,0 +1,60 @@
+---
+# https://elanthipedia.play.net/Ranger#Circle_Requirements
+
+weapon_training:
+  Bow: reflex bow
+  # Slings: spidersilk sling
+
+dance_skill: 
+hunting_info:
+- :zone: mountain_giants
+  :duration: 20
+  args:
+    - r1
+  stop_on:
+  - Bow
+  before: 
+  - walk-to-safe
+  - go2 4069
+  - first-aid
+  after:
+  - walk-to-safe 
+  - go2 4069
+  #- walk-to-safe
+  - first-aid
+  - collect rock
+  - pick
+  - athletics
+  - burgle start
+  - athletics
+  - sell-loot
+
+offensive_spells:
+  - skill: Debilitation
+    name: Harawep's Bonds
+    abbrev: hb
+    use_auto_mana: true
+    expire: The spiders lose their interest in
+    #harmless: true
+  - skill: Debilitation
+    name: Devolve
+    abbrev: de
+    use_auto_mana: true
+#  - skill: Debilitation
+#    name: Grizzly Claws
+#    abbrev: griz
+#    use_auto_mana: true
+#    #cast_only_to_train: true
+#    harmless: true
+  - skill: Debilitation
+    name: Deadfall
+    abbrev: df
+    use_auto_mana: true
+
+use_stealth_attacks: false
+
+training_abilities:
+  App Quick:
+    :check: Appraisal
+    :cooldown: 120
+

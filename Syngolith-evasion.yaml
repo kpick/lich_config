@@ -1,0 +1,52 @@
+---
+# https://elanthipedia.play.net/Ranger#Circle_Requirements
+
+weapon_training:
+  Small Edged: dagger
+  #Offhand Weapon: dagger
+  #Brawling: ''
+  #Large Edged: aldamdin longsword
+ 
+
+dance_skill: Small Edged
+#train_with_spells: false
+skip_lockpick_ring_refill: true
+hunting_info:
+- :zone: black_apes
+  :duration: 20
+  before:
+#    - herb-stock 
+    #- walk-to-safe 
+    #- athletics
+    - safe-room
+    - first-aid
+    #- collect rock
+    #- first-aid
+    #- buff prebuff
+  after:
+    - walk-to-safe 
+    - go2 4069
+    - safe-room
+    - first-aid
+    #- collect rock
+    - pick
+    - burgle start
+  args:
+    - d1
+  stop_on:
+    - Evasion
+    - Small Edged
+
+use_stealth_attacks: true
+
+# offensive_spells:
+#   - skill: Debilitation
+#     name: Harawep
+#     abbrev: hb
+#     use_auto_mana: true
+#     expire: The spiders lose their interest in
+#     harmless: true
+#   - skill: Debilitation
+#     name: Swarm
+#     abbrev: swarm
+#     use_auto_mana: true

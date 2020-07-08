@@ -1,0 +1,89 @@
+---
+#intended for hunting with primrary weapons
+backstab: Small Blunt
+ambush: true
+dance_action:
+- bob
+dance_skill: Large Edged
+dance_threshold: 2
+use_weak_attacks: false
+hunting_info:
+- :zone: orc_reivers
+  :duration: 60
+  args:
+  - d0
+  before:
+#  - mining
+  - safe-room
+  - go2 6003
+  - pick
+  - sell-loot
+#  - crossing-r
+#  - steal
+#  - workorders tailoring
+#  - go2 6003
+  after:
+  - go2 6003
+  - burgle start
+  stop_on:
+  - Large Edged
+  - Shield Usage
+  - Brawling
+  - Offhand Weapon
+weapon_training:
+  Brawling: ''
+  Large Edged: bastard sword
+  Offhand Weapon: pasabas
+#  Crossbow: battle crossbow
+#  Light Thrown: bola
+#  Small Blunt: bola
+gear_sets:
+  standard:
+  - quilted shirt
+  - leather cowl
+  - quilted gloves
+  - chain greaves
+  - parry stick
+  - spiked knuckles
+  - knee spikes
+  - elbow spikes
+  - small shield
+  stealing:
+  - parry stick
+
+stances:
+#  Bow:
+#  - Evasion
+#  - Shield Usage
+#   - Parry
+  Crossbow:
+  - Evasion
+  - Shield
+  - Parry
+  Slings:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Offhand Weapon:
+  - Evasion
+  - Shield
+  - Parry
+  Brawling:
+  - Evasion
+  - Parry
+  - Shield
+  Large Edged:
+  - Evasion
+  - Shield
+  - Parry
+
+cycle_armors:
+  Chain Armor:
+  - chain greaves
+  Brigandine:
+  - scale greaves
+  Plate Armor:
+  - light greaves
+
+# Spellcasting (and Khri) settings
+kneel_khri: false
