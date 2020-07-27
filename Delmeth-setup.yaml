@@ -59,14 +59,16 @@ stealing_towns:
 #  - Shard
 #  - Horse Clan
 
+textbook: true
+textbook_type: textbook
 
 crafting_container: pack
 outfitting_room: 
 engineering_room: 
 alchemy_room: 6004 
 train_workorders:
-- Tailoring
-- Remedies
+# - Tailoring
+# - Remedies
 outfitting_tools:
 - knitting needle
 alchemy_tools:
@@ -142,8 +144,8 @@ gear:
   :hinders_lockpicking: false
   :is_worn: false
   :swappable: false
-- :adjective: triple
-  :name: bola
+- :adjective: throwing
+  :name: club
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: false
@@ -172,10 +174,10 @@ ambush: true
 weapon_training:
   Brawling: ''
   Small Edged: wide dagger
-  Light Thrown: wide dagger
+  Light Thrown: throwing club
   Crossbow: crossbow
   Offhand Weapon: wide dagger  
-  Small Blunt: triple bola
+  Small Blunt: throwing club
   Large Edged: stout broadsword  
 priority_weapons:
   - Small Edged
@@ -268,6 +270,7 @@ crossing_training:
   - Appraisal
   - Athletics
   - Scholarship
+  - First Aid
   - Outdoorsmanship
   - Performance
   - Utility

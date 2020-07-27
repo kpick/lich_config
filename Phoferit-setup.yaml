@@ -331,8 +331,8 @@ use_harness_when_arcana_locked: true
 empath_healing:
   HEAL:
   - 15
-  - 3
-  - 2
+  - 5
+  - 5
 
 
 ignored_npcs:
