@@ -1,0 +1,12 @@
+---
+hunting_info:
+- :zone: thrall_magus
+  args:
+  - d0
+  - back
+  stop_on:
+  - Plate Armor
+  - Heavy Thrown
+  - Twohanded Blunt
+  :duration: 50
+

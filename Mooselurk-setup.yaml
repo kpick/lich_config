@@ -1,0 +1,341 @@
+---
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Missile Mastery
+- Melee Mastery
+- Stealth
+- Plate Armor
+- Debilitation
+- Targeted Magic
+- Twohanded Edged
+hunting_info:
+- :zone: rock_guardians
+  args:
+    - d0
+    - r5
+  stop_on:
+  - Missile Mastery
+  - Melee Mastery
+  - Stealth
+  - Plate Armor
+  - Twohanded Edged
+  :duration: 20
+- :zone: geni
+  args:
+    - d0
+    - r2
+  stop_on:
+  - Targeted Magic
+  - Debilitation
+  :duration: 30
+- :zone: cave_trolls
+  args:
+    - d0
+    - r2
+  stop_on:
+  - Skinning
+  :duration: 20
+
+hunting_buddies:
+- Tekronn
+- Inkin
+- Torgro
+
+safe_room: 8926
+safe_room_id: 8926
+safe_room_empath: Xaji
+quit_on_status_warning: true
+braid_item: grass
+
+gear:
+- :adjective: ring
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: rugged
+  :name: gloves
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: scale
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: rugged
+  :name: greaves
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: ring
+  :name: balaclava
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: rugged
+  :name: cowl
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective:
+  :name: vest
+  :is_leather: true
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: small
+  :name: shield
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: war
+  :name: hammer
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+- :adjective:
+  :name: bow
+  :is_leather: true
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+- :adjective: light
+  :name: crossbow
+  :is_leather: true
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+- :adjective: triple-weighted
+  :name: bola
+  :is_leather: false
+  :is_worn: false
+- :adjective: plate
+  :name: vambraces
+  :is_leather: false
+  :is_worn: true
+- :adjective:
+  :name: sling
+  :is_leather: false
+  :is_worn: false
+- :adjective: bar
+  :name: mace
+  :is_leather: false
+  :is_worn: false
+  :swappable: true
+- :adjective:
+  :name: spear
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+- :name: stick
+  :adjective: parry
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+gear_sets:
+  standard:
+  - burlap vest
+  - small shield
+  - ring gloves
+  - scale greaves
+  - plate vambraces
+  - ring balaclava
+  - parry stick
+  naked: []
+offensive_spells:
+- skill: Debilitation
+  name: Mental Blast
+  abbrev: mb
+  mana: 20
+- skill: Targeted Magic
+  name: Dinazen Olkar
+  abbrev: do
+  mana: 2
+offensive_spell_cycle:
+- Dinazen Olkar
+- Mental Blast
+
+buff_spells:
+  Manifest Force:
+    abbrev: maf
+    recast: 1
+    mana: 5
+    cambrinth:
+    - 24
+    - 24
+  Seer's Sense:
+    abbrev: seer
+    recast: 1
+    mana: 15
+    cambrinth:
+    - 20
+    - 20
+  Shadows:
+    abbrev: shadows
+    recast: 2
+    mana: 32
+    cambrinth:
+    - 8
+    - 8
+    - 8
+    - 24
+  Moonblade:
+    abbrev: moonblade
+    moon: true
+    recast_every: 1400
+    mana: 15
+    cambrinth:
+    - 22
+    - 22
+  Cage of Light:
+    abbrev: col
+    moon: true
+    recast: 1
+    mana: 15
+    cambrinth:
+    - 20
+    - 18
+
+use_stealth_attacks: true
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+cambrinth: armband
+charged_maneuvers:
+  Brawling: palmstrike
+  Bow: powershot
+  Slings: powershot
+  Small Edged: cleave
+  Large Edged: cleave
+  Twohanded Edged: cleave
+  Small Blunt: crash
+  Large Blunt: crash
+  Twohanded Blunt: crash
+  Staves: twirl
+  Polearms: impale
+dance_skill: Small Blunt
+dance_actions:
+- bob
+- bob
+- bob
+- bob
+dance_actions_stealth:
+- bob
+- hide
+- stalk
+- bob
+aim_fillers_stealth:
+  Bow:
+  - bob
+  - hide
+  - bob
+weapon_training:
+  Bow: bow
+  Crossbow: light crossbow
+  Offhand Weapon: war hammer
+  Light Thrown: triple-weighted bola
+  Brawling: ''
+  Small Blunt: war hammer
+  Staves: moonstaff
+  Heavy Thrown: spear
+  Twohanded Edged: moonblade
+  Large Edged: moonblade
+  Small Edged: moonblade
+  Slings: a sling
+  Large Blunt: bar mace
+  Twohanded Blunt: bar mace
+  Polearms: spear
+summoned_weapons:
+  - name: Staves
+  - name: Twohanded Edged
+  - name: Large Edged
+  - name: Small Edged
+training_abilities:
+  Stealth: 60
+  Hunt: 80
+  # Astro: 300
+  Tactics: 30
+  PercMana: 240
+  App Quick: 60
+exp_timers:
+  Stealth: 300
+  First Aid: 720
+  Locksmithing: 600
+  Attunement: 130
+  Astrology: 180
+cambrinth_cap: 48
+listen: true
+training_spells:
+  Augmentation:
+    abbrev: cv
+    symbiosis: true
+  Warding:
+    abbrev: maf
+  Utility:
+    abbrev: pg
+    symbiosis: true
+hide_to_steal: true
+hand_armor: ring gloves
+crossing_training:
+- Perception
+- Performance
+- Locksmithing
+- Augmentation
+- Warding
+- Utility
+- Astrology
+- Attunement
+- Athletics
+- First Aid
+- Appraisal
+- Mechanical Lore
+- Engineering
+have_telescope: true
+lockpick_buff_bot: Roobeelitch
+picking_box_source: pack
+picking_box_storage: pack
+lockpick_buffs:
+  spells:
+    - abbrev: cv
+      mana: 52
+      cambrinth:
+      - 24
+      - 24
+    - abbrev: mt
+      mana: 15
+      cambrinth:
+      - 24
+      - 24
+mining_buddy_mine_every_room: true
+favor_goal: 15
+crafting_container: pack
+forge_container: pack
+stealing_bag: pack
+engineering_room: 793
+astrology_buffs:
+  spells:
+    - abbrev: pg
+      mana: 1

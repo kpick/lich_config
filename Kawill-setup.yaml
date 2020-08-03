@@ -1,0 +1,321 @@
+---
+# TODO quests (reserve 5 spell slots): Resurrection (1) (remember to push altar with pilgrim's badge), Fires of Ushnish (2), Murrula's Flames (2)
+
+# Hunting settings
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Brawling
+- Heavy Thrown
+- Polearms
+- Small Blunt
+# - Light Armor
+# - Chain Armor
+- Large Blunt
+- Twohanded Blunt
+- Light Thrown
+- Small Edged
+- Offhand Weapon
+- Large Edged
+- Twohanded Edged
+- Staves
+hunting_info:
+- :zone: cave_trolls
+  :duration: 30
+  stop_on:
+  - Brawling
+  - Heavy Thrown
+  - Polearms
+  - Small Blunt
+  # - Light Armor
+  # - Chain Armor
+hunting_file_list:
+- setup
+- back
+prehunt_buffs: 7958
+waggle_sets:
+  prehunt_buffs:
+    Shield of Light:
+      mana: 15
+    Manifest Force:
+      mana: 10
+    Minor Physical Protection:
+      mana: 10
+    Major Physical Protection:
+      mana: 10
+
+# Gear settings
+gear:
+- :adjective: chain
+  :name: hauberk
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: coarse
+  :name: cowl
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: coarse
+  :name: gloves
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: half
+  :name: plate
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective: scale
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective: scale
+  :name: balaclava
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective: scale
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective: target
+  :name: shield
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: brass
+  :name: knuckles
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: elbow
+  :name: spikes
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: light
+  :name: spear
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+- :adjective: bronze
+  :name: club
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+- :adjective: bastard
+  :name: sword
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: true
+  :tie_to:
+- :adjective: throwing
+  :name: spike
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: true
+- :adjective: bar
+  :name: mace
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: true
+- :adjective:
+  :name: nightstick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+gear_sets:
+  standard:
+  - chain hauberk
+  - coarse cowl
+  - coarse gloves
+  - target shield
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+sort_auto_head: false
+
+# Combat settings
+buff_spells:
+  Shield of Light:
+    mana: 15
+    cambrinth:
+    - 10
+    - 5
+  Minor Physical Protection:
+    mana: 10
+    cambrinth:
+    - 10
+    - 10
+  Manifest Force:
+    mana: 10
+    cambrinth:
+    - 10
+    - 10
+  Sanctify Pattern:
+    mana: 10
+    cambrinth:
+    - 10
+    - 10
+    cast: cast augmentation
+  Major Physical Protection:
+    mana: 10
+    cambrinth:
+    - 10
+    - 10
+  # Persistence of Mana:
+  #   focus: blue-lacquered inkwell
+  Benediction:
+    mana: 15
+    cambrinth:
+    - 10
+    - 10
+  Centering:
+    mana: 10
+    cambrinth:
+    - 10
+    - 10
+  # Auspice:
+  #   mana: 5
+  #   cambrinth:
+  #   - 4
+offensive_spells:
+- name: Hydra Hex
+  mana: 8
+  cast: cast malediction offense
+- name: Fists of Faenella
+  cast_only_to_train: true
+  mana: 2
+# - name: Soul Sickness
+#   mana: 1
+#   cambrinth:
+#   - 4
+dance_skill: Small Blunt
+training_abilities:
+  Tactics: 60
+  Hunt: 80
+  App Quick: 60
+  Perc: 120
+  Pray: 610
+  Meraud: 1200
+  Collect: 120
+weapon_training:
+  Brawling: ''
+  Heavy Thrown: light spear
+  Polearms: light spear
+  Small Blunt: bronze club
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+use_weak_attacks: true
+# priority_defense: Parry Ability
+loot_subtractions:
+- bolt
+- bolts
+- arrow
+- arrows
+- rock
+- rocks
+- coffer
+- strongbox
+- chest
+- caddy
+- trunk
+- casket
+- skippet
+- crate
+- box
+health_threshold: 80
+
+# Non-combat settings
+crossing_training:
+- Theurgy
+- Augmentation
+- Utility
+- Warding
+- Attunement
+- Perception
+# - Appraisal
+- Athletics
+- Sorcery
+# - First Aid
+- Outfitting
+- Scholarship
+- Outdoorsmanship
+- Mechanical Lore
+- Locksmithing
+train_workorders:
+- Tailoring
+training_spells:
+  Augmentation:
+    abbrev: Centering
+    symbiosis: true
+  Utility:
+    abbrev: Uncurse
+    symbiosis: true
+  Warding:
+    abbrev: MPP
+    symbiosis: true
+cyclic_training_spells:
+  Warding:
+    abbrev: GHS
+    cyclic: true
+cyclic_cycle_skills:
+- Warding
+favor_goal: 30
+favor_god: Kertigen
+water_holder: chalice
+flint_lighter: bronze club
+theurgy_supply_container: backpack
+listen: true
+# stop_pick_on_mindlock: false
+harvest_traps: false
+picking_box_source: bag
+lockpick_dismantle: pray
+sell_loot_pouch: false
+gem_pouch_adjective: suede
+spare_gem_pouch_container: bag
+crossing_training_sorcery:
+  abbrev: Compost
+  mana: 15
+  cambrinth:
+  - 15
+  - 15
+  - 10
+tithe: true
+
+quit_on_status_warning: true
+braid_item: grass
+saferoom_health_threshold: 25
+status_monitor_no_window: true
+bankbot_deposit_threshold: 0
+repair_every: 3
+repair_timer:
+
+# From UserVars
+crossing_training_sorcery_room:
+engineering_room:
+outfitting_room:
+safe_room:
+safe_room_id:
+safe_room_empath:
+slack_username:
+bankbot_name:
+bankbot_room_id:

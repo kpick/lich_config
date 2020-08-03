@@ -183,18 +183,18 @@ gear:
   :is_worn: true
   :is_leather: true
 #WEAPONS
-- :adjective: steel
-  :name: tachi
-  :is_leather: false
-  :hinders_lockpicking: false
-  :wield: true
-  :lodges: true
-- :adjective: short 
-  :name: sword
-  :is_leather: false
-  :hinders_lockpicking: false
-  :wield: true
-  :lodges: true
+#- :adjective: steel
+#  :name: tachi
+#  :is_leather: false
+#  :hinders_lockpicking: false
+#  :wield: true
+#  :lodges: true
+#- :adjective: short 
+#  :name: sword
+#  :is_leather: false
+#  :hinders_lockpicking: false
+#  :wield: true
+#  :lodges: true
 - :adjective: battle
   :name: stonebow
   :is_leather: true
@@ -421,23 +421,29 @@ charged_maneuvers:
 crossing_training:
  - Summoning
  - Warding
+ - Augmentation
+ - Elemental Magic
  - Utility
- - Appraisal
  - First Aid
  - Outdoorsmanship
- - Elemental Magic
  - Attunement
  - Arcana
- - Stealth
- - Augmentation
  - Athletics
- - Scholarship
  - Perception
- #- Locksmithing
  - Performance
- - Sorcery
+ #- Sorcery
  - Enchanting
  - Forging
+ #- Locksmithing
+ - Scholarship
+ - Appraisal
+ #- Stealth
+ #- Thievery
+
+appraisal_training:
+- gear
+#- art
+- pouches
 
 exp_timers:
   First Aid: 120
@@ -458,7 +464,7 @@ training_spells:
     symbiosis: false
 
 
-#crossing_training_sorcery_room: 1234
+crossing_training_sorcery_room: 6446
 #crossing_training_sorcery: CV 10
 
 textbook: true
@@ -516,6 +522,8 @@ lockpick_container: lockpick ring
 lockpick_dismantle: fire
 picking_lockbox: keepsake box
 
+worn_instrument: cowbell
+
 #summoned_weapons_ingot: animite
 summoned_weapons_element: electric
 summoned_weapons:
@@ -533,6 +541,34 @@ research_skills:
   - Utility
   - Augmentation
   - Elemental Magic
+
+train_with_burgle: false
+burgle_settings:
+  room: 6202                                 # pick your own room, you should pick a room that no guard will ''ever'' enter.  Picking rooms guards can come to is a failure on setup, not the script.
+  entry_type: lockpick                      # lockpick | rope | cycle
+  use_lockpick_ring: true                   # if you use a worn lockpick stacker
+  lockpick_container: lockpick ring         # name of your lockpick stacker
+  max_search_count: 2                       # max number of total searches to do including retries
+  retry: false                              # retry if you don't find loot.  default: false
+  loot: pawn                                # drop | keep | bin | pawn   default: keep 
+  loot_container: ruck                # container to keep loot in while burglering
+  safe_mode: true                           # stop searching and try to get out as quickly as possible when hearing footsteps. Default: true
+  room_blacklist:                           # array of rooms to ignore. Case sensitive.
+    - Kitchen
+  item_whitelist:                           # array of full item names (adj + noun) of items to keep no matter what.  Case Sensitive.  
+    - worn book
+    - memory orb
+    - blunt-tipped bolts
+    - blunt-tipped arrows
+    - blunt stones
+    - keepsake box
+    - quill
+  before:                                   # array of scripts to run, similar to #hunting-buddy, before the burgle (will be called right before buffing)
+  #  - yourscripthere with args here
+  #- put "untie h rope" 
+  after:                                    # array of scripts to run, similar to #hunting-buddy, after the burgle, (will be called right before script ends)
+  #  - anotherscript here
+  #- put "tie h rope to rucksack"
 
 hunting_buddies:
  - Kyver

@@ -1,0 +1,22 @@
+skinning:
+  skin: true
+  arrange_all: true
+  arrange_count: 1
+  tie_bundle: false
+  arrange_types:
+    stalker: bone
+    sluagh: bone
+
+weapon_training:
+  Heavy Thrown: spear
+
+dance_skill: Heavy Thrown
+
+use_stealth_attacks: false
+
+training_abilities:
+offensive_spells:
+buff_spells:
+
+dance_threshold: 0
+combat_spell_training:

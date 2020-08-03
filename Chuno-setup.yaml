@@ -1,0 +1,533 @@
+---
+hometown: Crossing
+repair_town: Hibarnhvidar
+slack_username: #####
+quit_on_status_warning: false
+status_monitor_no_window: true
+status_monitor_respond: false
+favor_god: Urrem'tier
+favor_goal: 40
+saferoom_health_threshold0: 5
+depart_on_death: false  
+health_threshold: 65
+repair_withdrawal_amount: 30000
+repair_timer: 43200 # Repair once every 12 hours
+repair_every: .inf # Infinity
+dump_junk: true
+
+default_stance: 100 100 5
+###############
+# Safe Room
+###############
+safe_room: &safe_room #####
+safe_room_empaths:
+- name: #####
+  id: #####
+# - name: #####
+#   id: #####
+- name: #####
+  id: #####
+# - name: #####
+#   id: #####
+listen: true
+listen_observe: true
+#hand_armor: sleeves
+athletics_outdoorsmanship_rooms: 
+- #####
+- #####
+- #####
+- #####
+- #####
+- #####
+- #####
+
+###############
+# T2
+###############
+training_list:
+- skill: 
+  - Small Edged
+  - Heavy Thrown
+  start: 34
+  scripts:
+  - rem eagle
+  - checkfavor
+  - go2 #####
+  - bitchin-pick
+  - rem owl #private script
+  - athletics wyvern
+  - go2 #####
+  - noncombats #private script
+  - gird #private script
+  - hunting-buddy stealth setup
+  - safe-room
+  - sloot shard #private script
+  - restock
+
+###############
+# Abilities
+###############
+waggle_sets:
+  default:
+  #- Python
+  - Piranha
+  - Eagle
+  - Dragon
+  - Monkey
+  - Tornado
+  - Wildfire
+  stealth:
+  - Panther
+  - Tornado
+  #- Python
+  prebuff:
+  #- Contemplation
+  #- Tenacity
+  #- Python
+  - Piranha
+  - Eagle
+  - Dragon
+  - Monkey
+  - Tornado
+  pick:
+  - Focus
+  - Owl
+  - Wildfire
+  test:
+  - Tenacity
+  bear:
+  - Bear
+  magicpvp:
+  - Swan
+  #- Turtle
+  - Piranha
+  - Eagle
+  - Monkey
+  - Wildfire
+  - Tornado
+  - Earthquake
+  #- Flashflood
+  - Serenity
+  - Bastion
+
+###############                                                       ##########
+# Hunting Buddy                                                                #
+###############                                                       ##########
+shuffle_rooms: false #private script
+hunting_info:
+- :zone:
+  - void_moths
+  - cabalist
+  - archons
+  args:
+  - d0
+  stop_on:
+  - Heavy Thrown
+  stop_on_low:
+  - Locksmithing
+  - Athletics
+- :zone:
+  - cabalist
+  - archons
+  args:
+  - d0
+  - boxes
+  boxes: true
+  :duration: 30
+stop_on_low_threshold: 5
+hunting_buddies:
+
+###############
+# Combat Trainer
+###############
+combat_trainer_target_increment: 3
+combat_trainer_action_count: 10
+priority_defense: Parry Ability
+skip_last_kill: false
+use_weak_attacks: false
+using_light_crossbow: true
+aiming_trainables:
+- Brawling
+- Small Edged
+- Large Edged
+- Small Blunt
+- Large Blunt
+- Light Thrown
+- Heavy Thrown
+- Staves
+- Polearms
+
+buff_nonspells:
+  roar quiet wail: 90
+  barb_buffs:
+#meds
+  #- Serenity
+  #- Contemplation
+  - Tenacity
+#forms
+  #- Turtle
+  #- Panther
+  #- Python
+  - Piranha
+  - Eagle
+  - Dragon
+  - Monkey
+  #- Swan
+#bers
+  #- Famine
+  - Tornado
+  #- Earthquake
+  - Wildfire
+  - Flashflood
+  #- Landslide
+
+training_abilities:
+  #Charged Maneuver: 30 #Used to train Expertise with custom 2handed whirlwind changes, 1750 capped expertise doesn't need anymore
+  Hunt: 180
+  App Quick: 120
+  Tactics: 30 # More than enough tactics for a lore tert barb
+
+dont_stalk: true
+ambush: false
+stealth_attack_aimed_action: poach
+use_stealth_attacks: false
+use_stealth_ranged: false
+
+###############
+# Weapons
+###############
+weapon_training:
+  Brawling: ''
+  Bow: yew shortbow
+  Crossbow: forester crossbow
+  Slings: sling
+  Polearms: spear
+  Small Edged: scimitar
+  Large Edged: longsword
+  Small Blunt: war hammer
+  Large Blunt: heavy mace
+  Staves: nightstick
+  Twohanded Blunt: bar mace
+  Twohanded Edged: greatsword
+  Heavy Thrown: spear
+  Light Thrown: throwing club
+dance_skill: Twohanded Edged
+
+###############
+# Barb Specific
+###############
+meditation_pause_timer: 6
+barb_combo_weapon: scimitar #private script
+use_barb_combos: true
+dual_load: true
+whirlwind_trainables:
+  - Twohanded Edged #private script
+  - Twohanded Blunt #private script
+  - Large Edged
+  - Small Edged
+  - Large Blunt
+  - Small Blunt
+  - Polearms
+  - Staves
+
+###############
+# Looting
+###############
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+
+loot_subtractions:
+- rock
+- rocks
+- peacock arrow
+- peacock arrows
+- purple bolt
+- purple bolts
+- arrow
+- arrows
+loot_additions:
+- coffer
+- strongbox
+- chest
+- caddy
+- trunk
+- casket
+- skippet
+- crate
+- box
+- dark blade
+- dark blades
+- bolt
+- bolts
+- small rock
+- small rocks
+- smooth rock
+- smooth rocks
+- tooth
+- boar arrow
+- boar arrows
+- long arrow
+- long arrows
+loot_specials:
+- name: stones
+  bag: backpack
+- name: pipe
+  bag: backpack
+- name: tobacco
+  bag: backpack
+- name: cigar
+  bag: narwhal
+- name: cigarillo
+  bag: narwhal
+
+###############
+# Hunting Buddy
+###############
+ignored_npcs:
+- student
+- leopard
+- owl
+- Taala
+- foal
+- watchsoul # Cleric spell
+- appraiser # Dwarven appraiser
+- shadowling
+- Servant # Shadow Servant
+- guard # Town guard
+- zombie # necromancer pet
+- lynx
+
+###############
+# Script Gear
+###############
+warhorn: warhorn
+thrown_item: saucer #private script
+thrown_container: forage sack #private script
+footwear: sandals
+textbook: true
+textbook_type: field guide
+held_athletics_items:
+  - bolts
+  - arrows
+
+###############
+# Selling
+###############
+gem_pouch_adjective: suede
+spare_gem_pouch_container: backpack
+full_pouch_container: narwhal
+sell_loot_pouch: true
+storage_containers:
+- narwhal
+- backpack
+
+###############
+# Stealing
+###############
+stealing_high_acceptable_count: 3
+stealing_low_acceptable_count: 3
+hide_to_steal: false
+bin_stolen: false
+stealing_towns:
+  - Crossing
+  - Arthe Dale
+  - Kaerna Village
+  - Tiger Clan
+  - Knife Clan
+  #- Dirge #WILL FUCK YOU OVER AND THUG YOU
+  # - Leth Deriel
+  # - Shard
+  # - Horse Clan
+  # - Aesry
+
+###############
+# Locksmithing
+###############
+lockpick_room_id: *safe_room
+use_lockpick_ring: true
+skip_lockpick_ring_refill: false
+lockpick_ignore_diffi1culty: false
+stop_pick_on_mindlock: true
+harvest_traps: false
+box_loot_limit: 15
+pet_boxes_on_hand: 5
+picking_pet_boxes_on_hand: 5 #private script
+box_hunt_minimum: 1
+picking_pet_box_source: haversack
+picking_box_source: backpack
+picking_box_storage: backpack
+lockpick_type: ordinary
+lockpick_dismantle: bash
+
+###############
+# Crafting
+###############
+train_workorders:
+- Blacksmithing
+crafting_container: backpack
+forging_belt:
+  name: forger belt
+  items:
+    - ball-peen hammer
+    - box-jaw tongs
+    - bellows
+    - wide shovel
+    - stirring rod
+forging_tools:
+- ball-peen hammer
+- box-jaw tongs
+- bellows
+- wide shovel
+- stirring rod
+
+###############
+# Mining
+###############
+mine_while_training: false
+mining_buddy_mine_every_room: false
+mining_implement: wide shovel
+mines_to_mine:
+- wicked_burrow
+- stone_clan
+- waterfall
+- abandoned_mine
+mining_buddy_vein_list:
+- Lumium
+- Darkstone
+- Damite
+- Kertig
+- Haralun
+- Glaes
+- Animite
+mine_use_packet: false
+
+###############
+# Gear Settings
+###############
+gear_sets:
+  standard: &std
+  - small shield
+  - quilted hood
+  - scale mask
+  - mail hauberk
+  - plate gauntlets
+  - parry stick
+  stealing: &stl
+  - parry stick
+  swimming: *std
+  naked: []
+
+cycle_armors:
+  # Brigandine:
+  # - scale greaves
+  # Plate Armor:
+  # - light greaves
+  # Chain Armor:
+  # - ring greaves
+  # Light Armor:
+  # - quilted pants
+
+restock:
+  arrow:
+    quantity: 30
+  bolt:
+    quantity: 30
+  rock:
+    hometown: Hibarnhvidar
+    name: smooth rocks
+    room: 12172
+    price: 45
+    size: 30
+    stackable: true
+    quantity: 30
+
+gear:
+#ARMOR
+- :adjective: small
+  :name: shield
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: quilted
+  :name: hood
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: scale
+  :name: mask
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: mail
+  :name: hauberk
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: plate
+  :name: gauntlets
+  :hinders_lockpicking: true
+  :is_worn: true
+#BRAWLING
+- :adjective: parry
+  :name: stick
+  :hinders_lockpicking: false
+  :is_worn: true
+#WEAPONS
+- :adjective: bar 
+  :name: mace
+  :wield: true
+- :adjective: yew
+  :name: shortbow
+  :is_leather: true
+  :wield: true
+- :adjective: forester
+  :name: crossbow
+  :is_leather: true
+  :wield: true
+- :name: sling
+  :is_leather: true
+  :wield: true
+- :name: nightstick
+  :wield: true
+- :adjective: war
+  :name: hammer
+  :wield: true
+- :adjective: heavy
+  :name: mace
+  :wield: true
+- :name: greatsword
+  :wield: true
+- :name: longsword
+  :wield: true
+- :name: spear
+  :wield: true
+  :lodges: true
+- :adjective: throwing
+  :name: axe
+  :is_leather: false
+  :wield: true
+  :bound: true
+- :adjective: throwing
+  :name: club
+  :wield: true
+  :lodges: false
+- :name: scimitar
+  :wield: true
+
+farming_cleanup_tasks: #private script
+  - go2 ####
+  - bitchin-pick normal
+  - safe-room force
+  - sloot crossing
+  - gird
+  - repair hibarnhvidar
+
+# Sorter
+sorter:
+  width: 25
+  mute_old_inventory: true
+  sort_inv_command: false
+  sort_look_others: false
+  sort_look_items_command: true
+  ignore_categories: lootables|trash 

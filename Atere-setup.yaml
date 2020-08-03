@@ -1,0 +1,334 @@
+---
+# TODO spells:
+# TODO feat: Area Casting (for RAGE and DRUM)
+
+# Hunting settings
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+# - Light Armor
+# - Chain Armor
+- Offhand Weapon
+- Staves
+- Large Edged
+- Polearms
+- Twohanded Edged
+- Twohanded Blunt
+hunting_file_list:
+- setup
+# - back
+hunting_info:
+- :zone: rock_guardians
+  :duration: 30
+  before:
+  - release_cyclic
+  # args:
+  # - r4
+  stop_on:
+  # - Brawling
+  # - Heavy Thrown
+  # - Large Blunt
+  # - Small Edged
+  # - Light Thrown
+  # - Small Blunt
+  - Offhand Weapon
+  - Staves
+  - Large Edged
+  - Polearms
+  - Twohanded Edged
+  - Twohanded Blunt
+prehunt_buffs: 7958
+waggle_sets:
+  prehunt_buffs:
+    Manifest Force:
+      mana: 5
+    Harmony:
+      mana: 30
+    Naming of Tears:
+      mana: 30
+hunting_buddies:
+- Evissam
+- Byd
+- Rakkor
+- Kaldean
+- Reverence
+- Aurayn
+- Jezzail
+- Zharen
+- Zharyn
+- Demeterus
+- Cresida
+- Remu
+- Wanz
+- Serature
+- Tebaud
+- Elegoth
+- Abius
+- Sheltim
+- Oratesen
+- Lhind
+- Phoerne
+- Tamfell
+
+# Gear settings
+gear:
+- :adjective: chain
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: ring
+  :name: vambraces
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: quilted
+  :name: tabard
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: leather
+  :name: cowl
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: leather
+  :name: greaves
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: small
+  :name: shield
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: brass
+  :name: knuckles
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: elbow
+  :name: spikes
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: throwing
+  :name: hammer
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+- :adjective: throwing
+  :name: spike
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: true
+  :tie_to:
+- :adjective:
+  :name: nightstick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective:
+  :name: cinquedea
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective:
+  :name: javelin
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective:
+  :name: greataxe
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective:
+  :name: akabo
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+gear_sets:
+  standard:
+  - chain gloves
+  - ring vambraces
+  - leather cowl
+  - quilted tabard
+  - leather greaves
+  - small shield
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+sort_auto_head: false
+
+# Combat settings
+offensive_spells:
+- name: Breath of Storms
+  mana: 2
+  cast_only_to_train: true
+# - name: Damaris' Lullaby
+  # mana: 6
+- name: Demrris' Resolve
+  mana: 3
+  cambrinth:
+  - 1
+buff_spells:
+  Manifest Force:
+    mana: 5
+    cambrinth:
+    - 5
+  Rage of the Clans:
+    mana: 15
+  Drums of the Snake:
+    mana: 15
+  Harmony:
+    mana: 30
+  Naming of Tears:
+    mana: 30
+  # Nexus:
+  #   mana: 30
+dance_skill: Large Edged
+training_abilities:
+  Tactics: 30
+  Hunt: 80
+  Perc: 120
+  Scream: 15
+  App Quick: 60
+  # Collect: 120
+weapon_training:
+  # Brawling: ''
+  # Heavy Thrown: throwing hammer
+  # Large Blunt: throwing hammer
+  # Small Edged: throwing spike
+  # Light Thrown: throwing spike
+  # Small Blunt: throwing spike
+  Staves: nightstick
+  Offhand Weapon: throwing spike
+  Large Edged: cinquedea
+  Polearms: javelin
+  Twohanded Edged: greataxe
+  Twohanded Blunt: akabo
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+loot_subtractions:
+- bolt
+- bolts
+- arrow
+- arrows
+- rock
+- rocks
+use_weak_attacks: true
+# priority_defense: Parry Ability
+health_threshold: 80
+
+# Non-combat settings
+crossing_training:
+- Forging
+- Engineering
+- Outfitting
+- Mechanical Lore
+# - Locksmithing
+- Sorcery
+- Augmentation
+- Utility
+- Warding
+- Attunement
+# - Appraisal
+- Performance
+- Athletics
+- Perception
+# - First Aid
+- Outdoorsmanship
+# - Alchemy
+# - Scholarship
+train_workorders:
+- Shaping
+- Tailoring
+- Blacksmithing
+# - Remedies
+# workorder_diff:
+  # remedies: hard
+forging_tools:
+- ball-peen hammer
+- articulated tongs
+- bellows
+- wide shovel
+- stirring rod
+training_spells:
+  Augmentation:
+    abbrev: ECRY
+    symbiosis: true
+  Utility:
+    abbrev: AOT
+    symbiosis: true
+  Warding:
+    abbrev: REPR
+    symbiosis: true
+cyclic_training_spells:
+  Augmentation:
+    abbrev: FAE
+    cyclic: true
+  Utility:
+    abbrev: HODI
+    cyclic: true
+  Warding:
+    abbrev: GJ
+    cyclic: true
+cyclic_cycle_skills:
+- Augmentation
+- Utility
+- Warding
+listen: true
+cambrinth: cambrinth armband
+cambrinth_cap: 32
+favor_goal: 30
+favor_god: Faenella
+gem_pouch_adjective: suede
+picking_box_source: haversack
+picking_box_storage: backpack
+stop_pick_on_mindlock: false
+harvest_traps: false
+lockpick_dismantle: shriek
+sell_loot_pouch: false
+spare_gem_pouch_container: haversack
+crossing_training_sorcery:
+  abbrev: MPP
+  mana: 23
+  cambrinth:
+  - 16
+  - 16
+
+quit_on_status_warning: true
+braid_item: grass
+saferoom_health_threshold: 25
+status_monitor_no_window: true
+bankbot_deposit_threshold: 0
+repair_every: 3
+repair_timer:
+dump_junk: true
+
+# From UserVars
+crossing_training_sorcery_room:
+engineering_room:
+outfitting_room:
+safe_room:
+safe_room_id:
+safe_room_empath:
+slack_username:
+bankbot_name:
+bankbot_room_id:

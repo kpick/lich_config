@@ -138,6 +138,12 @@ gear:
   :hinders_lockpicking: false
   :is_worn: false
   :swappable: false
+- :adjective: icesteel
+  :name: mambeli
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false  
 - :adjective: stout
   :name: broadsword
   :is_leather: false
@@ -173,7 +179,7 @@ gear_sets:
 ambush: true
 weapon_training:
   Brawling: ''
-  Small Edged: wide dagger
+  Small Edged: icesteel mambeli
   Light Thrown: throwing club
   Crossbow: crossbow
   Offhand Weapon: wide dagger  

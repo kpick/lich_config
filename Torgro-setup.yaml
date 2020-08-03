@@ -1,0 +1,302 @@
+---
+training_manager_hunting_priority: false
+hunting_info:
+- :zone: warklin
+  :duration: 30
+  stop_on:
+  - Brawling
+  - Twohanded Edged
+  - Large Edged
+  - Large Blunt
+  - Twohanded Blunt
+  - Heavy Thrown
+  - Polearms
+  - Small Edged
+  - Small Blunt
+  - Light Thrown
+  - Staves
+prehunt_buffs: 1189
+waggle_sets:
+  prehunt_buffs:
+    Sure Footing:
+      cambrinth:
+      - 20
+      - 15
+      - 15
+    Swirling Winds:
+      cambrinth:
+      - 20
+      - 15
+      - 15
+    Manifest Force:
+      cambrinth:
+      - 20
+      - 15
+      - 15
+hunting_buddies:
+- Sheltim
+- Mooselurk
+- Fuss
+- Feltzer
+
+gear:
+- :adjective: plate
+  :name: gauntlets
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: scale
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: quilted
+  :name: gloves
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: ring
+  :name: balaclava
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: round
+  :name: sipar
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: ring
+  :name: shirt
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: quilted
+  :name: pants
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: scale
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: light
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: brass
+  :name: knuckles
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: elbow
+  :name: spikes
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+gear_sets:
+  standard:
+  - quilted gloves
+  - ring balaclava
+  - round sipar
+  - ring shirt
+  - quilted pants
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+cycle_armors:
+  Plate Armor:
+  - plate gauntlets
+  - light greaves
+  Brigandine:
+  - scale gloves
+  - scale greaves
+  Light Armor:
+  - quilted gloves
+  - quilted pants
+
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+offensive_spells:
+# - skill: Targeted Magic
+#   name: Fire Rain
+- name: Electrostatic Eddy
+  cambrinth:
+  - 25
+- name: Fire Shards
+  cast_only_to_train: true
+  cambrinth:
+  - 15
+- name: Anther's Call
+  cambrinth:
+  - 30
+# - name: Mark of Arhat
+#   cambrinth:
+#   - 1
+buff_spells:
+  # Ignite:
+  #   prep_time: 0
+  Ethereal Fissure:
+    cambrinth:
+    - 20
+    - 15
+    - 15
+    cast: cast earth
+  Sure Footing:
+    cambrinth:
+    - 20
+    - 15
+    - 15
+  Swirling Winds:
+    cambrinth:
+    - 20
+    - 15
+    - 15
+  Manifest Force:
+    cambrinth:
+    - 20
+    - 15
+    - 15
+  # Veil of Ice:
+  # Aegis of Granite:
+  #   focus: metal jar
+  Zephyr:
+    cambrinth:
+    - 20
+    - 15
+    - 15
+  Y'ntrel Sechra:
+    cambrinth:
+    - 20
+    - 15
+    - 15
+buff_nonspells:
+  # pathway focus quick: 300
+  # summon earth domain: 300
+dance_skill: Small Edged
+training_abilities:
+  Hunt: 80
+  Perc: 120
+  App Quick: 60
+weapon_training:
+  Brawling: ''
+  Twohanded Edged: blade
+  Large Edged: broadsword
+  Large Blunt: hara
+  Twohanded Blunt: maul
+  Heavy Thrown: javelin
+  Polearms: lance
+  Small Edged: scimitar
+  Small Blunt: mallet
+  Light Thrown: bola
+  Staves: quarterstaff
+summoned_weapons:
+- name: Twohanded Edged
+- name: Large Edged
+- name: Large Blunt
+- name: Heavy Thrown
+- name: Polearms
+- name: Small Edged
+- name: Small Blunt
+- name: Light Thrown
+- name: Twohanded Blunt
+- name: Staves
+loot_subtractions:
+- arrow
+- arrows
+- bolt
+- bolts
+- rock
+- rocks
+# use_weak_attacks: true
+
+training_spells:
+  Warding:
+    abbrev: VOI
+    symbiosis: true
+  Utility:
+    abbrev: FOI
+    symbiosis: true
+    after:
+    - message: climb wall
+      matches:
+      - When you reach the bottom
+      - Climb what
+    # abbrev: ignite
+    # before:
+    # - message: get broadsword
+    #   matches: You are
+    # cast: cast broadsword
+    # after:
+    # - message: stow broadsword
+    #   matches: You put
+  Augmentation:
+    abbrev: YS
+    symbiosis: true
+listen: true
+crossing_training:
+# - Engineering
+- Forging
+- Outfitting
+- Sorcery
+# - Appraisal
+- Athletics
+- Outdoorsmanship
+- Perception
+- Warding
+- Augmentation
+- Summoning
+- Utility
+- Attunement
+- Mechanical Lore
+# - First Aid
+# - Scholarship
+train_workorders:
+- Blacksmithing
+- Tailoring
+- Shaping
+crafting_container: backpack
+forging_tools:
+- ball-peen hammer
+- tongs
+- bellows
+- shovel
+- stamp
+- pliers
+- stirring rod
+cambrinth_cap: 50
+sell_loot_pouch: false
+gem_pouch_adjective: suede
+spare_gem_pouch_container: bag
+dedicated_camb_use: spell
+crossing_training_sorcery:
+  abbrev: Athleticism
+  symbiosis: true
+favor_god: Meraud
+favor_goal: 30
+
+quit_on_status_warning: true
+braid_item: grass
+saferoom_health_threshold: 25
+status_monitor_no_window: true
+bankbot_deposit_threshold: 0
+
+# From UserVars
+crossing_training_sorcery_room:
+engineering_room:
+outfitting_room:
+safe_room:
+safe_room_id:
+safe_room_empath:
+slack_username:
+bankbot_name:
+bankbot_room_id:

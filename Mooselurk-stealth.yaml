@@ -1,0 +1,9 @@
+gear_sets:
+  standard:
+  - burlap vest
+  - rugged gloves
+  - rugged greaves
+  - rugged cowl
+  - plate vambraces
+  - small shield
+  naked: []

@@ -1,0 +1,793 @@
+---
+combat_teaching_skill: slings
+#stealing_data_builder_mode: true
+slack_username: sarvatt
+hometown: Shard
+hand_armor: gauntlet
+using_light_crossbow: true
+magic_exp_training_max_threshold: 8
+default_stance: 100 93 0
+
+force_healer_town: Leth Deriel
+safe_room: &safe_room 12345
+safe_room_empaths:
+- name: Bob
+  id: 9999
+- name: Dick
+  id: 8888
+- name: Harry
+  id: 7777
+health_threshold: 0
+saferoom_health_threshold: 8
+engineering_room: *safe_room
+outfitting_room: *safe_room
+crossing_training_sorcery_room: 12346
+compost_room: *safe_room
+lockpick_room_id: *safe_room
+repair_every: 4
+repair_timer: 21600
+sell_loot_money_on_hand: 19 gold
+prehunt_buffs: *safe_room
+
+#Training Manager Settings
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Small Edged
+hunting_file_list:
+- setup
+#- stealth
+- back
+#- stealth
+#priority_skills_lower_limit: 4
+hunting_info:
+- :zone: juvenile_wyverns
+  args:
+  - d1
+  stop_on:
+  - Small Edged
+  - Evasion
+  :duration: 45
+  before:
+#  - checkout
+  - go2 12346
+  - stack-scrolls carry
+  - sorcery
+  - pick
+  - sorcery
+  - athletics wyvern
+  during:
+  - bandaid
+  - ranger-companion
+
+empty_hunting_room_messages:
+- Anyone?
+
+hunting_buddies:
+- Embrace
+- Scaley
+- Robkin
+- Majorly
+- Zharen
+- Bhaalgorn
+- Reverence
+- Kaldean
+- Rikkon
+- Rakkor
+- Byd
+- Gallifreius
+- Dijkstra
+- Crannach
+- Atanamir
+- Vune
+- Kerizon
+- Dartellum
+- Tybress
+- Rhakim
+- Missah
+- Yggrald
+- Aruthas
+
+gear:
+- :name: shackle
+  :adjective: animite
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+  :swappable: false
+- :name: balaclava
+  :adjective: chainmail
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :name: balaclava
+  :adjective: lamellar
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :name: leathers
+  :adjective: black
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :name: sallet
+  :adjective:
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :name: gauntlet
+  :adjective: plate
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :name: sipar
+  :adjective: round
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :name: spikes
+  :adjective: elbow
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :name: spike
+  :adjective: knee
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :name: footwraps
+  :adjective: steel
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+  :swappable: false
+- :name: cutlass
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :wield: true
+- :name: allarh
+  :is_worn: false
+  :wield: true
+- :name: sword
+  :adjective: bastard
+  :swappable: true
+  :wield: true
+- :name: greataxe
+  :is_leather: false
+  :hinders_lockpicking: false
+  :wield: false
+  :tie_to: odaj
+- :name: shortbow
+  :adjective: nisha
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+  :swappable: false
+- :name: mace
+  :adjective: bar
+  :swappable: true
+  :wield: true
+- :name: nightstick
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :wield: true
+- :name: sling
+  :adjective: dark-scale
+  :is_leather: true
+  :is_worn: false
+- :name: crossbow
+  :adjective: forest
+  :is_leather: true
+  :is_worn: true
+- :name: shoe
+  :adjective: leather
+  :is_leather: false
+# This is added to work around a bug with needles being discarded
+- :name: needles
+  :adjective: knitting
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: false
+  :tie_to: out belt
+  :skip_repair: true
+- :name: stamp
+  :adjective: basic
+  :is_leather: false
+
+gear_sets:
+  standard:
+  - black leathers
+  - round sipar
+  - plate gauntlet
+  - chainmail balaclava
+  - animite shackle
+  - nisha shortbow
+  - forest crossbow
+  - steel footwraps
+  - knee spikes
+  - elbow spikes
+  stealing:
+  - nisha shortbow
+  - forest crossbow
+  - animite shackle
+  - steel footwraps
+  - knee spikes
+  - elbow spikes
+  swimming:
+  - nisha shortbow
+  - forest crossbow
+  - animite shackle
+  - steel footwraps
+  - knee spikes
+  - elbow spikes
+
+cycle_armors:
+  Chain Armor:
+  - chainmail balaclava
+  Brigandine:
+  - lamellar balaclava
+
+default_armor_type: Chain Armor
+cycle_armors_time: 240
+cycle_armors_hysteresis: true
+
+weapon_training:
+  Bow: nisha shortbow
+  Heavy Thrown: allarh
+  Brawling: ''
+  Small Edged: cutlass
+footwear: boots
+
+aim_fillers:
+  Bow:
+  - get allarh; lob left; get allarh; lob left; get allarh; stow allarh
+  Crossbow:
+  - get shoe; lob left; get shoe; lob left; get shoe; jab left; stow shoe
+  Slings:
+  - get shoe; jab left; lob left; get shoe; lob left; get shoe; stow shoe
+
+aiming_trainables:
+- Tactics
+- Brawling
+- Heavy Thrown
+
+use_stealth_attacks: true
+dont_stalk: true
+# switch to slip stalk instead of hide, it teaches better
+#hide_type: stalk
+stealth_attack_aimed_action: snipe
+
+training_abilities:
+  Teach: 120
+  Hunt: 80
+  Perc: 120
+  App Quick: 90
+#  Collect: 200
+  Analyze: 121
+  Locks: 70
+  Almanac: 120
+
+performance_monitor_weapons:
+  - cutlass
+  - nisha shortbow
+
+offensive_spells:
+- skill: Targeted Magic
+  name: Stampede
+  abbrev: stampede
+  mana: 20
+  cast_only_to_train: true
+- skill: Debilitation
+  name: Swarm
+  abbrev: swarm
+  mana: 15
+  harmless: true
+  cast: cast creatures
+
+buff_spells: &buffs
+  Ease Burden:
+    abbrev: EASE
+    recast: 1
+    mana: 20
+    cambrinth:
+    - 20
+    - 20
+    - 20
+#  Essence of Yew:
+#    abbrev: ey
+#    recast: 1
+#    mana: 20
+#    cambrinth:
+#    - 20
+#    - 10
+  Manifest Force:
+    abbrev: maf
+    mana: 30
+#  Lay Ward:
+#    abbrev: lw
+#    mana: 20
+  Instinct:
+    abbrev: INST
+    recast: 2
+    mana: 20
+    cambrinth:
+    - 20
+    - 20
+  Skein of Shadows:
+    abbrev: SKS
+    recast: 2
+    mana: 20
+    cambrinth:
+    - 20
+    - 10
+  See the Wind:
+    abbrev: stw
+    recast: 4
+    mana: 30
+    cambrinth:
+    - 20
+    - 20
+    - 20
+  Senses of the Tiger:
+    abbrev: sott
+    recast: 1
+    mana: 30
+    cambrinth:
+    - 20
+    - 20
+    - 15
+  Oath of the Firstborn:
+    abbrev: oath
+    recast: 1
+    mana: 30
+    cambrinth:
+    - 20
+    - 20
+  Claws of the Cougar:
+    abbrev: cotc
+    recast: 1
+    mana: 25
+    cambrinth:
+    - 25
+    - 22
+  Vigor:
+    abbrev: Vigor
+    mana: 25
+    cambrinth:
+    - 25
+    - 22
+  Syamelyo Kuniyo:
+    abberv: sk
+    recast: -1
+    mana: 60
+
+prep_scaling_factor: 0.90
+cambrinth: water bag
+cambrinth_cap: 108
+
+dance_skill: Small Edged
+dance_actions:
+- circle
+- bob
+- jab
+- weave
+- gouge
+- analyze
+
+use_weak_attacks: false
+fatigue_regen_threshold: 65
+dual_load: true
+priority_defense: Evasion
+
+# no boxes, more gems/scrolls for this hunt, overridden in -back
+#custom_loot_type: treasure
+depart_type: full
+
+box_loot_limit: 8
+
+skinning:
+  skin: true
+  arrange_all: true
+  arrange_count: 1
+  tie_bundle: true
+
+loot_subtractions:
+- rock
+- coffer
+- strongbox
+- chest
+- caddy
+- trunk
+- casket
+- skippet
+- crate
+- box
+- bolt
+- arrow
+- arrows
+
+loot_additions:
+- long arrow
+- long arrows
+- fang arrow
+- fang arrows
+- package
+- ball
+- license
+- map
+- writ
+- permit
+- pass
+- ivory tooth
+- profile
+- seastars
+- featherstone
+
+loot_specials:
+- name: stones
+  bag: clutch
+
+waggle_sets:
+  default:
+    << : *buffs
+#  prehunt_buffs:
+#    Ease Burden:
+#      abbrev: EASE
+#      recast: 1
+#      mana: 20
+#      cambrinth:
+#      - 20
+#      - 20
+#      - 20
+#    Essence of Yew:
+#      abbrev: ey
+#      mana: 20
+#      cambrinth:
+#      - 20
+#      - 10
+#    Manifest Force:
+#      abbrev: maf
+#      mana: 30
+#    Lay Ward:
+#      abbrev: lw
+#      mana: 20
+  embrace:
+    Ease Burden:
+      abbrev: EASE
+      recast: 1
+      pet_type: Embrace
+      mana: 20
+      cambrinth:
+      - 20
+      - 20
+      - 20
+      cast: cast embrace
+    Instinct:
+      abbrev: INST
+      recast: 2
+      pet_type: Embrace
+      mana: 20
+      cambrinth:
+      - 20
+      - 20
+      cast: cast embrace
+    Senses of the Tiger:
+      abbrev: sott
+      recast: 1
+      pet_type: Embrace
+      mana: 20
+      cambrinth:
+      - 20
+      - 20
+      - 15
+      - 15
+      cast: cast embrace
+
+crafting_container: rucksack
+
+#train_workorders:
+#- Shaping
+#- Tailoring
+workorder_cash_on_hand: 12000
+craft_max_mindstate: 12
+yarn_quantity: 200
+
+outfitting_belt:
+  name: outfitter's belt
+  items:
+    - knitting needles
+    - yardstick
+    - scissors
+    - sewing needles
+    - hide scraper
+engineering_belt:
+  name: carp belt
+  items:
+    - carving knife
+    - shaper
+    - drawknife
+    - rasp
+    - bone saw
+    - serrated saw
+outfitting_tools:
+- knitting needles
+- yardstick
+- scissors
+- sewing needles
+- hide scraper
+- slickstone
+- stamp
+shaping_tools:
+- carving knife
+- shaper
+- drawknife
+- rasp
+- bone saw
+- serrated saw
+- stamp
+forging_tools:
+- black hammer
+- tongs
+- stir rod
+- pliers
+- bellows
+- stamp
+forging_belt:
+  name: odaj
+  items:
+  - black hammer
+  - bellows
+mark_crafted_goods: true
+workorder_max_items: 3
+workorder_recipes:
+  tailoring:
+     - a hooded cloth cloak
+     - some cloth dress pants
+     - a cloth charm bag
+     - a cloth tabard
+     - a formal cloth tunic
+     - a cloth gown
+     - a cloth dress shirt
+     - a floor-length cloth dress
+     - a knitted cloak
+     - a knitted blanket
+     - a cloth duffel bag
+     - a cloth haversack
+     - a cloth bandolier
+  shaping:
+     - a composite bow
+     - a flatbow
+#     - a competition shortbow
+     - a double-backed bow
+#     - a skirmisher's bow
+     - a reflex longbow
+#    - a rough wood table
+#    - a low woodtable
+#    - a high wood table
+#    - a round wood table
+#    - a square wood table
+#    - a long wood table
+#    - an oval wood table
+#    - a wood dining table
+#    - a wood buffet table
+#    - a wood refectory table
+#    - a wood parquet table
+#    - a wood meditation table
+
+combat_spell_training:
+  Augmentation:
+    abbrev: wotp
+    symbiosis: true
+    use_auto_mana: true
+  Warding:
+    abbrev: ey
+    symbiosis: true
+    use_auto_mana: true
+  Utility:
+    abbrev: sks
+    symbiosis: true
+    use_auto_mana: true
+
+training_spells:
+  Augmentation:
+    abbrev: WOTP
+    symbiosis: true
+  Warding:
+    abbrev: ey
+    symbiosis: true
+  Utility:
+    abbrev: SKS
+    symbiosis: true
+
+crafting_training_spells:
+  Augmentation:
+    abbrev: WOTP
+    symbiosis: true
+    mana: 20
+  Warding:
+    abbrev: ey
+    symbiosis: true
+    mana: 26
+  Utility:
+    abbrev: SKS
+    symbiosis: true
+    mana: 34
+
+crossing_training:
+- Sorcery
+- Mechanical Lore
+- Outfitting
+- First Aid
+- Athletics
+- Outdoorsmanship
+- Attunement
+- Thievery
+- Outfitting
+- Engineering
+- Locksmithing
+
+crossing_training_sorcery:
+  abbrev: es
+  mana: 15
+  symbiosis: true
+crossing_training_force_cambrinth: true
+cambrinth_invoke_exact_amount: true
+
+status_monitor_no_window: true
+quit_on_status_warning: false
+
+braid_item: vine
+forage_item: rock
+dump_junk: true
+dump_item_count: 10
+
+picking_box_source: carryall
+picking_pet_box_source: rucksack
+picking_box_storage:
+stop_pick_on_mindlock: true
+use_lockpick_ring: true
+pick_blind: true
+skip_lockpick_ring_refill: false
+lockpick_type: stout iron
+harvest_traps: false
+lockpick_dismantle: whistle
+lockpick_ignore_difficulty: false
+
+listen: true
+
+textbook: true
+textbook_type: cookbook
+
+storage_containers:
+- rucksack
+- quiver
+- carryall
+- scabbard
+- clutch
+sell_loot_pouch: true
+sell_loot_bundle: true
+
+appraisal_training:
+- bundle
+- gear
+- pouches
+full_pouch_container: rucksack
+spare_gem_pouch_container: carryall
+gem_pouch_adjective: fuzzy
+
+ignored_npcs:
+- wolf
+- raccoon
+- owl
+- goat
+- Brokk
+- warrior
+
+stealing_towns:
+#  - Crossing
+#  - Arthe Dale
+#  - Kaerna Village
+#  - Tiger Clan
+#  - Knife Clan
+#  - Leth Deriel
+  - Shard
+  - Horse Clan
+
+mine_for_outdoorsmanship: false
+
+mining_buddy_vein_list:
+#- Silver
+#- Gold
+#- Platinum
+- Lumium
+- Damite
+- Kertig
+- Haralun
+- Glaes
+- Animite
+- Muracite
+- Quelium
+
+mine_use_packet: false
+lumber_use_packet: false
+mining_skip_populated: true
+mines_to_mine:
+- waterfall
+- wicked_burrow
+- wicked_burrow_climbing
+- stone_clan
+- abandoned_mine
+- warklins
+- ice_caves
+
+lumber_implement: greataxe
+
+forests_to_chop:
+- twisted_dryads
+- road_to_shard
+- undergondola_river
+- undergondola_leucro
+- adanf_woods
+- darkling_woods
+lumber_skip_populated: true
+lumber_buddy_tree_list:
+#- Maple
+#- Cherry #shortbows
+#- Ramin #longbows
+#- Yew
+#- Osage
+#- Hickory #Composite
+#- Lelori #Composite
+#- Sandalwood #Composite
+#- Ironwood #martial
+# very rare
+- Darkspine
+- Albarco
+- Rockwood
+- Bloodwood
+- Copperwood
+- Mistwood
+- Goldwood
+- Azurelle
+- Silverwood
+
+scroll_stackers:
+- tome
+- poke
+- folio
+
+restock:
+  bolt:
+    quantity: 45
+  arrow:
+    quantity: 45
+#  milk:
+#    name: fresh milk
+#    size: 1
+#    stackable: false
+#    room: 19240
+#    price: 18
+#    quantity: 5
+
+
+
+favor_goal: 50
+favor_god: Kuniyo
+use_favor_altars: true
+water_holder: chalice
+
+dynamic_dance_skill: true
+status_monitor_respond: false
+
+combat_trainer_target_increment: 6
+combat_trainer_action_count: 15
+
+warhorn: egg
+
+boggle_cash_on_hand: 30 platinum
+boggle_stow_container: carry
+boggle_full_container: clutch
+boggle_withdraw: true

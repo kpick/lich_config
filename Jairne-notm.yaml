@@ -1,0 +1,6 @@
+---
+offensive_spells:
+  - skill: Debilitation
+    name: Sleep
+    abbrev: sleep
+    mana: 7

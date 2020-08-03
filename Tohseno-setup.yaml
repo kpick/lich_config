@@ -1,0 +1,301 @@
+---
+# https://elanthipedia.play.net/Warrior_Mage#Circle_Requirements
+# 3 Magics: Arcana, Targeted Magic, Attunement
+# 5 Weapons (only 3 are needed to circle): Brawling, Heavy Thrown, Polearms, Large Edged, Twohanded Edged
+# 2 Armors (only 1 is needed to circle): Light Armor, Shield Usage
+# 4 Survivals: Athletics, Perception, Skinning, Stealth
+# 3 Lores: Appraisal, Tactics, Scholarship
+
+# Eventually you will need to train 2 more Magics to circle (for a total of 5)
+# However, you will probably end up training them all since they each have very useful spells
+# The other Magic skills are: Augmentation, Warding, Debilitation, Utility
+
+# Hunting settings
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Brawling
+- Heavy Thrown
+# - Polearms
+# - Crossbow
+# - Evasion
+# - Chain Armor
+
+hunting_file_list:
+- setup
+- back
+
+hunting_info:
+- :zone: geni
+  stop_on:
+  - Brawling
+  - Heavy Thrown
+  - Polearms
+  - Chain Armor
+  :duration: 80
+
+custom_loot_type: treasure
+
+# Gear settings
+gear:
+- :name: backplate
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :name: breastplate
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: scale
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: scale
+  :name: helm
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: ring
+  :name: tasset
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: quilted
+  :name: mask
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: quilted
+  :name: vambraces
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: ring
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: small
+  :name: shield
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: brass
+  :name: knuckles
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: elbow
+  :name: spikes
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: light
+  :name: spear
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective: forester
+  :name: crossbow
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+gear_sets:
+  standard:
+  - backplate
+  - breastplate
+  - scale gloves
+  - scale helm
+  - quilted mask
+  - quilted vambraces
+  - ring greaves
+  - ring tasset
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+  - forester crossbow
+  - small shield
+
+
+# Combat settings
+offensive_spells:
+- skill: Targeted Magic
+  name: Fire Shards
+  abbrev: fs
+  max_threshold: 1
+  mana: 5
+  cast_only_to_train: true
+- skill: Targeted Magic
+  name: Fire Ball
+  abbrev: fb
+  min_threshold: 2
+  mana: 16
+  cast_only_to_train: true
+- skill: Debilitation
+  name: Electrostatic Eddy
+  abbrev: ee
+  mana: 6
+  cyclic: true
+
+offensive_spell_cycle:
+- Electrostatic Eddy
+- Fire Ball
+- Fire Shards
+
+buff_nonspells:
+  pathway focus quick: 300
+
+buff_spells:
+  Manifest Force:
+    abbrev: MAF
+    recast: 1
+    mana: 7
+    prep_time: 5
+  Sure Footing:
+    abbrev: SUF
+    recast: 1
+    mana: 15
+    cambrinth:
+    - 12
+    - 12
+  Swirling Winds:
+    abbrev: SW
+    recast: 1
+    mana: 15
+    cambrinth:
+    - 12
+    - 12
+  Ethereal Fissure:
+    abbrev: ETF
+    mana: 15
+    cambrinth:
+    - 5
+    expire: fissure collapses in on itself, winking out of existence
+    cast: cast electric
+  Aegis of Granite:
+    abbrev: AEG
+    recast: 2
+    mana: 310
+    ritual: true
+    focus: metal jar
+
+dance_skill: Polearms
+training_abilities:
+  Tactics: 30
+  Hunt: 80
+  Perc: 120
+  App Quick: 60
+weapon_training:
+  Brawling: ''
+  Heavy Thrown: light spear
+  Polearms: light spear
+  Crossbow: forester crossbow
+use_weak_attacks: true
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+
+# Non-combat settings
+crossing_training:
+- Summoning
+- Warding
+- Augmentation
+- Utility
+- Athletics
+- Perception
+- Attunement
+# - Forging
+- First Aid
+- Locksmithing
+- Mechanical Lore
+- Scholarship
+
+dedicated_camb_use: spell
+
+combat_spell_training:
+  Augmentation:
+    abbrev: SUB
+    mana: 5
+    cambrinth:
+    - 2
+    - 2
+    symbiosis: true
+  Warding:
+    abbrev: es
+    symbiosis: true
+    mana: 4
+  Utility:
+    abbrev: GAF
+    mana: 12
+    cambrinth:
+    - 11
+    - 11
+    - 10
+
+training_spells:
+  Augmentation:
+    abbrev: sub
+    symbiosis: true
+  Warding:
+    abbrev: es
+    symbiosis: true
+  Utility:
+    abbrev: gaf
+    symbiosis: true
+
+safe_room: 984
+training_rooms:
+- 984
+- 851
+- 992
+#braid_item: grass
+cambrinth: cambrinth armband
+cambrinth_cap: 32
+
+train_workorders:
+- Blacksmithing
+
+spare_gem_pouch_container: bag
+gem_pouch_adjective: green
+sell_loot_pouch: false
+
+loot_subtractions:
+- coffer
+- strongbox
+- chest
+- caddy
+- trunk
+- casket
+- skippet
+- crate
+- box
+
+picking_box_source: bag
+picking_box_storage: backpack
+picking_pet_box_source: backpack
+lockpick_type: stout
+lockpick_dismantle: fire
+harvest_traps: false
+
+favor_god: Meraud
+favor_goal: 30
+
+safe_room_id: 8926
+safe_room_empath: Xaji
+
+forging_tools:
+- ball-peen hammer
+- tong
+- bellow
+- shovel
+
+lockpick_buff_bot: Roobeelitch
+priority_defense: Parry Ability
+symbiosis_learning_threshold: 3

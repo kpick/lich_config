@@ -1,0 +1,224 @@
+---
+hunting_info:
+- :zone: pale_gray_spirits
+  args:
+  - d0
+  - undead
+  :duration: 30
+gear:
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+- :adjective: scale
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :adjective: rugged
+  :name: cowl
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :adjective: chain
+  :name: shirt
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+- :adjective: brass
+  :name: knuckles
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :adjective: elbow
+  :name: spikes
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+- :adjective: scale
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :adjective: laminated
+  :name: crossbow
+  :is_leather: true
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+- :adjective: bastard
+  :name: sword
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: true
+- :adjective: throwing
+  :name: hammer
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: false
+gear_sets:
+  standard:
+  - scale greaves
+  - chain shirt
+  - rugged cowl
+  - scale gloves
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+  - laminated crossbow
+  naked: []
+stances:
+  Bow:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Crossbow:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Slings:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Offhand Weapon:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+offensive_spells:
+- skill: Targeted Magic
+  name: Fists of Faenella
+  abbrev: ff
+  mana: 12
+- skill: Debilitation
+  name: Malediction
+  abbrev: maled
+  mana: 15
+  expire: The swirling confines of malevolent darkness
+  harmless: true
+- skill: Debilitation
+  name: Soul Sickness
+  abbrev: sick
+  mana: 10
+  expire: The spiritual weight lifts off
+  harmless: true
+buff_spells:
+  Shield of Light:
+    abbrev: sol
+    recast: 3
+    mana: 15
+    cambrinth:
+    - 5
+    - 5
+    after:
+    - message: wear shield
+      matches:
+      - your shield dissolves
+      - you are already wearing
+  Benediction:
+    abbrev: benediction
+    recast: 1
+    mana: 10
+    cambrinth:
+    - 5
+    - 5
+  Major Physical Protection:
+    abbrev: MAPP
+    recast: 1
+    mana: 15
+    cambrinth:
+    - 5
+  Minor Physical Protection:
+    abbrev: MPP
+    recast: 1
+    mana: 15
+    cambrinth:
+    - 5
+  Centering:
+    abbrev: Centering
+    recast: 1
+    mana: 15
+    cambrinth:
+    - 8
+    - 7
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+charged_maneuvers:
+  Brawling: palmstrike
+  Bow: powershot
+  Crossbow: powershot
+  Slings: powershot
+  Small Edged: cleave
+  Large Edged: cleave
+  Twohanded Edged: cleave
+  Small Blunt: crash
+  Large Blunt: crash
+  Twohanded Blunt: crash
+  Staves: twirl
+  Polearms: impale
+dance_skill: Large Edged
+dance_actions:
+- bob
+training_abilities:
+  Hunt: 80
+  Perc: 120
+  Pray: 610
+weapon_training:
+  Brawling: ''
+  Crossbow: laminated crossbow
+  Large Edged: bastard sword
+  Large Blunt: throwing hammer
+  Heavy Thrown: throwing hammer
+prep_scaling_factor: 0.98
+listen: true
+training_spells:
+  Warding:
+    abbrev: MPP
+  Augmentation:
+    abbrev: MAPP
+  Utility:
+    abbrev: BLESS
+    symbiosis: true
+safe_room: 851
+hand_armor: gloves
+crossing_training:
+- First Aid
+#- Appraisal
+- Athletics
+- Augmentation
+- Attunement
+- Utility
+- Mechanical Lore
+- Outdoorsmanship
+- Warding
+- Theurgy
+- Perception
+#- Performance
+
+loot_additions:
+- bolt
+- arrow
+- stones
+- coffer
+- strongbox
+- chest
+- caddy
+- trunk
+- casket
+- skippet
+- crate
+- box
+
+water_holder: chalice
+flint_lighter: sword

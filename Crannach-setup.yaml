@@ -1,0 +1,851 @@
+---
+hometown: Crossing
+safe_room: # Set via UserVars.safe_room 
+###################
+### COORDINATOR ###
+###################
+
+coordinator_hunting_tasks:
+  #  - :file: tactics
+  #    :pause_sanowret: false
+  #    :default: false
+  #    :start_on:
+  #      any_skill_under:
+  #        skills:
+  #        - Tactics
+  #        target: 5
+  - :file: cabalists
+    :pause_sanowret: false
+    :default: false
+    :start_on:
+      any_skill_under:
+        skills:
+        - Targeted Magic
+          #        - Debilitation
+        target: 5
+#  - :file: boxes
+#    :pause_sanowret: true
+#    :start_on:
+#      boxes_under: 1
+#    :stop_on:
+#      any_skill_under:
+#        skills:
+#        - Targeted Magic
+#        - Debilitation
+#        target: 5
+#  - :file: back_weapons
+#    :pause_sanowret: true
+#    :start_on:
+#      any_skill_under:
+#        skills:
+#        - Slings
+#        - Small Edged
+#        target: 1
+#    :stop_on:
+#      any_skill_under:
+#        skills:
+#        - Targeted Magic
+#        - Debilitation
+#        target: 5
+
+
+coordinator_hunting_cleanup:
+  - :script: safe-room
+    :skip_first_run: true
+  - :script: sell-loot
+    :skip_first_run: true
+  - :script: crossing-repair
+    :skip_first_run: true
+    :start_on:
+      timer:
+        global: true
+        time: 43200 
+        key: 'repair'
+
+coordinator_town_tasks:
+    - :script: astrology
+      :start_on:
+        and:
+          - timer:
+              global: true
+              time: 300
+              key: 'astro'
+          - skill_under:
+              skill: Astrology
+              target: 5
+      :walk_to: safe_room
+    - :script: athletics
+      :args:
+      - wyvern
+      :start_on:
+        skill_under:
+          skill: Athletics
+          target: 10
+    - :script: nexus
+      :args:
+      - fatigue
+      - 793
+      :start_on:
+        timer:
+          global: true
+          time: 18000 # 5 hours
+          key: 'nexus'
+          #    - :script: mech-lore
+          #      :walk_to: safe_room 
+          #      :start_on:
+          #        skill_under:
+          #          skill: Mechanical Lore
+          #          target: 14
+    - :script: appraisal
+      :walk_to: safe_room
+      :start_on:
+        and:
+          - timer:
+              global: true
+              time: 300
+              key: 'appraisal'
+          - skill_under:
+              skill: Appraisal
+              target: 5
+      :walk_to: safe_room
+  ##  - :script: sorcery
+  ##    :start_on:
+  ##      and:
+  ##        - timer:
+  ##            global: true
+  ##            time: 300
+  ##            key: 'cyclic'
+  ##        - skill_under:
+  ##            skill: Sorcery
+  ##            target: 5
+    - :script: first-aid
+      :walk_to: safe_room
+      :start_on:
+        skill_under:
+          skill: First Aid
+          target: 1
+  ##  - :script: outdoorsmanship
+  ##    :walk_to: safe_room
+  ##    :start_on:
+  ##      and:
+  ##        - predicate: hunt_done?
+  ##        - skill_under:
+  ##            skill: Outdoorsmanship
+  ##            target: 20
+    - :action: pick_boxes
+      :walk_to: safe_room
+      :start_on:
+        and:
+          - skill_under:
+              skill: Locksmithing
+              target: 14
+          - or:
+              - boxes_over: 0
+              - predicate: pet_boxes?
+######################
+### STATUS MONITOR ###
+######################
+status_monitor_no_window: true
+########################
+### TRAINING-MANAGER ###
+########################
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Targeted Magic
+- Debilitation
+training_manager_town_duration: 20  
+repair_timer: 86400 # Repair once every 24 hours
+repair_withdrawal_amount: 40_000
+repair_every: .inf # Infinity
+favor_god: Meraud
+favor_goal: 30
+#####################
+### HUNTING-BUDDY ###
+#####################
+skip_last_kill: true
+hunting_buddies:
+- Atanamir
+- Aruthas
+- Leustyin
+- Sarvatt
+- Natarian
+- Fuss
+- Sheltim
+- Rhakim
+- Kaldean
+- Reverence
+- Aradar
+- Rakkor
+- Jonas
+- Zansa
+- Chuno
+- Byd
+
+# No hunting zones are defined here. Instead I use the hunting_file_list to point to other YAML files with hunting zomes in them.
+hunting_file_list:
+- tm
+- debil
+#- weapons
+- sorcery
+stop_hunting_if_bleeding: true
+priority_defense: Evasion
+training_abilities:
+  Hunt: 80
+  Stealth: 60
+  PercMana: 60
+  Analyze: 70
+  Recall: 1205
+  Astro: 220
+  Locks: 120
+#  Collect: 180
+
+weapon_training:
+  Crossbow: crossbow
+  Large Edged: bastard sword
+  Brawling: ''
+summoned_weapons:
+#- name: Large Edged
+dance_skill:         Brawling
+use_weak_attacks:    false
+use_stealth_attacks: false
+ignored_npcs:
+- student
+- leopard
+- owl
+- Taala
+- foal
+- watchsoul # Cleric spell
+- appraiser # Dwarven appraiser
+- shadowling
+- Servant # Shadow Servant
+- guard # Town guard
+- zombie # necromancer pet
+#################
+### EQUIPMENT ###
+#################
+gear:
+#### WEAPONS ####
+- :name: sword
+  :adjective: bastard
+  #:tie_to: strap
+  :swappable: true
+- :name: mace
+  :adjective: bar
+  :swappable: true
+- :name: spear
+  :adjective: light
+- :name: blade
+  :adjective: icy-blue
+  :tie_to: strap
+  :is_leather: true #lolwhat
+- :name: cheesecake
+  :adjective: metal
+  :swappable: true
+- :name: longbow
+  :adjective: azurelle
+  :is_leather: true
+- :name: staff
+  :adjective: oaken
+  :is_leather: true
+  :is_worn: true
+- :name: sling
+  :adjective: hide
+  :is_leather: true
+- :name: tetractys
+  :adjective: haledroth
+  :is_worn: true
+- :name: crossbow
+  :is_leather: true
+  :is_worn: true
+- :name: footwraps
+  :adjective: steel-toed
+  :is_worn: true
+- :adjective: knee
+  :name: spikes
+  :is_worn: true
+- :adjective: elbow
+  :name: spikes
+  :is_worn: true
+- :adjective: hand
+  :name: claws
+  :hinders_lockpicking: true
+  :is_worn: true
+##### ARMOR #####
+- :name: gauntlets
+  :adjective: plate
+  :is_worn: true
+  :hinders_lockpicking: true
+- :name: gloves
+  :adjective: scale
+  :is_worn: true
+  :hinders_lockpicking: true
+- :name: pants
+  :adjective: quilted
+  :is_leather: true
+  :is_worn: true
+- :name: aventail
+  :adjective: plate
+  :is_worn: true
+- :name: lorica
+  :adjective: scale
+  :is_worn: true
+- :name: mask
+  :adjective: ring
+  :is_worn: true
+  :hinders_lockpicking: true
+- :name: mask
+  :adjective: plate
+  :is_worn: true
+  :hinders_lockpicking: true
+- :adjective: small
+  :name: shield
+  :hinders_lockpicking: true
+  :is_worn: true
+  :is_leather: true
+- :adjective: ring
+  :name: helm
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: quilted
+  :name: gloves
+  :is_leather: true
+  :hinders_lockpicking: true
+- :adjective: parry
+  :name: stick
+  :is_worn: true
+- :name: hauberk
+  :adjective: ring
+  :is_worn: true
+- :name: gloves
+  :adjective: ring
+  :hinders_lockpicking: true
+  :is_worn: true
+- :name: staff
+  :adjective: oaken
+  :is_worn: true
+  :is_leather: true
+- :name: vambraces
+  :adjective: plate
+  :is_worn: true
+# Noncombat Gear with trash nouns (prevents being thrown away)
+- :name: rope
+  :adjective: climbing
+- :name: needles
+  :adjective: knitting
+
+using_light_crossbow: false
+tk_ammo: razor
+
+restock:
+  arrow:
+    quantity: 30
+  tk_ammo:
+    name: razor
+    price: 471
+    size: 1
+    stackable: false
+    room: 9747
+    quantity: 1
+  bolt:
+    quantity: 30
+## Old Mechanical Lore Stuff
+#  block:
+#    name: crystal block
+#    #wandering_npc: shaman # in dirge
+#    wandering_npc: theurgist # in Shard
+#    price: 250
+#    order_number: 6
+#    quantity: 30 # Wallet holds max of 30
+#    size: 1
+#    stackable: true # Its only stackable if its put in a bead-carvers wallet
+#    container: wallet
+#  primer:
+#    name: raven primer
+#    #wandering_npc: shaman # in dirge
+#    wandering_npc: theurgist # in shard
+#    price: 250
+#    order_number: 101
+#    quantity: 1
+#    size: 1
+#    stackable: false
+#    container: pack
+
+gear_sets:
+  standard:
+  - ring gloves
+  - ring helm
+  - ring hauberk
+  - steel-toed footwraps
+  - knee spikes
+  - hand claws
+  - small shield
+  - ring mask
+  - elbow spikes
+  - parry stick
+  - oaken staff
+  - crossbow
+  stealing:
+  - elbow spikes
+  - knee spikes
+  - steel-toed footwraps
+  - parry stick
+  - oaken staff
+  - crossbow
+cycle_armors:
+  Chain Armor:
+  - ring gloves
+  Light Armor:
+  - quilted gloves
+  Brigandine:
+  - scale gloves
+  Plate Armor:
+  - plate gauntlets
+### CAMBRINTH ###
+cambrinth: watersilk bag
+cambrinth_cap: 108
+stored_cambrinth: false
+cambrinth_invoke_exact_amount: true
+cambrinth_num_charges: 1  # Number of times to harness or charge when using auto mana
+cambrinth_items:
+- name: watersilk bag
+  cap: 108
+  stored: false
+
+### SPELLS ###
+#prep_scaling_factor: 0.91
+
+offensive_spells:
+  #- name: Demrris' Resolve
+  # use_auto_mana: true
+  #skill: Sorcery
+  #- name: Rebuke
+  #use_auto_mana: true
+  #skill: Sorcery
+  #cast_only_to_train: true
+- name: Starlight Sphere
+  mana: 10
+  cast: cast spider
+  cast_only_to_train: false
+- name: Telekinetic Storm
+  mana: 32
+  cambrinth:
+  - 48
+  slivers: false
+  cast_only_to_train: true
+  cast: cast creatures
+- name: Partial Displacement
+  mana: 20
+  skill: Targeted Magic
+- name: Mind Shout
+  mana: 30
+  cambrinth:
+  - 30
+  harmless: true
+  min_threshold: 2
+  cast_only_to_train: true
+  cast: cast creatures
+- name: Mental Blast
+  harmless: true
+  mana: 10
+  cast_only_to_train: true
+
+#################
+### ASTROLOGY ###
+#################
+#have_divination_bones: true # DEPRECATED
+divination_bones_storage:
+  container: forging kit
+  tied: false
+have_telescope: true
+astrology_training:
+- observe
+- rtr
+astral_plane_training:
+  train_destination: Shard
+  train_source: Crossing
+astrology_use_full_pools: false # Helps maximize tool bonding rate when using max pools
+#############
+### ;BUFF ###
+#############
+
+## The idea here is to list each spell as its own set. This means I can call ;buff aus to cast Aura Sight if i just want to cast that single spell. It also means that I only need to define the spell once and I can use the << : merge operator to copy it into other sets.
+waggle_sets:
+  aus: &aus
+    Aura Sight:
+      mana: 30
+      cambrinth:
+      - 48
+  bc: &bc
+    Braun's Conjecture:
+      mana: 700
+      focus: staff
+      worn_focus: true
+  col: &col
+    Cage of Light:
+      cambrinth:
+      - 48
+      recast: 2
+  cv: &cv
+    Clear Vision:
+      mana: 20
+      recast: 10
+      prep_time: 3
+  dc: &dc
+    Destiny Cipher:
+      mana: 500
+      focus: staff
+      worn_focus: true
+  fm:
+    Focus Moonbeam:
+      mana: 50
+  gaf: &gaf
+    Gauge Flow:
+      mana: 52
+      cambrinth:
+      - 48
+  locate: &locate
+    Locate:
+      mana: 40
+  lw: &lw
+    Lay Ward:
+      mana: 52
+      cambrinth:
+      - 48
+  maf: &maf
+    Manifest Force:
+      cambrinth:
+      - 48
+  moonblade: &moonblade
+    Moonblade:
+      recast_every: 1400
+      cambrinth:
+      - 48
+  mt: &mt
+    Machinist's Touch:
+      cambrinth:
+      - 48
+  pg: &pg
+    Piercing Gaze:
+      mana: 20
+      recast: 10
+  rs: &rs
+    Riftal Summons:
+      mana: 80
+  rtr: &rtr
+    Read the Ripples:
+      mana: 400
+      focus: staff
+      worn_focus: true
+  seer: &seer
+    Seer's Sense:
+      recast: 2
+      mana: 40
+      cambrinth:
+      - 48
+  shadows: &shadows
+    Shadows:
+      mana: 30
+      cambrinth:
+      - 48
+      recast: 2
+  teleport:
+    Teleport:
+      mana: 50
+      prep_time: 10
+  iots: &iots
+    Invocation of the Spheres:
+      mana: 700
+      focus: staff
+      worn_focus: true
+      before:
+      - message: release iots
+        matches:
+        - Release what
+        - You feel the energy 
+      stats:
+      - Intelligence
+      - Agility
+  shadowling: &shadowling
+    Shadowling:
+      mana: 52
+      cambrinth:
+      - 48
+  sls: &sls
+    Starlight Sphere:
+      abbrev: sls
+      mana:   10
+      cast:   cast spider
+      night:  true
+  ###########################
+  ### SCRIPT WAGGLE SETS ###
+  ###########################
+  astrology:
+    << : *cv
+    << : *pg
+    << : *dc
+    << : *rtr
+  forestry:
+    Tenebrous Sense:
+      cambrinth:
+      - 48
+  mining:
+    Tenebrous Sense:
+      cambrinth:
+      - 48
+  pick:
+    << : *mt
+  prehunt_buffs: &prehunt_buffs
+    << : *shadowling
+    << : *shadows
+    << : *iots
+    << : *seer
+    << : *col
+    << : *maf
+    << : *lw
+    << : *aus
+  default:
+    << : *prehunt_buffs
+
+buff_spells: &buff_spells
+  << : *seer
+  << : *lw
+  << : *maf
+  << : *shadows
+  << : *sls
+  << : *iots
+  #<< : *shadowling
+  << : *aus
+  << : *col
+  << : *moonblade
+#  Ghost Shroud:
+#    abbrev: GHS
+#    mana: 21
+#    cyclic: true
+#    day: true # Prevent it from interfering with SLS
+######################
+### COMBAT-TRAINER ###
+######################
+dance_actions: 
+- perc planets
+- perc mana
+
+loot_additions:
+- jadeite stone
+- kyanite stone
+- ju'ladan oil # enchanting
+- tooth # black apes
+- smooth rock
+- smooth rocks
+- long arrow
+- long arrows
+loot_subtractions:
+- arrow
+- shard
+loot_specials:
+- name: jadeite stone  
+  bag:  pack
+- name: kyanite stone
+  bag:  pack
+####################
+### LOCKSMITHING ###
+####################
+number_of_pets_to_keep_on_hand: &box_count 5  # custom setting
+box_loot_limit: *box_count
+lockpick_buffs:     
+  spells:           
+  - abbrev: MT
+    mana: 52
+    cambrinth:    
+    - 48   
+stop_pick_on_mindlock:     true
+picking_box_source:        duffel bag
+picking_box_storage:       duffel bag
+picking_pet_box_source:    hunting pack
+refill_pet_boxes:          true # custom setting
+use_lockpick_ring:         true
+skip_lockpick_ring_refill: false
+lockpick_type:             stout iron
+lockpick_dismantle:        focus
+harvest_traps:             true
+#################
+### SELL LOOT ###
+#################
+gem_pouch_adjective:       fuzzy
+spare_gem_pouch_container: kit
+sell_loot_money_on_hand: 3 silver
+sell_loot_pouch:           false
+sell_loot_bundle:          true
+skinning:
+  skin:          true
+  arrange_all:   false
+  arrange_count: 1
+  tie_bundle:    true
+########################
+### CROSSING TRAINER ###
+########################
+braid_item: vine
+listen: true
+listen_observe: true
+dump_junk: true  # Call the dump junk command after braiding or collecting when room is full of junk
+textbook: true
+crossing_training:
+# - Forging
+- Athletics
+- Locksmithing
+- Astrology
+  #- Thievery
+- Appraisal
+- Outdoorsmanship
+- Mechanical Lore
+- Warding
+- Utility
+- Augmentation
+
+classes_to_teach:
+- Stealth
+
+use_research: true
+research_skills:
+- Warding
+train_with_spells: true
+symbiosis_learning_threshold: 1
+use_harness_when_arcana_locked: true
+training_spells:
+  Augmentation:
+    abbrev: AUS
+    symbiosis: true
+  Warding:
+    abbrev: CoL
+    symbiosis: true
+    moon: true
+  Utility:
+    abbrev: GAF
+    symbiosis: true
+combat_spell_training:
+  Utility:
+    name: Shift Moonbeam
+    use_auto_mana: true
+    symbiosis: true
+#  Warding:
+#    name: Ghost Shroud
+#    mana: 21
+#    cyclic: true
+#    skill: Sorcery
+
+#crossing_training_sorcery_room: 2784
+crossing_training_sorcery_room: 1645
+
+crossing_training_sorcery:
+  #  name: Ghost Shroud
+  #  abbrev: GHS
+  # mana: 20
+  #cyclic: true
+
+  #cyclic_cycle_skills:
+  # - Sorcery
+
+  #cyclic_training_spells:
+  #Sorcery:
+  #  abbrev: GHS
+  #  cyclic: true
+
+#################
+### APPRAISAL ###
+#################
+appraisal_training:
+- pouches
+full_pouch_container: pack
+
+#############
+### STEAL ###
+#############
+stealing_towns:
+#  - Crossing
+#  - Arthe Dale
+#  - Kaerna Village
+#  - Tiger Clan
+#  - Knife Clan
+#  - Leth Deriel
+- Shard
+- Horse Clan
+
+
+#################
+### MECH LORE ###
+#################
+hand_armor: ring gloves
+mech_lore_do_bead_carving: true # Carve beads to train mech lore
+##############
+### MINING ###
+##############
+mine_for_outdoorsmanship: false
+mines_to_mine:
+- ice_caves # Shard
+mine_implement: shovel
+mine_while_training: false
+mining_buddy_mine_every_room: false
+mining_buddy_vein_list:
+- Orichalcum
+- Damite
+- Kertig
+- Haralun
+- Glaes
+- Animite
+- Lumium
+################
+### CRAFTING ###
+################
+#train_workorders:
+#- Blacksmithing
+crafting_container: pack
+outfitting_tools:
+- knitting needles
+### STACK-SCROLLS ###
+scroll_stackers:
+- of scrolls
+- black tome
+- wizard tome
+- scroll folio
+- scroll booklet
+- yellow notebook
+discard_scrolls:
+- Burden
+- Dispel
+- Ease Burden
+- Gauge Flow
+- Imbue
+- Lay Ward
+- Manifest Force
+- Seal Cambrinth
+- Strange Arrow
+- Tremor
+- Rite of Contrition
+- Rite of Grace
+- Awaken
+- Heighten Pain
+- Absolution
+custom_scrolls:
+- dubiously scroll
+- crinkled scroll
+- icy scroll
+- bright scroll
+- green scroll
+- pristine scroll
+- silver scroll # Stacker
+- smudged scroll # Stacker
+
+######################
+### INVASION-WATCH ###
+######################
+invasion_watch_hideouts:
+- 1900
+invasion_watch_hide_time: 380
+invasion_watch_mobs:
+- hafwa
+- construct
+- malchata
+- mouse
+invasion_watch_rooms:
+- 1
+
+...

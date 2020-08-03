@@ -1,0 +1,86 @@
+---
+dance_skill: Small Edged
+
+weapon_training:
+  Small Edged: scimitar
+  Small Blunt: mallet
+  Light Thrown: bola
+  Twohanded Blunt: maul
+  Twohanded Edged: blade
+
+summoned_weapons:
+- name: Small Edged
+  push: true
+- name: Small Blunt
+  push: true
+- name: Light Thrown
+- name: Twohanded Blunt
+  push: true
+- name: Twohanded Edged
+  push: true
+
+offensive_spells:
+- skill: Debilitation
+  name: Electrostatic Eddy
+  abbrev: ee
+  mana: 6
+  cyclic: true
+- skill: Debilitation
+  name: Mark of Arhat
+  abbrev: moa
+  mana: 3
+  recast_every: 30
+
+offensive_spell_cycle:
+- Electrostatic Eddy
+- Mark of Arhat
+
+buff_spells:
+  Manifest Force:
+    abbrev: MAF
+    recast: 1
+    mana: 7
+    prep_time: 5
+  Sure Footing:
+    abbrev: SUF
+    recast: 1
+    mana: 15
+    cambrinth:
+    - 12
+    - 12
+  Swirling Winds:
+    abbrev: SW
+    recast: 1
+    mana: 15
+    cambrinth:
+    - 12
+    - 12
+  Ethereal Fissure:
+    abbrev: ETF
+    mana: 15
+    cambrinth:
+    - 5
+    expire: fissure collapses in on itself, winking out of existence
+    cast: cast fire
+
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+
+fatigue_regen_action: bob
+
+hunting_info:
+- :zone: leucro2
+  args:
+  - back
+  stop_on:
+  - Small Edged
+  - Twohanded Edged
+  - skinning
+  :duration: 40
+
+combat_trainer_target_increment: 6
+combat_trainer_action_count: 20
+use_weak_attacks: false

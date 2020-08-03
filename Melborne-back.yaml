@@ -1,0 +1,63 @@
+---
+hunting_info:
+- :zone:
+  - shard_gryphons
+  - elder_blue_dappled_prereni
+  - adanf_warriors_and_mages
+  args:
+  - d0
+  - back
+  :duration: 25
+  before:
+  - buff eotb
+
+offensive_spells:
+- skill: Sorcery
+  name: Sleep
+  cast_only_to_train: true
+  harmless: true
+  mana: 15
+buff_spells:
+
+weapon_training:
+  Brawling: ''
+  Light Thrown: bola
+  Polearms: light spear
+  Heavy Thrown: light spear
+  Offhand Weapon: bola
+  Large Edged: bastard sword
+  Small Blunt: bola
+  Large Blunt: bar mace
+  Staves: nightstick
+  Twohanded Blunt: bar mace
+  Twohanded Edged: bastard sword
+offhand_thrown: true
+dance_skill: Brawling
+
+skip_last_kill: true
+use_weak_attacks: true
+use_stealth_attacks: false
+training_abilities:
+thanatology:
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 4
+  tie_bundle: true
+
+loot_subtractions:
+- box
+- trunk
+- coffer
+- strongbox
+- chest
+- caddy
+- casket
+- skippet
+- crate
+- rock
+- rocks
+- arrow
+- arrows
+- bolt
+- bolts

@@ -39,7 +39,7 @@ offensive_spells:
 
 weapon_training:
   Large Blunt: greathammer
-  Small Blunt: bola
+  Small Blunt: copper mace
   Small Edged: cutlass  
   Slings: sling 
   Brawling: ''
@@ -136,6 +136,7 @@ crossing_training:
 - Performance
 - Perception
 - Arcana
+- Thievery
 - Warding
 #- Life Magic
 #- Fundamental
@@ -283,6 +284,10 @@ gear:
   :name: bludgeon
   :hinders_lockpicking: false
   :wield: true
+- :adjective: copper
+  :name: mace
+  :hinders_lockpicking: false
+  :wield: true  
 - :adjective:
   :name: sling
   :hinders_lockpicking: false
@@ -325,6 +330,36 @@ exp_timers:
  
 quit_on_status_warning: true
 status_monitor_no_window: true
+
+train_with_burgle: true
+burgle_settings:
+  room: 6202                                 # pick your own room, you should pick a room that no guard will ''ever'' enter.  Picking rooms guards can come to is a failure on setup, not the script.
+  entry_type: lockpick                      # lockpick | rope | cycle
+  use_lockpick_ring: true                   # if you use a worn lockpick stacker
+  lockpick_container: lockpick ring         # name of your lockpick stacker
+  max_search_count: 2                       # max number of total searches to do including retries
+  retry: false                              # retry if you don't find loot.  default: false
+  loot: pawn                                # drop | keep | bin | pawn   default: keep 
+  loot_container: ruck                # container to keep loot in while burglering
+  safe_mode: true                           # stop searching and try to get out as quickly as possible when hearing footsteps. Default: true
+  room_blacklist:                           # array of rooms to ignore. Case sensitive.
+    - Kitchen
+  item_whitelist:                           # array of full item names (adj + noun) of items to keep no matter what.  Case Sensitive.  
+    - worn book
+    - memory orb
+    - blunt-tipped bolts
+    - blunt-tipped arrows
+    - blunt stones
+    - keepsake box
+    - quill
+  before:                                   # array of scripts to run, similar to #hunting-buddy, before the burgle (will be called right before buffing)
+  #  - yourscripthere with args here
+  #- put "untie h rope" 
+  after:                                    # array of scripts to run, similar to #hunting-buddy, after the burgle, (will be called right before script ends)
+  #  - anotherscript here
+  #- put "tie h rope to rucksack"
+
+picking_lockbox: keepsake box
 
 use_harness_when_arcana_locked: true
  

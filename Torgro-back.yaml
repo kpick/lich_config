@@ -1,0 +1,24 @@
+---
+dance_skill: Small Edged
+
+weapon_training:
+  Small Edged: scimitar
+  Small Blunt: mallet
+  Light Thrown: bola
+  Twohanded Blunt: maul
+  Staves: quarterstaff
+
+summoned_weapons:
+- name: Small Edged
+#  turn: true
+#  pull: true
+- name: Small Blunt
+#  turn: true
+- name: Light Thrown
+#  pull: true
+- name: Twohanded Blunt
+#  push: true
+- name: Staves
+#  push: true
+# summoned_weapons_element: electric
+# summoned_weapons_ingot: animite

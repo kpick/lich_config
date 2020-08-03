@@ -1,0 +1,230 @@
+---
+hunting_info:
+- :zone: dire_bears
+  args:
+  - d0
+  - r4
+  :duration: 30
+gear:
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+- :adjective: chain
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :adjective: chain
+  :name: balaclava
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :adjective: chain
+  :name: shirt
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+- :adjective: brass
+  :name: knuckles
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :adjective: elbow
+  :name: spikes
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+- :adjective: target
+  :name: shield
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :adjective: chain
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :adjective: light
+  :name: crossbow
+  :is_leather: true
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+- :adjective: war
+  :name: sword
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: true
+- :adjective: pine-handled
+  :name: sledgehammer
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: false
+- :adjective: triple-weighted
+  :name: bola
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: false
+gear_sets:
+  standard:
+  - chain greaves
+  - target shield
+  - chain shirt
+  - chain balaclava
+  - chain gloves
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+  - light crossbow
+  naked: []
+aim_fillers:
+  Crossbow:
+  - bob
+  - analyze
+  - bob
+  Bow:
+  - bob
+  - bob
+aim_fillers_stealth:
+  Bow:
+  - bob
+  - hide
+loot_additions:
+- bolt
+- arrow
+- stones
+stances:
+  Bow:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Crossbow:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Slings:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Offhand Weapon:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Brawling:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+offensive_spells:
+- skill: Targeted Magic
+  name: Breath of Storms
+  abbrev: bos
+  mana: 6
+- skill: Debilitation
+  name: DALU
+  abbrev: dalu
+  mana: 6
+  cyclic: true
+buff_spells:
+  Eillie's Cry:
+    abbrev: ecry
+    recast: 1
+    mana: 1
+    cambrinth:
+    - 1
+    - 1
+    prep_time: 0
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+cambrinth: armband
+charged_maneuvers:
+  Brawling: palmstrike
+  Slings: powershot
+  Small Edged: cleave
+  Large Edged: cleave
+  Twohanded Edged: cleave
+  Small Blunt: crash
+  Large Blunt: crash
+  Twohanded Blunt: crash
+  Staves: twirl
+  Polearms: impale
+dance_threshold: 1
+dance_skill: Brawling
+dance_actions:
+- analyze
+- feint
+- bob
+training_abilities:
+  Hunt: 80
+  Perc: 120
+  Scream: 15
+fatigue_regen_threshold: 85
+fatigue_regen_action: bob
+weapon_training:
+  # Offhand Weapon: triple-weighted bola
+  # Small Blunt: triple-weighted bola
+  # Light Thrown: triple-weighted bola
+  # Large Edged: war sword
+  # Large Blunt: pine-handled sledgehammer
+  # Twohanded Edged: war sword
+  Brawling: ''
+  # Crossbow: light crossbow
+exp_timers:
+  Stealth: 300
+  First Aid: 360
+  Locksmithing: 600
+  Attunement: 65
+  Utility: 90
+cambrinth_cap: 32
+prep_scaling_factor: 0.98
+listen: false
+training_spells:
+  Utility:
+    abbrev: reson
+    before:
+    - message: get my bola
+      matches:
+      - You get
+    cast: cast bola
+    after:
+    - message: stow my bola
+      matches:
+      - You put
+  Warding:
+    abbrev: repr
+  Augmentation:
+    abbrev: ecry
+safe_room: 705
+hide_to_steal: true
+hand_armor: gloves
+crossing_training:
+# - First Aid
+# - Appraisal
+# - Athletics
+- Augmentation
+# - Attunement
+# - Utility
+# - Mechanical Lore
+# - Outdoorsmanship
+# - Warding
+# - Perception
+# - Scholarship
+# - Forging
+# - Performance
+
+writing_instrument: charcoal
+favor_god: Glythtide

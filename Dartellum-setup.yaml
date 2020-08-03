@@ -1,0 +1,1545 @@
+---
+# https://elanthipedia.play.net/mediawiki/index.php/Warrior_Mage#Circle_Requirements
+# 3 Magics: Arcana, Targeted Magic, Attunement
+# 5 Weapons (only 3 are needed to circle): Brawling, Heavy Thrown, Polearms, Large Edged, Twohanded Edged
+# 2 Armors (only 1 is needed to circle): Light Armor, Shield Usage
+# 4 Survivals: Athletics, Perception, Skinning, Stealth
+# 3 Lores: Appraisal, Tactics, Scholarship
+
+# Eventually you will need to train 2 more Magics to circle (for a total of 5)
+# However, you will probably end up training them all since they each have very useful spells
+# The other Magic skills are: Augmentation, Warding, Debilitation, Utility
+
+hometown: Crossing
+#hometown: Shard
+loot_delay: 15
+firing_delay: 6
+#instrument: tabla
+guilty_plea: guilty
+
+scroll_stackers:
+- booklet
+- scroll.case
+- poke
+- papers
+- scroll.folio
+
+######################
+### STATUS MONITOR ###
+######################
+status_monitor_no_window: true
+slack_username: dartellum
+status_monitor_respond: false
+#stop_hunting_on_speech: true
+#stop_on_familiar_drag: true
+
+# Hunting settings
+hunting_file_list:
+#### not needed for T2 ###
+#- main
+#- LE
+#- boxes
+##- crossbow
+
+#priority_skills_lower_limit: 6
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+  - Large Edged
+  #- Targeted Magic
+
+hunting_room_min_mana: 12
+#hunting_room_strict_mana: false
+
+prehunt_buffs: xxxx
+
+# Gear settings
+gear:
+# Armor
+- :adjective: assassin's
+  :name: coat
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: assassin's
+  :name: cowl
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :adjective: assassin's
+  :name: greaves
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: assassin's
+  :name: gauntlets
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: scale
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective:
+  :name: targe
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: ring
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :adjective: plate
+  :name: gauntlets
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+# Weapons
+- :name: crossbow
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+  :wield: true
+- :name: longbow
+  :adjective:
+  :is_leather: true
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+  :wield: true
+- :name: axe
+  :adjective: throwing
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+  :wield: true
+- :name: sling
+  :adjective:
+  :is_leather: true
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+  :wield: true
+#- :name: sword
+#  :adjective: bastard
+#  :is_leather: false
+#  :is_worn: false
+#  :swappable: true
+- :name: staff
+  :adjective: steel
+  :is_leather: true
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+  :wield: true
+- :name: stick
+  :adjective: parry
+  :is_leather: false
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+  :wield:
+- :name: hatchet
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+  :wield: true
+# Crafting tools
+# Forging
+- :name: hammer
+  :adjective: forging
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: forger's belt
+- :name: tongs
+  :adjective: articulated
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: forger's belt
+- :name: bellow
+  :adjective: leather
+  :is_leather: true
+  :is_worn: false
+  :swappable: false
+  :tie_to: forger's belt
+- :name: rod
+  :adjective: stirring
+  :is_leather: true
+  :is_worn: false
+  :swappable: false
+  :tie_to: forger's belt
+- :name: shovel
+  :adjective: tomiek
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: forger's belt
+- :name: pliers
+  :adjective: plain
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+# Outfitting tools
+- :name: needle
+  :adjective: knitting
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: tailor's belt
+- :name: needle
+  :adjective: sewing
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: tailor's belt
+- :name: yardstick
+  :adjective: detailed
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: tailor's belt
+- :name: awl
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: tailor's belt
+- :name: scraper
+  :adjective: hide
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: tailor's belt
+- :name: scissors
+  :adjective: serrated
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+- :name: slickstone
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+# Shaping tools
+- :name: rasp
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: engineer's belt
+- :name: rifflers
+  :adjective: square
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: engineer's belt
+- :name: saw
+  :adjective: bone
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: engineer's belt
+- :name: chisels
+  :adjective: sharpened
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: engineer's belt
+- :name: saw
+  :adjective: curved
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: engineer's belt
+- :name: drawknife
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+# Enchanting
+- :name: burin
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: tailor's belt
+- :name: brazier
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: tailor's belt
+- :name: fount
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :skip_repair: true
+  :tie_to: tailor's belt
+- :name: rod
+  :adjective: fey-bone
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: tailor's belt
+- :name: loop
+  :adjective: augmentation
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to: tailor's belt
+# Stamp
+- :name: stamp
+  :adjective: basic
+  :is_leather: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+# Ropes
+- :name: rope
+  :adjective: climbing
+  :skip_repair: true
+- :name: rope
+  :adjective: straight
+  :skip_repair: true
+gear_sets:
+  standard:
+  - assassin's coat
+  - assassin's cowl
+  - assassin's greaves
+  - assassin's gauntlets
+  - parry stick
+  - targe
+  swimming: []
+  pick:
+  - assassin's coat
+
+cycle_armors:
+  Plate Armor:
+  - plate gauntlets
+  Brigandine:
+  - scale gloves
+  Light Armor:
+  - assassin's gauntlets
+  Chain Armor:
+  - ring gloves
+
+loot_specials:
+#- name: jadeite stones
+#  bag: duffel bag
+- name: fabric
+  bag: duffel bag
+loot_subtractions:
+- rock
+#- stones
+loot_additions:
+- cambrinth lump
+- package
+- sraeth runestone
+- gold ring
+- kirmhiro draught
+- signet ring
+- witch ball
+- satin pillow
+- license
+- writ
+- permit
+- pass
+- profile
+- seastars
+- pendant
+- card
+- jasper
+- heliodor
+- tasialm
+- seastar
+- papyrus roll
+#- silver nugget
+#- gold nugget
+#- platinum nugget
+- lumium shard
+#- niniam nugget
+#- electrum nugget
+- muracite nugget
+- darkstone nugget
+- damite nugget
+- kertig nugget
+- haralun nugget
+- glaes fragment
+- animite nugget
+#- covellite nugget
+#- oravir nugget
+#- pewter bar
+- pulzone
+- quadrello
+- potency crystal
+- infuser stone
+- shard
+- smooth rock
+- smooth rocks
+- pumpkin rock
+- pumpkin rocks
+#- small rock
+#- small rocks
+#- tooth
+loot_bodies: true
+#custom_loot_type: all
+
+# HE script
+darkbox_junk:
+- sharkskin
+- root
+- rockweed
+- kelp
+- flowers
+- apple
+- strawberry
+- root
+- snake
+- cobra
+- coin
+- belt
+- powder
+- sundress
+- earcuff
+- armband
+- anklet
+- sash
+- ascot
+- shirt
+- cap
+- cape
+- ocarina
+#- tooth
+- cloak
+- pants
+- headscarf
+- belt
+- boots
+- tobacco
+- trousers
+- moccasins
+- viper
+- armband
+- ring
+- peach
+- sandwich
+- plum
+
+# Define a list of containers like you would for storage_containers.  All the bags you could shove stuff into for the cornmaze
+cornmaze_containers:
+- sack
+
+cambrinth_invoke_exact_amount: true
+# Combat settings
+offensive_spells:
+- name: Air Lash
+  use_stealth: true
+  harmless: true
+  #target_enemy:
+  #max_threshold: 3
+  mana: 38
+  #cambrinth:
+  #- 10
+
+- name: Fire Ball
+  mana: 60
+  use_stealth: true
+  harmless: true
+  #min_threshold: 3
+
+- name: Shockwave
+  min_threshold: 4
+  mana: 50
+
+- name: Aethrolysis
+  #target_enemy:
+  #max_threshold: 3
+  mana: 14
+
+- name: Stampede
+  skill: Sorcery
+  mana: 50
+  use_stealth: true
+  cast_only_to_train: true
+  harmless: true
+
+- name: Devitalize
+  skill: Sorcery
+  mana: 54
+  use_stealth: true
+  cast_only_to_train: true
+  harmless: true
+
+- name: Electrostatic Eddy
+  mana: 20
+
+- name: Fire Rain
+  mana: 27
+
+- name: Rimefang
+  mana: 27
+
+- name: Frostbite
+  mana: 60
+  cast: cast creatures
+
+offensive_spell_cycle:
+- Electrostatic Eddy
+- Devitalize
+#- Fire Rain
+#- Shock Wave
+- Air Lash
+- Devitalize
+- Devitalize
+- Fire Ball
+- Frostbite
+#- Aethrolysis
+- Devitalize
+- Air Lash
+- Devitalize
+- Devitalize
+- Fire Ball
+- Frostbite
+#- Aethrolysis
+- Devitalize
+- Air Lash
+- Devitalize
+- Devitalize
+- Fire Ball
+- Frostbite
+#- Aethrolysis
+- Rimefang
+- Devitalize
+- Air Lash
+- Devitalize
+- Devitalize
+- Fire Ball
+- Frostbite
+#- Aethrolysis
+- Devitalize
+- Air Lash
+- Devitalize
+- Devitalize
+- Fire Ball
+- Frostbite
+#- Aethrolysis
+- Devitalize
+- Air Lash
+- Devitalize
+- Devitalize
+- Fire Ball
+- Frostbite
+#- Aethrolysis
+
+dance_skill: Large Edged
+combat_trainer_target_increment: 20
+combat_trainer_action_count: 40
+combat_training_abilities_target: 25
+
+training_abilities:
+  Analyze: 120
+  #Stealth: 60
+  Hunt: 120
+  Perc: 120
+  App Quick: 40
+  Recall: 1800
+  App Pouch: 120
+  #Collect: 120
+  #Locks: 200 # pet boxes required
+
+combat_spell_timer: 60
+combat_spell_training:
+  Warding:
+    name: Veil of Ice
+    abbrev: voi
+    symbiosis: true
+    cast_only_to_train: true
+    mana: 30
+    cambrinth:
+    - 20
+  Utility:
+    name: Ethereal Fissure
+    abbrev: etf
+    symbiosis: true
+    cast_only_to_train: true
+    before:
+    #after:
+    - message: close airy fissure
+      matches:
+      - The airy fissure collapses in on itself, winking out of existence.
+      - What were you referring to?
+      - There is no way to do that.
+    cast: cast air
+    mana: 18
+    cambrinth:
+    - 17
+
+maf: &maf
+  Manifest Force:
+    mana: 40
+    cambrinth:
+    - - 20
+sw: &sw
+  Swirling Winds:
+    mana: 30
+    symbiosis: true
+    cambrinth:
+    #- - 50
+    #  - 10
+    - - 22
+    harmless: true
+suf: &suf
+  Sure Footing:
+    mana: 30
+    symbiosis: true
+    cambrinth:
+    - - 22
+es: &es
+  Ethereal Shield:
+    mana: 30
+    symbiosis: true
+    cambrinth:
+    #- - 50
+    #  - 10
+    - - 20
+    harmless: true
+tw: &tw
+  Tailwind:
+    mana: 30
+    symbiosis: true
+    cambrinth:
+    #- - 50
+    #  - 10
+    - - 20
+ys: &ys
+  Y'ntrel Sechra:
+    mana: 35
+    symbiosis: true
+    cambrinth:
+    #- - 50
+    #  - 10
+    - - 15
+sub: &sub
+  Substratum:
+    mana: 30
+    symbiosis: true
+    cambrinth:
+    #- - 40
+    #  - 20
+    - - 20
+voi: &voi
+  Veil of Ice:
+    mana: 30
+    symbiosis: true
+    cambrinth:
+    - - 20
+drums: &drums
+  Drums of the Snake:
+    mana: 40
+    symbiosis: true
+    cambrinth:
+    - - 20
+mof: &mof
+  Mantle of Flame:
+    mana: 680
+    focus: steel staff
+    tied_focus: false
+    worn_focus: false
+    sheathed_focus: true
+aog: &aog
+  Aegis of Granite:
+    mana: 400
+    symbiosis: true
+    cambrinth:
+    - - 50
+    focus: steel staff
+    tied_focus: false
+    worn_focus: false
+    sheathed_focus: true
+etf: &etf
+  Ethereal Fissure:
+    mana: 30
+    symbiosis: true
+    cambrinth:
+    - - 15
+    #  - 10
+    harmless: true
+    before:
+    #after:
+    - message: close airy fissure
+      matches:
+      - The airy fissure collapses in on itself, winking out of existence.
+      - What were you referring to?
+      - There is no way to do that.
+    cast: cast air
+ignite: &ignite
+  Ignite:
+    mana: 20
+    symbiosis: true
+    cambrinth:
+    #- - 50
+    #  - 10
+    - - 20
+rm: &rm
+  Rising Mists:
+   mana: 20
+   symbiosis: true
+   cambrinth:
+   - - 23
+   #- - 50
+zephyr: &zephyr
+  Zephyr:
+    mana: 30
+    symbiosis: true
+    cambrinth:
+    - - 22
+    harmless: true
+bg: &bg
+  Blufmor Garaen:
+    mana: 30
+    cambrinth:
+    - - 15
+
+
+buffs: &buffs
+  #<< : *maf
+  << : *sw
+  << : *suf
+  << : *es
+  << : *tw
+  << : *ys
+  << : *sub
+  << : *voi
+  << : *drums
+  #make active when not training stealth
+  #<< : *mof
+  << : *aog
+
+buff_spells:
+  << : *etf
+  << : *ignite
+  << : *rm
+  << : *zephyr
+  << : *buffs
+
+buff_nonspells:
+   pathway focus quick: 300
+   #retreat: 596
+   #retreat: 598
+   #summon air domain: 600
+   prep c p h: 3600
+   gesture custom: 3601
+   #prep fls: 180
+   #slam left: 60
+
+waggle_sets:
+  prehunt_buffs:
+    << : *buffs
+  default:
+    << : *buffs
+  pvp:
+    << : *buffs
+    << : *bg
+    << : *voi
+    << : *mof
+  ph:
+    Pattern Hue:
+      abbrev: pattern hue
+      prep_type: prep cantrip
+      mana:
+      harmless: true
+      expire: The faint .* aura fades from around you.
+      #expire: aura fades from around you.
+      cast: gesture custom
+      symbiosis: false
+      recast: 1
+  pick:
+    << : *drums
+  mof:
+    << : *mof
+  aog:
+    << : *aog
+  burgle:
+    << : *suf
+    << : *sw
+  voi:
+    << : *voi
+
+use_weak_attacks: true
+weapon_training:
+  Large Edged: broadsword
+  Heavy Thrown: javelin
+  Polearms: lance
+  Brawling: ''
+  Twohanded Edged: sword
+  Bow: longbow
+  Staves: quarterstaff
+  Small Blunt: mallet
+  Light Thrown: bola
+  Large Blunt: hara
+  Crossbow: crossbow
+  Offhand Weapon: throwing axe
+  Small Edged: scimitar
+  Twohanded Blunt: maul
+  Slings: sling
+
+#### Summoned Weapons
+summoned_weapons_ingot: animite
+summoned_weapons_element: ice
+summoned_weapons:
+- name: Twohanded Edged
+  turn: true
+#  pull: true # increase density
+#  push: true # lower density
+- name: Large Edged
+  pull: true
+#  push: true
+- name: Large Blunt
+#  push: true
+- name: Heavy Thrown
+- name: Polearms
+- name: Small Edged
+- name: Small Blunt
+  pull: true
+- name: Light Thrown
+- name: Twohanded Blunt
+#  push: true
+- name: Staves
+
+priority_weapons:
+- Slings
+- Crossbow
+- Bow
+
+use_analyze_combos: true
+use_stealth_attacks: false
+use_stealth_ranged: true
+aim_fillers:
+  Crossbow:
+  - wield throwing.axe; draw left; lob left; get throwing.axe; lob left; get throwing.axe; sheathe throwing.axe
+  Bow:
+  - wield throwing.axe; lob left; get throwing.axe; lob left; get throwing.axe; sheathe throwing.axe; gouge; gouge
+  Slings:
+  - wield throwing.axe; draw left; lob left; get throwing.axe; lob left; get throwing.axe; sheathe throwing.axe
+
+#aiming_trainables:
+#- Light Thrown
+#- Brawling
+#- Small Edged
+
+# Skinning settings
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 1
+  tie_bundle: false
+  arrange_types:
+    ape: skin
+    wyvern: skin
+    drake: bone
+
+# Non-combat settings
+# Sell loot settings
+sell_loot_pouch: false
+sell_loot_bundle: false
+
+train_workorders:
+ - Tailoring
+# - Engineering
+# - Weaponsmithing
+# - Blacksmithing
+
+crossing_training:
+ - First Aid
+# - Sorcery
+# - Athletics
+# - Appraisal
+# - Locksmithing
+# - Outdoorsmanship
+ - Elemental Magic
+ - Arcana
+ - Utility
+ - Augmentation
+ - Warding
+# - Perception
+# - Carving
+
+#crossing_training_force_cambrinth: true
+crossing_training_sorcery_room: xxxx
+crossing_training_sorcery:
+  abbrev: drum
+  mana: 70
+training_spells:
+  Augmentation:
+    abbrev: tw
+    symbiosis: true
+    cast_only_to_train: true
+    mana: 30
+    cambrinth:
+    - 20
+  Warding:
+    name: Veil of Ice
+    abbrev: voi
+    symbiosis: true
+    cast_only_to_train: true
+    mana: 30
+    cambrinth:
+    - 20
+  Utility:
+    name: Ethereal Fissure
+    abbrev: etf
+    symbiosis: true
+    cast_only_to_train: true
+    before:
+    #after:
+    - message: close airy fissure
+      matches:
+      - The airy fissure collapses in on itself, winking out of existence.
+      - What were you referring to?
+      - There is no way to do that.
+    cast: cast air
+    mana: 20
+    cambrinth:
+    - 20
+
+# Crafting and belt settings
+carving_workorder_material_type: bone
+use_own_ingot_type: steel
+deed_own_ingot: true
+workorder_min_items: 3
+workorder_max_items: 4
+workorder_diff:
+  tailoring: hard
+  weaponsmithing: challenging
+  blacksmithing: challenging
+  carving: challenging
+  remedy: challenging
+  artificing: challenging
+crafting_container: backpack
+workorders_repair: false
+
+forging_tools:
+- forging hammer
+- tongs
+- bellow
+- stirring rod
+- shovel
+- pliers
+- stamp
+
+forging_belt:
+  name: forger's belt
+  items:
+    - stirring rod
+    - forging hammer
+    - bellow
+    - tong
+    - shovel
+
+outfitting_tools:
+- knitting needle
+- sewing needle
+- yardstick
+- awl
+- stamp
+- scissors
+- slickstone
+- hide scraper
+
+outfitting_belt:
+  name: tailor's belt
+  items:
+    - sewing needle
+    - yardstick
+    - knitting needle
+    - awl
+    - scraper
+
+shaping_tools:
+#- carving knife
+#- shaper
+- drawknife
+- rasp
+- curved saw
+- stamp
+
+carving_tools:
+- rasp
+- rifflers
+- bone saw
+- chisels
+- scissors
+- stamp
+
+engineering_belt:
+  name: engineer's belt
+  items:
+    - rasp
+    - rifflers
+    - bone saw
+    - chisels
+    - curved saw
+
+enchanting_tools:
+- burin
+- brazier
+- fount
+- fey-bone rod
+- augmentation loop
+- stamp
+
+enchanting_belt:
+  name: tailor's belt
+  items:
+    - burin
+    - brazier
+    - fount
+    - fey-bone rod
+    - augmentation loop
+
+# Workorder recipes
+workorder_recipes:
+  tailoring:
+    - a deeply-hooded cloak
+    - a cloth shaman's robe
+    - some flowing cloth robes
+    - a cloth mage's robe
+    - a cloth mining belt
+    - a cloth survival belt
+    - a cloth artisan's belt
+    - a hooded cloth cloak
+    - some cloth dress pants
+    - a cloth charm bag
+    - a cloth tabard
+    - a formal cloth tuic
+    - a cloth gown
+    - a cloth dress shirt
+    - a floor-length cloth dress
+    - a knitted cloak
+    - a knitted blanket
+  #artificing:
+    #- burden runestone
+#  Forging:
+#  Alchemy:
+
+#### Training/safe rooms ###
+enchanting_room: xxxx
+training_rooms:
+- xxxx
+- xxxx
+
+# Athletic trainer - a dark climbing rope woven with strangely glowing threads
+have_climbing_rope: true
+
+# Appraisal settings
+appraisal_training:
+- gear
+- art
+- pouches
+
+#### Lockpick settings
+use_lockpick_ring: &use_lockpick_ring true
+lockpick_container: &lockpick_container lockpick case
+box_loot_limit: 30 #12
+box_hunt_minimum: 10
+picking_box_source: sack
+picking_box_storage: red backpack
+full_pouch_container: green backpack
+sale_pouches_container: green backpack
+harvest_traps: false
+picking_pet_box_source: blue backpack
+pet_boxes_on_hand: 12
+lockpick_type: stout #stout iron #Shard
+stop_pick_on_mindlock: true
+lockpick_dismantle:
+  fire
+#skip_lockpick_ring_refill: true
+gem_pouch_adjective: black
+spare_gem_pouch_container: sack
+
+lockpick_buffs:
+  spells:
+    - abbrev: drum
+      symbiosis: true
+      mana: 40
+      cambrinth:
+      - - 20
+#uses ;pick and existing settings
+revert_to_live_boxes: true
+#required to be true/false.  base will default to false
+have_training_box: false
+#original settings - optional if have_training_box: false
+picking_lockbox: safe
+picking_worn_lockbox: false
+#list training item as specifically as possible
+#consumable boxes will be pulled from your burgle loot_container and should be kept separate from live boxes.
+#leave blank to skip
+consumable_lockboxes:
+- keepsake box
+
+#### Safe room and empath
+safe_room: xxxx
+safe_room_id: xxxx
+safe_room_empath: xxxx
+safe_room_empaths:
+- name: xxxx
+  id: xxxx
+- name: xxxx
+  id: xxxx
+saferoom_health_threshold: 15
+dump_junk: true
+dump_item_count: 5
+
+#### Cambrinth settings
+cambrinth: first.armband
+cambrinth_items:
+- name: first.armband
+  cap: 50
+  stored:
+- name: second.armband
+  cap: 50
+  stored:
+- name: cambrinth.orb
+  cap: 100
+  stored: true
+- name: chrysalis
+  cap: 108
+  stored: true
+- name: anklet
+  cap: 4
+  stored:
+
+dedicated_camb_use: spell
+#stored_cambrinth: true
+use_harness_when_arcana_locked: true
+
+health_threshold: 30
+mark_crafted_goods: true
+
+use_research: true
+research_skills:
+ - Elemental Magic
+ - Arcana
+ - Utility
+ - Augmentation
+ - Warding
+ #- Sorcery
+
+empty_hunting_room_messages:
+
+hunting_buddies_max: 3
+hunting_buddies:
+ - Ceindrech
+ - Treahead
+ - Anshelm
+ - Haruhiko
+ - Iney
+ - Endraig
+ - Reverence
+ - Twiddlethumbs
+ - Vinarterta
+ #- Crannach
+ - Aurayn
+ - Gallifreius
+ - Sarvatt
+ - Atanamir
+ - Ezzra
+ - Mitkiahn
+ - Venantius
+ - Gram
+ - Emma
+ - Kalinandra
+ - Emmajin
+ - Wilhellm
+
+favor_god: Meraud
+favor_goal: 151
+favor_orb_rub_frequency: 120
+
+listen: true
+#listen_observe: true
+ignored_npcs:
+- owl
+- golds
+- shadowling
+- lynx
+
+exp_timers:
+  First Aid: 400
+  Locksmithing: 600
+  Thievery: 600
+  Attunement: 120
+  Utility: 240
+  Augmentation: 240
+
+#quit_on_status_warning: true
+
+#Mining
+mines_to_mine:
+- wicked_burrow
+- wicked_burrow_climbing
+- stone_clan
+- waterfall
+- warklins
+- abandoned_mine
+- ice_caves
+#mining_buddy_mine_every_room: true
+mining_buddy_vein_list:
+# common
+#- Quartzite
+# uncommon
+#- Silver
+# rare
+#- Gold
+#- Platinum
+- Lumium
+#- Niniam
+#- Electrum
+- Muracite
+- Darkstone
+# very rare
+- Damite
+- Kertig
+- Haralun
+- Glaes
+- Animite
+mine_while_training: true
+
+###Forestry################
+forests_to_chop:
+- neg_to_kaerna
+- cougars
+- wilds_and_reavers
+- blood_dryads
+- twisted_dryads
+- road_to_shard
+- adanf_woods
+#lumber_buddy_chop_every_room: true
+lumber_implement: hatchet
+lumber_while_training: true
+lumber_buddy_tree_list:
+# common
+#- Ash #shortbows
+#- Bamboo # martial
+#- Durian # martial
+#- Mahogany # martial
+#- Mangrove #martial, shortbows
+#- Maple #longbows
+#- Sandalwood #Composite
+# rare
+- Adder # Alterations
+- Aformosia # Alterations
+- Albarco # shortbow
+- Alerce # Alterations
+#- Avodire # composite
+- Azurelle # longbows
+- Bloodwood # longbows, shortbows
+#- Bocote # martial
+#- Cherry # longbows
+- Copperwood # longbows
+#- Crabwood # martial
+- Darkspine # martial
+- Diamondwood # martial
+- Dragonwood # alterations
+- E'erdream # ???
+- Felwood # martial, shortbows, composite
+- Finivire # all bows
+- Glitvire # ???
+#- Gloomwood # ???
+- Goldwood # longbows, shortbows
+#- Greenheart # martial
+#- Hickory # martial, composite
+- Ilomba # Alterations
+- Iroko # Alterations
+#- Ironwood #martial
+#- Kapok # alterations # have lots
+#- Lelori #Composite
+#- Macawood #alterations
+- Mistwood # longbow, shortbow
+#- Osage	# longbows
+#- Ramin # longbows
+#- Redwood # alterations
+#- Rockwood # martial
+#- Rosewood # longbows
+- Shadowbark # ???
+- Silverwood # shortbows, composite bows
+- Smokewood # alterations
+- Tamarak # alterations
+- Tamboti # ???
+#- Yew # Longbows
+###########################
+
+# Textbooks/First Aid charts
+textbook: true
+textbook_type: codex
+
+footwear: boots
+
+#forage_item: grass
+braid_item: grass
+
+custom_scrolls:
+- heart-shaped scroll
+- yellow scroll
+- dubiously scroll
+- crinkled scroll
+- icy scroll
+- bright scroll
+- green scroll
+- pristine scroll
+- rainbow-hued scroll
+
+discard_scrolls:
+- Burden
+- Dispel
+- Ease Burden
+- Gauge Flow
+- Imbue
+- Lay Ward
+#- Manifest Force
+#- Seal Cambrinth
+- Strange Arrow
+- Absolution
+
+# Repair settings
+skip_repair: false
+repair_timer: 86400 #10800 # Repair once every 3 hours. #86400 # Repair once every 24 hours.
+repair_every: .inf # Infinity or 1, 2, whatever hunts
+
+restock:
+  ammo:
+    name: smooth rocks
+    room: 12172
+    price: 90
+    size: 30
+    stackable: true
+    quantity: 60
+  arrow:
+  bolt:
+  #rock:
+  #torch: # Crossing
+    #name: torch
+    #room: 8265
+    #price: 93
+    #size: 1
+    #stackable: false
+    #quantity: 2
+  #flint: # Crossing
+    #name: flint
+    #room: 8265
+    #price: 143
+    #size: 1
+    #stackable: false
+    #quantity: 1
+  #torch: # Shard
+    #name: torch
+    #room: 9747
+    #price: 94
+    #size: 1
+    #stackable: false
+    #quantity: 2
+  #flint: # Shard
+    #name: flint
+    #room: 9747
+    #price: 34
+    #size: 1
+    #stackable: false
+    #quantity: 1
+
+#### T2 Setup
+#stop_on_low_threshold: 4
+training_list:
+- skill:
+  - Athletics
+  start: 10
+  scripts:
+  - get2 xxxx
+  - sum_fam_owl # private script
+  - tendme
+  - athletics
+
+- skill:
+  - Thievery
+  start: 10
+  scripts:
+  - get2 xxxx
+  - burg-check # private script
+
+- skill:
+  - Defending
+  start: 4
+  scripts:
+  - get2 xxxx
+  - checkfavors
+  - weararmor
+  - hunting-buddy main
+  - safe-room
+  - get2 xxxx
+  - tendme
+  - pick
+  - journal
+  - sell-loot
+  - checkrepair # private script
+  - restock
+
+- skill:
+  - Skinning
+  start: 4
+  scripts:
+  - get2 xxxx
+  - checkfavors
+  - weararmor
+  - hunting-buddy drakes
+  - safe-room force
+  - checkrepair # private script
+  - journal
+  - sell-loot
+
+- skill:
+  - Forging
+  - Outfitting
+  - Enchanting
+  start: 2
+  scripts:
+  - get2 xxxx
+  - tendme
+  - burg-check
+  - smelt-deeds lum
+  - smelt-deeds glaes
+  - smelt-deeds darkstone
+  - smelt-deeds muracite
+  - makesteel_w 3 m
+  - workorders weaponsmithing
+  - deedingot # private script
+  - workorders tailoring
+  - workorders artificing
+  - wes-ench # private craft enchanting
+
+- skill:
+  - Outdoorsmanship
+  start: 35
+  scripts:
+  - get2 xxxx
+  - tendme
+  - get2 xxxx
+  - outdoorsmanship
+  - journal
+  - mining-buddy
+  - forestry-buddy
+  - get2 xxxx
+  - first-aid
+  - get2 xxxx
+  - clean-lumber_w blood backpack sack # private script
+  - clean-lumber_w copper backpack sack # private script
+  - clean-lumber_w ash backpack sack # private script
+  - clean-lumber_w redwood backpack sack # private script
+  - clean-lumber_w tamarak backpack sack # private script
+  - clean-lumber_w lelori backpack sack # private script
+  - clean-lumber_w azurelle backpack sack # private script
+  - deedingot # private script
+  - stack-scrolls backpack
+  - sell-loot
+
+sorter:
+  width: 25
+  mute_old_inventory: true
+  sort_inv_command: true
+  sort_look_others: true
+  sort_look_items_command: true
+  ignore_categories: lootables|trash
+
+#integrate_shit_list_with_textsubs: true
+
+boggle_stow_container: backpack
+boggle_full_container: sack
+
+tarantula_noun: tarantula
+tarantula_debug: false  #This is only necessary if you want it true.  Script defaults to false.
+
+tarantula:
+  Armor:
+    combat:
+    - Chain Armor
+    - Defending
+    - Shield Usage
+  Weapon:
+    combat:
+    - Melee Mastery
+    - Missile Mastery
+  Magic:
+    combat:
+    - Utility
+    non_combat:
+    - Sorcery
+  Survival:
+    combat:
+    - Evasion
+    - Skinning
+    non_combat:
+    - Athletics
+  Lore:
+    non_combat:
+    - Appraisal
+    - Performance
+    - Scholarship
+
+tarantula_excluded_skills:
+  - Forging
+  - Outfitting
+  - Alchemy
+  - Enchanting
+  - Engineering
+  - Slings
+  - Bow
+  - Crossbow
+  - Thievery
+  - First Aid
+  - Stealth
+  - Locksmithing
+
+burgle_settings:
+  room: xxxx
+  entry_type: lockpick
+  use_lockpick_ring: *use_lockpick_ring
+  lockpick_container: *lockpick_container
+  max_search_count: 2
+  loot: pawn
+  loot_container: blue backpack
+  retry: false
+  item_whitelist:
+    #- witch ball
+    - memory orb
+    - blunt-tipped bolts
+    - blunt-tipped arrows
+    - blunt stones
+    - worn book
+    - small telescope
+    - keepsake box
+
+droughtman_storage: blue backpack

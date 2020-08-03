@@ -1,0 +1,714 @@
+# Spell Wish List (1 slots to spend)
+# TURI(2)
+
+hometown: Crossing
+safe_room: 1645
+
+coordinator_hunting_tasks:
+  #  - :file: setup
+  #    :pause_sanowret: true
+  #    :default: true
+  #    :start_on:
+  #      any_skill_under:
+  #        skills:
+  #        - Small Edged
+  #        target: 5
+
+
+coordinator_town_tasks:
+  - :script: restock-shop
+    :start_on:
+      timer:
+        global: true
+        time: 86400 # 24 hours
+        key: 'shop'
+  - :action: train_forging 
+    :start_on:
+      skill_under:
+        skill: Forging
+        target: 5
+  - :action: train_outfitting
+    :start_on:
+      skill_under:
+        skill: Outfitting
+        target: 5
+  - :action: train_engineering
+    :start_on:
+      skill_under:
+        skill: Engineering
+        target: 5
+  - :action: train_alchemy
+    :start_on:
+      skill_under:
+        skill: Alchemy
+        target: 5
+
+        #  - :script: athletics
+        #    :args:
+        #    :start_on:
+        #      skill_under:
+        #        skill: Athletics
+        #        target: 10
+
+coordinator_hunting_cleanup:
+  - :script: safe-room
+  - :script: sell-loot
+    :skip_first_run: true
+  - :script: crossing-repair
+    :skip_first_run: true
+    :start_on:
+      timer:
+        global: true
+        time: 43200 
+        key: 'repair'
+
+buff_spells:
+  Manifest Force:
+    cambrinth:
+    - 32
+  Finesse:
+    cambrinth:
+    - 17
+  Last Gift of Vithwok IV:
+    cambrinth:
+    - 21
+  Membrach's Greed:
+    cambrinth:
+    - 20
+  Noumena:
+    cambrinth:
+    - 28
+
+offensive_spells:
+- name: Arbiter's Stylus
+  cast_only_to_train: true
+  night: yes  # Same as true
+- name: Crystal Dart
+  mana: 6
+  cast_only_to_train: true
+  day: true # Same as yes
+- name: Fluoresce
+  # cast: cast creatures # This does not work. It looks like it only works with the plain 'cast' command
+  cambrinth:
+  - 10
+
+waggle_sets:
+  ## Individual Spells
+  ava:
+    # Room objs: "ball of red luminescence", 
+    Avren Aevareae:
+      cambrinth:
+      - 10
+      skill: Augmentation
+  blur:
+    Blur:
+      cambrinth:
+      - 28
+      min_starlight_level: 1
+  fin: &finesse
+    Finesse:
+      recast: 7
+      cambrinth:
+      - 32
+  gaf:
+    Gauge Flow:
+      cambrinth:
+      - 25
+  maf:
+    Manifest Force:
+      mana: 9
+      cambrinth:
+      - 32
+  meg:
+    Membrach's Greed:
+      mana: 10
+      cambrinth:
+      - 32
+  nou:
+    Noumena:
+      mana: 3
+      cambrinth:
+      - 32
+  trc:
+    Trabe Chalice:
+      mana: 4
+      cambrinth:
+      - 32
+  ## Script sets
+  #  sew:
+  #    Platinum Hands of Kertigen:
+  #      recast: 7
+  #      cambrinth:
+  #      - 20
+  #    << : *finesse
+  #  smith:
+  #    Platinum Hands of Kertigen:
+  #      recast: 7
+  #      cambrinth:
+  #      - 20
+  #    << : *finesse
+  mining:
+    Membrach's Greed:
+      recast: 10
+      mana: 10
+      cambrinth:
+      - 32
+  forestry:
+    Membrach's Greed:
+      recast: 10
+      mana: 10
+      cambrinth:
+      - 32
+
+hunting_buddies:
+- Remigius
+
+prep_scaling_factor: 0.95
+
+cambrinth: cambrinth armband
+cambrinth_cap: 32
+cambrinth_num_charges: 1
+cambrinth_invoke_exact_amount: true
+cambrinth_items:
+- name: cambrinth armband
+  cap: 32
+  stored: false
+crossing_training_sorcery_room: 1645
+use_harness_when_arcana_locked: yes
+dedicated_camb_use: spell
+
+training_spells:
+  Augmentation:
+    abbrev: FIN
+    symbiosis: true
+  Utility:
+    abbrev: NOU
+  Warding:
+    abbrev: NON
+    symbiosis: true # Need more than 204
+
+training_manager_hunting_priority: yes
+training_manager_town_duration: 60
+training_manager_priority_skills:
+- Small Edged
+
+hunting_file_list:
+  #- stealth
+- setup
+
+combat_trainer_target_increment: 10
+combat_trainer_action_count: 50
+
+skip_last_kill: true  # Stops hunting as soon as possible, otherwise combat-trainer lingers and tries to kill the last mob to recover ammo, etc..., this just says "my hunting skills are locked, im out"
+
+trade_contract_container: sturdy backpack
+
+crafting_container: sturdy backpack # Add an adjective, this helps if you craft backpacks
+
+train_workorders:
+- Blacksmithing
+- Tailoring
+
+workorder_diff:
+  armorsmithing: Challenging
+  blacksmithing: Hard
+  carving: Challenging
+  remedies: Challenging
+  shaping: Challenging
+  tailoring: Hard
+  weaponsmithing: Hard
+
+work_order_disciplines:
+- Blacksmithing
+- Tailoring
+
+workorder_min_items: 1 # accept any work order above or at this amount
+workorder_max_items: 4 # accept any work order below or at this amount
+
+mark_crafted_goods: true # Stamp your goods when doing workorders. You still have to tell ;smith to stamp if you run it manually
+
+use_own_ingot_type: # Use a specific ingot for workorders
+deed_own_ingot: false # Deed whatevers in use_own_ingot_type
+
+forging_tools:
+- forging hammer
+- tong
+- bellow
+- shovel
+- stamp
+- stirring rod
+
+forging_belt:
+  name: forg belt
+  items: 
+  - forging hammer
+  - tong
+  - bellow
+  - shovel
+  - stirring rod
+
+mining_buddy_vein_list:
+#- Oravir
+- Zinc
+- Silver
+- Tin
+- Nickel
+- Platinum
+- Covellite # Heat resistant, makes good tongs
+# Rare Metals
+- Lumium
+- Damite
+- Kertig
+- Haralun
+- Glaes
+- Animite
+
+mines_to_mine:
+- dark_tunnels
+- waterfall
+- wicked_burrow
+- wicked_burrow_premie
+- wicked_burrow_climbing
+- stone_clan
+- abandoned_mine
+
+
+hunting_info: 
+- :zone:
+  - rock_guardians
+  :duration: 30
+  stop_on:
+  - Small Edged
+
+restock:
+  bolt:
+    quantity: 30
+  arrow:
+    quantity: 30
+
+
+stop_hunting_if_bleeding: yes
+
+favor_god: Kertigen
+favor_goal: 30
+
+picking_box_source: bag 
+picking_box_storage:
+lockpick_dismantle: salvage
+use_lockpick_ring: true
+
+use_weak_attacks: true
+use_stealth_attacks: false
+
+status_monitor_no_window: true
+dump_junk: true
+
+gear:
+### Weapons
+## Vaulted
+#- :name: sword
+#  :adjective: bastard
+#  :swappable: true
+- :name: spear
+  :adjective: light
+- :name: spike
+  :adjective: throwing
+  :swappable: true
+- :name: shortbow
+  :adjective: Nisha
+  :is_leather: true
+  :is_worn: true
+  ## Vaulted
+  #- :name: crossbow
+  #  :adjective: battle
+- :name: mace
+  :adjective: bar
+  :swappable: true
+### Armor
+- :name: pants
+  :adjective: insulated
+  :is_leather: true
+  :is_worn: true
+- :name: gloves
+  :adjective: quilted
+  :is_leather: true
+- :name: hood
+  :adjective: quilted
+  :is_leather: true
+- :name: shirt
+  :adjective: quilted
+  :is_leather: true
+- :name: mask
+  :adjective: quilted
+  :is_leather: true
+- :name: greaves
+  :adjective: scale
+- :name: greaves
+  :adjective: light 
+- :name: sipar
+  :adjective: round
+  :is_worn: true
+  :hinders_lockpicking: true
+- :name: helm
+  :adjective: ring
+  :is_worn: true
+  :hinders_lockpicking: true
+- :name: mask
+  :adjective: ring
+  :is_worn: true
+  :hinders_lockpicking: true
+- :name: lorica
+  :adjective: ring
+  :is_worn: true
+- :name: greaves
+  :adjective: ring
+  :is_worn: true
+- :name: &hand_armor gloves # this gets referenced by *hand_armor; if i change my gloves here, it will change hand_armor
+  :adjective: ring
+  :is_worn: true
+  :hinders_lockpicking: true
+- :name: vambraces
+  :adjective: ring
+  :is_worn: true
+- :name: stick
+  :adjective: parry
+  :is_worn: true
+### Tools
+- :name: hammer
+  :adjective: forging
+  :tie_to: forg belt
+- :name: shovel
+  :adjective: glaes-edged
+  :tie_to: forg belt
+- :name: rod
+  :adjective: stirring
+  :tie_to: forg belt
+
+gear_sets:
+  standard:
+  - parry stick
+  - round sipar
+  - ring lorica
+  - ring vambraces
+  - insulated pants
+    #- ring greaves
+  - ring mask
+  - ring helm
+  - Nisha shortbow
+  - ring gloves 
+
+performance_monitor_weapons:
+  #- bastard sword
+
+weapon_training:
+  #  Brawling: ''
+  #  Bow: Nisha shortbow
+  #  Crossbow: battle crossbow
+  #  Offhand Weapon: throwing spike
+  #  Light Thrown: throwing spike
+  #  Small Blunt: throwing spike
+  Small Edged: throwing spike
+  #  Polearms: light spear
+  #  Heavy Thrown: light spear
+  #  Large Blunt: bar mace
+  #  Twohanded Blunt: bar mace
+  #  Large Edged: bastard sword
+  #  Twohanded Edged: bastard sword
+
+training_abilities:
+  Hunt: 80
+  PercMana: 60
+  Analyze: 70
+  Recall: 1205
+  #  App: 60
+
+cycle_armors:
+  Light Armor:
+  - insulated pants
+    #  Chain Armor:
+    #- ring greaves
+  Plate Armor:
+  - light greaves
+  Brigandine:
+  - scale greaves
+
+hand_armor: *hand_armor # check the gear list to see whats going on here
+
+crossing_training:
+- Locksmithing
+- Trading
+- Athletics
+- Outdoorsmanship
+- Forging
+- Outfitting
+- Attunement
+- Utility
+- Augmentation
+- Warding
+- Mechanical Lore
+- Appraisal
+
+appraisal_training:
+- pouches
+- gear
+
+full_pouch_container: sturdy backpack
+
+#crafting_training_spells:
+#  Augmentation:
+#    abbrev: FIN
+#    name: Finesse
+#    mana: 5
+#    symbiosis: true
+#  Utility:
+#    abbrev: NOU
+#    mana: 5
+#    symbiosis: true
+#  Warding:
+#    abbrev: NON
+#    mana: 5
+#    symbiosis: true
+
+listen: true
+listen_observe: true
+
+sell_loot_pouch: false
+spare_gem_pouch_container: duffel bag
+gem_pouch_adjective: purple
+sell_pouches_for_trading: true
+sale_pouches_container: sturdy backpack
+
+repair_timer: 86400 # Repair once every 24 hours
+repair_every: .inf # Infinity - Dont use repair counter
+
+# To correctly stow special types of 'stones' you need to subtract the general 'stones' from your lootables list. Keep in mind that you now need to list all types of stones to loot in loot additions, e.g. 'shmurgle stones' wont be looted anymore with the settings below
+loot_subtractions:
+- stones
+loot_additions:
+- kyanite stones
+- jadeite stones
+- waermodi stones
+- lantholite stones
+loot_specials:
+- name: jadeite stones
+  bag: duffel bag
+- name: kyanite stones
+  bag: duffel bag
+
+safe_room: 
+restock_shop:
+  inside_room: 14024
+  outside_room: 7917
+  entrance_noun: engraved arch
+  items:
+  - noun: mask  # Noun of the item
+    price: 60000 # Cost in coppers
+    surface: in cabinet # Where are you selling it in your shop, also include if its 'in' or 'on'
+    recipe: a light plate mask  # Whats the recipe name in the crafting book
+    material: steel # What are you making it out of
+    full_name: plate mask # What does the item look like in your shop, this helps distinguish similar items being sold on the same surface (This is not always 'adjective + noun' so be careful)
+  - noun: gauntlets
+    full_name: light steel plate gauntlets
+    price: 60000
+    surface: in cabinet
+    recipe: some light plate gauntlets
+    material: steel
+  - noun: greaves
+    full_name: light plate greaves
+    price: 120000
+    surface: in cabinet
+    recipe: light plate greaves
+    material: steel
+  - noun: mask
+    full_name: scale mask
+    price: 60000
+    surface: in cabinet
+    recipe: scale mask
+    material: steel
+  - noun: gloves
+    full_name: scale gloves
+    price: 60000
+    surface: in cabinet
+    recipe: scale gloves
+    material: steel
+  - noun: greaves
+    full_name: scale greaves
+    price: 120000
+    surface: in cabinet
+    recipe: scale greaves
+    material: steel
+  - noun: balaclava
+    full_name: ring balaclava
+    price: 110000
+    surface: in cabinet
+    recipe: ring balaclava
+    material: steel
+  - noun: mask
+    full_name: ring mask
+    price: 60000
+    surface: in cabinet
+    recipe: ring mask
+    material: steel
+  - noun: helm
+    full_name: ring helm
+    price: 100000
+    surface: in cabinet
+    recipe: ring helm
+    material: steel
+  - noun: gloves
+    full_name: some steel ring gloves
+    price: 60000
+    surface: in cabinet
+    recipe: ring gloves
+    material: steel
+  - noun: shirt
+    full_name: a steel ring shirt
+    price: 220000
+    surface: in cabinet
+    recipe: ring shirt
+    material: steel
+  - noun: greaves
+    full_name: some steel ring greaves
+    price: 120000
+    surface: in cabinet
+    recipe: ring greaves
+    material: steel
+  - noun: sipar
+    full_name: a steel round sipar
+    price: 200000
+    surface: in cabinet
+    recipe: round sipar
+    material: steel
+  - noun: stick
+    full_name: parry stick
+    price: 120000
+    surface: on table
+    recipe: parry stick
+    material: steel
+  - noun: hammer
+    full_name: throwing hammer
+    price: 120000
+    surface: on rack
+    recipe: throwing hammer
+    material: steel
+  - noun: spike
+    full_name: throwing spike
+    price: 100000
+    surface: on rack
+    recipe: throwing spike
+    material: steel
+  - noun: spear
+    full_name: steel light spear
+    price: 120000
+    surface: on rack
+    recipe: light metal spear
+    material: steel
+  - noun: nightstick
+    full_name: steel nightstick
+    price: 120000
+    surface: on rack
+    recipe: nightstick
+    material: steel
+  - noun: axe
+    full_name: throwing axe
+    price: 120000
+    surface: on rack
+    recipe: a light throwing axe
+    material: steel
+  - noun: axe
+    full_name: hurling axe
+    price: 120000
+    surface: on rack
+    recipe: hurling axe
+    material: steel
+  - noun: akabo
+    full_name: akabo
+    price: 120000
+    surface: on rack
+    recipe: akabo
+    material: steel
+  - noun: blade
+    full_name: marauder blade
+    price: 120000
+    surface: on rack
+    recipe: marauder blade
+    material: steel
+  - noun: cutlass
+    full_name: steel cutlass
+    price: 120000
+    surface: on rack
+    recipe: cutlass
+    material: steel
+  - noun: bola
+    full_name: steel bola
+    price: 120000
+    surface: on rack
+    recipe: bola
+    material: steel
+  - noun: fork
+    full_name: military fork
+    price: 120000
+    surface: on rack
+    recipe: military fork
+    material: steel
+  - noun: mask
+    full_name: quilted heavy burlap mask
+    price: 60000
+    recipe: quilted cloth mask
+    material: heavy burlap
+    surface: in cabinet
+  - noun: hood
+    full_name: quilted heavy burlap hood
+    price: 100000
+    recipe: quilted cloth hood
+    material: heavy burlap
+    surface: in cabinet
+  - noun: gloves
+    price: 60000
+    surface: in cabinet
+    recipe: quilted cloth gloves
+    full_name: quilted heavy burlap gloves
+    material: heavy burlap
+  - noun: pants
+    full_name: quilted heavy burlap pants
+    price: 120000
+    surface: in cabinet
+    recipe: quilted cloth pants
+    material: heavy burlap
+  - noun: shirt
+    full_name: quilted heavy burlap shirt
+    price: 220000
+    recipe: quilted cloth shirt
+    material: heavy burlap
+    surface: in cabinet
+    #  - noun: shield
+    #    price: 220000
+    #    surface: in cabinet
+    #    material: gryphon
+    #    full_name: small gryphon-pelt shield
+    #    recipe: small leather shield
+  - noun: backpack
+    price: 100000 
+    recipe: backpack
+    full_name: backpack
+    surface: on table
+    material: heavy linen
+  - noun: duffel.bag
+    recipe: a cloth duffel bag
+    full_name: duffel bag
+    price: 100000
+    surface: on table
+    material: heavy linen
+
+
+outfitting_tools:
+- knitting needles
+- sewing needles
+- awl
+- scissors
+- stamp
+- hide scraper
+- slickstone
+- yardstick
+
+

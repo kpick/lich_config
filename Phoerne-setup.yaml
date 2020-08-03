@@ -1,0 +1,348 @@
+---
+# Hunting settings
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Brawling
+- Small Edged
+- Light Thrown
+- Small Blunt
+- Offhand Weapon
+- Heavy Thrown
+- Polearms
+- Crossbow
+- Staves
+- Large Edged
+- Twohanded Edged
+- Large Blunt
+- Twohanded Blunt
+hunting_info:
+- :zone: cave_trolls
+  :duration: 30
+  before:
+  - go2 846
+  - astrology
+  - go2 705
+  - first-aid
+  - athletics
+  - sorcery
+  - safe-room force
+  stop_on:
+  - Brawling
+  - Small Edged
+  - Light Thrown
+  - Small Blunt
+  - Offhand Weapon
+  - Heavy Thrown
+  - Polearms
+  - Crossbow
+  - Staves
+  - Large Edged
+  - Twohanded Edged
+  - Large Blunt
+  - Twohanded Blunt
+prehunt_buffs: 7958
+waggle_sets:
+  prehunt_buffs:
+    Seer's Sense:
+      use_auto_mana: true
+    Manifest Force:
+      mana: 15
+    Cage of Light:
+      use_auto_mana: true
+  astrology:
+    Clear Vision:
+      mana: 1
+    Piercing Gaze:
+      mana: 1
+    Aura Sight:
+      mana: 1
+hunting_buddies:
+
+# Gear settings
+gear:
+- :adjective: quilted
+  :name: hauberk
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: ring
+  :name: balaclava
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: scale
+  :name: balaclava
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective:
+  :name: sallet
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: ring
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: scale
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: plate
+  :name: gauntlets
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: target
+  :name: shield
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: brass
+  :name: knuckles
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: elbow
+  :name: spikes
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: throwing
+  :name: spike
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: true
+  :tie_to:
+- :adjective:
+  :name: spear
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective: light
+  :name: crossbow
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective:
+  :name: nightstick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: bastard
+  :name: sword
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: true
+- :adjective: bar
+  :name: mace
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: true
+gear_sets:
+  standard:
+  - quilted hauberk
+  - ring balaclava
+  - ring gloves
+  - target shield
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+cycle_armors:
+  Plate Armor:
+  - sallet
+  - plate gauntlets
+  Brigandine:
+  - scale balaclava
+  - scale gloves
+  Chain Armor:
+  - ring balaclava
+  - ring gloves
+sort_auto_head: false
+
+# Combat settings
+offensive_spells:
+- name: Mind Shout
+  use_auto_mana: true
+- name: Dinazen Olkar
+  cast_only_to_train: true
+  use_auto_mana: true
+buff_spells:
+  Seer's Sense:
+    use_auto_mana: true
+  Manifest Force:
+    use_auto_mana: true
+  Cage of Light:
+    use_auto_mana: true
+  Shadows:
+    use_auto_mana: true
+combat_spell_training:
+  Augmentation:
+    abbrev: shadows
+    use_auto_mana: true
+  Utility:
+    abbrev: PG
+    use_auto_mana: true
+  Warding:
+    abbrev: PSY
+    use_auto_mana: true
+dynamic_dance_skill: true
+training_abilities:
+  Stealth: 30
+  Tactics: 60
+  PercMana: 240
+  Hunt: 80
+  App Quick: 60
+  Collect: 120
+  Locks: 120
+weapon_training:
+  Brawling: ''
+  Small Edged: throwing spike
+  Light Thrown: throwing spike
+  Small Blunt: throwing spike
+  Offhand Weapon: throwing spike
+  Heavy Thrown: spear
+  Polearms: spear
+  Crossbow: light crossbow
+  Staves: nightstick
+  Large Edged: bastard sword
+  Twohanded Edged: bastard sword
+  Large Blunt: bar mace
+  Twohanded Blunt: bar mace
+# use_stealth_attacks: true
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+loot_subtractions:
+- arrow
+- arrows
+- rock
+- rocks
+- coffer
+- strongbox
+- chest
+- caddy
+- trunk
+- casket
+- skippet
+- crate
+- box
+use_weak_attacks: true
+health_threshold: 70
+dont_stalk: true
+restock:
+  bolt:
+    quantity: 50
+priority_defense: Evasion
+prep_scaling_factor: 0.80
+aiming_trainables:
+- Tactics
+- Brawling
+- Small Edged
+- Small Blunt
+- Light Thrown
+- Staves
+using_light_crossbow: true
+
+# Non-combat settings
+crafting_training_spells:
+  Augmentation:
+    abbrev: shadows
+    symbiosis: true
+    use_auto_mana: true
+  Utility:
+    abbrev: PG
+    symbiosis: true
+    use_auto_mana: true
+  Warding:
+    abbrev: PSY
+    symbiosis: true
+    use_auto_mana: true
+listen: true
+exp_timers:
+  Stealth: 300
+  First Aid: 400
+  Locksmithing: 600
+  Theurgy: 720
+  Thievery: 600
+  Attunement: 130
+  Astrology: 200
+have_telescope: false
+crossing_training:
+- Astrology
+- First Aid
+- Scholarship
+- Attunement
+# - Appraisal
+- Athletics
+- Perception
+- Sorcery
+- Forging
+- Outfitting
+- Mechanical Lore
+- Outdoorsmanship
+cambrinth: cambrinth armband
+cambrinth_cap: 50
+favor_goal: 30
+favor_god: Meraud
+# train_workorders:
+# - Blacksmithing
+# - Tailoring
+forging_tools:
+- ball-peen hammer
+- box-jaw tongs
+- bellows
+- wide shovel
+outfitting_tools:
+- knitting needle
+- sewing needle
+- slickstone
+- yardstick
+- scissor
+- stamp
+gem_pouch_adjective: suede
+sell_loot_pouch: false
+spare_gem_pouch_container: duffel bag
+crossing_training_sorcery:
+  abbrev: ECRY
+  mana: 15
+  cambrinth:
+  - 15
+  - 10
+  - 10
+have_telescope: true
+use_harness_when_arcana_locked: true
+
+quit_on_status_warning: true
+braid_item: grass
+saferoom_health_threshold: 25
+status_monitor_no_window: true
+bankbot_deposit_threshold: 0
+repair_every: 3
+repair_timer:
+dump_junk: true
+
+# From UserVars
+crossing_training_sorcery_room:
+engineering_room:
+outfitting_room:
+safe_room:
+safe_room_id:
+safe_room_empath:
+safe_room_empaths:
+slack_username:
+bankbot_name:
+bankbot_room_id:

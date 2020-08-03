@@ -1,0 +1,385 @@
+---
+#hometown: Shard
+#climbing_target: undergondola_pit
+slack_username: ###
+quit_on_status_warning: false
+status_monitor_no_window: true
+favor_god: Urrem'tier
+favor_goal: 10
+saferoom_health_threshold: 5 #15 - Set to 0 with Yndass
+depart_on_death: false  
+health_threshold: 65
+repair_withdrawal_amount: 30000
+repair_timer: 43200 # Repair once every 12 hours
+repair_every: .inf # Infinity
+dump_junk: true
+
+default_stance: 0 87 100
+###############
+# Safe Room
+###############
+safe_room: &safe_room ###
+safe_room_id: ###
+safe_room_empath: ###
+listen: true
+listen_observe: true
+hand_armor: sleeves
+
+###############
+# T2
+###############
+training_list:
+- skill:
+  - Large Edged
+  - Small Edged
+  - Twohanded Edged
+  start: 34
+  scripts:
+  #- go2 ###
+  #- buff prebuff
+  - hunting-buddy main back
+  - athletics
+  - sloot crossing #private script
+  - go2 ###
+  - bitchin-pick
+  - first-aid
+  #- mech-lore
+  #- performance
+
+###############
+# Magic
+###############
+mapp: &mapp
+  Major Physical Protection:
+    mana: 15
+    cambrinth:
+    - 15
+    - 15
+cour: &cour
+  Courage:
+    cambrinth:
+    - 15
+    - 15
+clr: &clr
+  Clarity:
+    cambrinth:
+    - 15
+    - 7
+crc: &crc
+  Crusader's Challenge:
+    abbrev: crc
+hes: &hes
+  Heroic Strength:
+    mana: 15
+    cambrinth:
+    - 20
+    - 15
+    - 15
+aa: &aa
+  Aspirant's Aegis:
+    mana: 15
+    cambrinth:
+    - 20
+    - 15
+    - 15
+sr: &sr
+  Sentinel's Resolve:
+    mana: 15
+    cambrinth:
+    - 15
+    - 15
+rw: &rw
+  Righteous Wrath:
+    mana: 15
+    cambrinth:
+    - 15
+    - 15
+sr: &sp
+  Soldier's Prayer:
+    cambrinth:
+    - 15
+    - 5
+rue: &rue
+  Rutilor's Edge:
+    cambrinth:
+    - 15
+    - 10
+    cast: cast my broadsword
+as: &as
+  Anti-Stun:
+    cambrinth:
+    - 15
+    - 5
+
+buff_spells: &buff_spells
+  << : *mapp
+  #<< : *cour
+  #<< : *hes
+  << : *aa
+  << : *sr
+  << : *rw
+  #<< : *sp
+
+waggle_sets:
+  default:
+    << : *buff_spells
+  prebuff:
+    << : *buff_spells
+  pvp:
+    << : *mapp
+    << : *cour
+    << : *hes
+    << : *aa
+    << : *sr
+    << : *rw
+    << : *sp
+    << : *as
+    << : *clr
+  rue:
+    << : *rue
+
+combat_spell_training: &cst
+  Warding:
+    abbrev: maf
+    symbiosis: true
+    mana: 2
+  Utility:
+    abbrev: gaf
+    symbiosis: true
+    mana: 5
+  Augmentation:
+    abbrev: dig
+    symbiosis: true
+    mana: 5
+
+use_harness_when_arcana_locked: true
+dedicated_camb_use:
+train_with_spells: true
+use_research: false
+cambrinth: armband
+prep_scaling_factor: 0.80
+cambrinth_cap: 50
+
+###############
+# Combat Trainer
+###############
+training_abilities:
+  Smite: 61
+  Perc: 120
+  Hunt: 120
+  App Quick: 120
+  Analyze: 120
+  Recall: 1800
+  Collect: 120
+use_stealth_attacks: false
+priority_defense: Shield Usage
+skip_last_kill: true
+
+## Paladin ##
+paladin_use_mana_glyph: true
+pray_to_chadatru: true
+paladin_use_badge: true
+tithe: true
+
+###############
+# Weapons
+###############
+combat_trainer_target_increment: 3
+combat_trainer_action_count: 10
+  
+###############
+# Looting
+###############
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+
+loot_subtractions:
+# - coffer
+# - strongbox
+# - chest
+# - caddy
+# - trunk
+# - casket
+# - skippet
+# - crate
+# - box
+- arrow
+- arrows
+loot_additions:
+- dark blade
+- dark blades
+- stone shard
+- stone shards
+- coug arrow
+- coug arrows
+- tooth
+loot_specials:
+- name: stones
+  bag: pack
+- name: pipe
+  bag: pack
+- name: tobacco
+  bag: pack
+- name: cigar
+  bag: satchel
+- name: cigarillo
+  bag: satchel
+
+###############
+# Hunting Buddy
+###############
+ignored_npcs:
+- Brokk # black goblin area
+- leopard
+- zombie
+
+restock:
+  arrow:
+  bolt:
+  rock:
+  tk_ammo:
+
+###############
+# Script Gear
+###############
+footwear: boots
+textbook: true
+textbook_type: weathered textbook
+
+###############
+# Selling
+###############
+gem_pouch_adjective: suede
+spare_gem_pouch_container: carryall
+full_pouch_container: haversack
+sell_loot_pouch: false
+storage_containers:
+- pack
+- satchel
+- haversack
+
+###############
+# Locksmithing
+###############
+box_loot_limit: 5
+box_hunt_minimum: 0 # Private script
+picking_pet_boxes_on_hand: 5 # Private script
+lockpick_room_id: *safe_room
+use_lockpick_ring: true
+skip_lockpick_ring_refill: false
+lockpick_ignore_diffi1culty: false
+stop_pick_on_mindlock: true
+harvest_traps: false
+picking_pet_box_source: haversack
+picking_box_source: pack
+picking_box_storage: pack
+lockpick_type: stout 
+lockpick_dismantle:
+lockpick_buffs:
+
+###############
+# Gear Settings
+###############
+gear_sets:
+  standard:
+  - pavise shield
+  - ring balaclava
+  - plate cuirass
+  - lame vambraces
+  - scale gloves
+  - morgawr legwraps
+  - parry stick
+  - hand claws
+  naked: []
+
+gear:
+#ARMOR
+- :adjective: pavise
+  :name: shield
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: ring
+  :name: balaclava
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: plate
+  :name: cuirass
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: lame
+  :name: vambraces
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: scale
+  :name: gloves
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: morgawr
+  :name: legwraps
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+#BRAWLING
+- :adjective: hand
+  :name: claws
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: parry
+  :name: stick
+  :hinders_lockpicking: false
+  :is_worn: true
+#WEAPONS
+- :name: nightstick
+  :wield: true
+- :adjective: throwing
+  :name: hammer
+  :wield: true
+  :lodges: false
+- :adjective: war
+  :name: hammer
+  :wield: true
+- :adjective: bar
+  :name: mace
+  :wield: true
+- :name: greataxe
+  :wield: true
+- :name: broadsword
+  :wield: true
+- :name: falchion
+  :wield: true
+- :adjective: light
+  :name: spear
+  :wield: true
+  :lodges: true
+- :name: bola
+  :wield: true
+  :lodges: false
+- :name: cutlass
+  :wield: true
+- :adjective: nisha
+  :name: shortbow
+  :wield: true
+  :is_leather: true
+- :name: crossbow
+  :wield: true
+  :is_leather: true
+- :name: sling
+  :wield: true
+  :is_leather: true
+
+# attack_overrides:
+#   Brawling: jab
+#   Small Edged: feint
+#   Large Edged: jab
+#   Twohanded Edged: feint
+#   Small Blunt: feint
+#   Large Blunt: jab
+#   Twohanded Blunt: feint
+#   Polearms: jab
+#   Staves: feint
+#   Light Thrown: throw
+#   Heavy Thrown: throw
+#   Offhand Weapon: throw

@@ -1,0 +1,29 @@
+---
+hunting_info:
+- :zone:
+  - young_wyverns
+  - storm_bulls
+  args:
+  - d4
+  - evasion
+  :duration: 10
+  stop_on:
+  - Evasion
+
+dance_actions:
+- circle
+- bob
+- weave
+
+stance_override: 100 43 43
+skip_last_kill: true
+manipulate_threshold:
+training_abilities:
+cycle_armors:
+offensive_spells:
+buff_spells:
+use_stealth_attacks: false
+use_weak_attacks: false
+weapon_training:
+  Brawling: ''
+dance_skill: Brawling

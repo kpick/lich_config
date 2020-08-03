@@ -1,0 +1,281 @@
+---
+#Training Manager Settings
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Light Thrown
+hunting_info:
+- :zone: thugs
+  args:
+  - back
+  stop_on:
+  - Light Thrown
+  - Heavy Thrown
+  :duration: 10
+#- :zone: gryphons1
+#  args:
+#  :duration: 10
+#  stop_on:
+#  - Melee
+#combat settings
+gear:
+- :name: stick
+  :adjective: parry
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+- :name: helm
+  :adjective: ring
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :name: mask
+  :adjective: plate
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :name: hauberk
+  :adjective: padded
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+- :name: gloves
+  :adjective: scale
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :name: knuckles
+  :adjective: flat
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :name: spikes
+  :adjective: elbow
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+- :name: shield
+  :adjective: target
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :name: footwraps
+  :adjective: steel-toed
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+  :swappable: false
+- :name: sword
+  :adjective: bastard
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: true
+- :name: axe
+  :adjective: throwing
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: false
+- :name: cutlass
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: false
+- :name: spear
+  :adjective: light
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: false
+  :swappable: false
+gear_sets:
+  standard:
+  -  a padded black hauberk
+  -  some lumium scale gloves
+  -  a light lumium plate mask
+  -  a bronze target shield shaped like a clawed paw
+  -  a lumium ring helm
+  -  some flat black knuckles
+  -  some steel-toed footwraps with silver buckles
+  -  an etched steel parry stick with black leather straps
+  -  some engraved elbow spikes
+  naked: []
+aim_fillers:
+  Crossbow:
+  - bob
+  - bob
+  Bow:
+  - bob
+  - analyze
+  - bob
+aim_fillers_stealth:
+  Bow:
+  - bob
+  - hide
+  - bob
+loot_additions:
+- bolt
+- arrow
+- stones
+
+
+offensive_spells:
+#- skill: Targeted Magic
+#  name: Vivisection
+#  abbrev: vivisection
+#  mana: 19
+- skill: Targeted Magic
+  name: Acid Splash
+  abbrev: acs
+  mana: 2
+- skill: Debilitation
+  name: Petrifying Visions
+  abbrev: pv
+  mana: 15
+  harmless: true
+  expire: no longer seems petrified
+buff_spells:
+#  Manifest Force:
+#    abbrev: maf
+#    recast: 1
+#    mana: 10
+#    cambrinth:
+#    - 10
+#    - 10
+#    - 10
+  Philosopher's Preservation:
+    abbrev: php
+    recast: 2
+    mana: 12
+    cambrinth:
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+  Obfuscation:
+    abbrev: obf
+    recast: 2
+    mana: 21
+    cambrinth:
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+thanatology:
+  ritual_type: dissect
+skinning:
+  skin: true
+  arrange_all: true
+  type: part
+  arrange_count: 1
+cambrinth: armband
+charged_maneuvers:
+  Brawling: palmstrike
+  Crossbow: powershot
+  Slings: powershot
+  Small Edged: cleave
+  Large Edged: cleave
+  Twohanded Edged: cleave
+  Small Blunt: crash
+  Large Blunt: crash
+  Twohanded Blunt: crash
+  Staves: twirl
+  Polearms: impale
+dance_threshold: 1
+dance_skill: Small Edged
+dance_actions:
+- feint
+- circle
+- bob
+dance_actions_stealth:
+- stalk
+- feint
+- circle
+fatigue_regen_threshold: 85
+fatigue_regen_action: analyze
+weapon_training:
+  Brawling: ''
+  Small Edged: a light steel throwing axe
+  Large Edged: a bastard sword
+  Twohanded Edged: a bastard sword
+  Polearms: a steel light spear
+
+exp_timers:
+  Stealth: 300
+  First Aid: 360
+  Locksmithing: 600
+  Theurgy: 720
+  Attunement: 130
+  Summoning: 120
+cambrinth_cap: 50
+
+# Crossing-training settings
+
+training_spells:
+  Warding:
+    abbrev: MAF
+    symbiosis: true
+  Augmentation:
+    abbrev: OBF
+    symbiosis: true
+  Utility:
+    abbrev: EOTB
+    symbiosis: true
+    after:
+    - message: release eotb
+      matches:
+      - Your corruption fades, revealing you to the world once more.
+training_abilities:
+  Hunt: 80
+  Perc: 120
+  App: 60
+#outcrop
+#safe_room: 6183
+#tree
+safe_room: 1645
+hand_armor: gloves
+forge_container: rucksack
+crossing_training:
+#- Appraisal
+- Athletics
+- Augmentation
+- Attunement
+- Utility
+- Mechanical Lore
+- Outdoorsmanship
+- Warding
+- Forging
+#- Sorcery
+- Locksmithing
+train_workorders:
+- Blacksmithing
+crafting_container: rucksack
+
+
+storage_containers:
+- haversack
+- bag
+- rucksack
+- baldric
+
+prep_scaling_factor: 0.95
+
+# Pick settings
+
+picking_box_source: bag
+lockpick_type: master
+lockpick_dismantle: crush
+use_lockpick_ring: true
+harvest_traps: true
+picking_box_storage: bag
+
+# True - mine every room you pass through
+# False - only mine rooms with veins that match your list
+mining_buddy_mine_every_room: false
+# Mining-buddy setting
+# The list of rooms in which to mine

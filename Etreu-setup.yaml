@@ -1,0 +1,625 @@
+---
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Bow
+- Small Edged
+- Evasion
+hunting_file_list:
+- setup
+- back
+hunting_info:
+- :zone: cabalist
+  args:
+  - d1
+  stop_on:
+  - Small Edged
+  - Bow
+  - Stealth
+  - Evasion
+  :duration: 60
+  before:
+  - safe-room
+gear:
+- :name: balaclava
+  :adjective: chain
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :name: sallet
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :name: vambraces
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :name: greaves
+  :is_leather: false
+  :is_worn: true
+- :name: lorica
+  :is_leather: false
+  :is_worn: true
+- :name: gauntlet
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :name: shovel
+  :adjective: wide
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+- :name: gloves
+  :adjective: mail
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :name: shield
+  :adjective: small
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :name: hauberk
+  :adjective: padded
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :name: stick
+  :adjective: parry
+  :is_leather: false
+  :hinders_lockpicking:
+  :is_worn: true
+  :swappable: false
+- :name: knuckles
+  :adjective: brass
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+- :name: spikes
+  :adjective: elbow
+  :is_leather: false
+  :is_worn: true
+  :swappable: false
+- :name: longbow
+  :adjective: battle
+  :is_leather: true
+  :wield: true
+- :name: scythe
+  :adjective: steel
+  :is_leather: false
+  :is_worn: true
+- :name: maul
+  :adjective: senci
+  :is_leather: true
+  :is_worn: false
+  :wield: true
+- :name: bola
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :lodges: false
+  :wield: true
+- :name: sling
+  :adjective:
+  :is_leather: true
+  :is_worn: false
+  :wield: true
+- :name: greatsword
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :wield: true
+- :name: star
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :wield: true
+- :name: falchion
+  :adjective:
+  :is_leather: false
+  :is_worn: false
+  :wield: true
+- :name: cutlass
+  :adjective:
+  :is_leather: false
+  :wield: true
+- :name: crossbow
+  :adjective:
+  :is_leather: true
+  :wield: true
+- :name: spear
+  :adjective:
+  :is_leather: true
+  :wield: true
+gear_sets:
+  standard:
+  - chain balaclava
+  - mail gloves
+  - small shield
+  - padded hauberk
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+  - steel scythe
+  naked: []
+  stealing:
+  - steel scythe
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+weapon_training:
+  Bow: battle longbow
+  Small Edged: cutlass
+aim_fillers:
+  Crossbow:
+  - bob
+  - bob
+  - bob
+  Bow:
+  - bob
+  - analyze
+  - bob
+  Slings:
+  - bob
+offensive_spells:
+- skill: Debilitation
+  name: Cotw
+  abbrev: cotw
+  mana: 15
+  expire: dissolving into a hazy green mist that soon vanishes
+  harmless: true
+cambrinth: scythe
+cambrinth_cap: 200
+buff_spells:
+  Instinct:
+    abbrev: inst
+    recast: 1
+    mana: 20
+    cambrinth:
+    - 20
+    - 20
+    - 20
+    - 20
+  Manifest Force:
+    abbrev: maf
+    recast: 1
+    mana: 20
+    symbiosis: true
+  See the Wind:
+    abbrev: stw
+    recast: 2
+    mana: 30
+    symbiosis: true
+  Senses of the Tiger:
+    abbrev: sott
+    recast: 1
+    mana: 20
+    cambrinth:
+    - 20
+    - 20
+    - 20
+    - 20
+  Skein of Shadows:
+    abbrev: sks
+    recast: 1
+    mana: 15
+    symbiosis: true
+  Claws of the Cougar:
+    abbrev: cotc
+    recast: -1
+    mana: 30
+    symbiosis: true
+  Hands of Lirisa:
+    abbrev: hol
+    recast: 1
+    mana: 30
+    symbiosis: true
+  Vigor:
+    abbrev: vigor
+    recast: 1
+    mana: 20
+    cambrinth:
+    - 20
+    - 20
+    - 20
+    - 20
+  Oath of the Firstborn:
+    abbrev: oath
+    recast: 2
+    mana: 20
+    cambrinth:
+    - 20
+    - 20
+    - 20
+    - 15
+
+combat_spell_training:
+  Utility:
+    abbrev: gaf
+    mana: 30
+    symbiosis: true
+    cambrinth:
+    - 15
+  Warding:
+    abbrev: maf
+    mana: 30
+    symbiosis: true
+    cambrinth:
+    - 15
+  Augmentation:
+    abbrev: ath
+    symbiosis: true
+    mana: 30
+    cambrinth:
+    - 25
+
+skinning:
+  skin: false
+  arrange_all: true
+  arrange_count: 1
+  tie_bundle: true
+  arrange_types:
+    wyvern: part
+charged_maneuvers:
+  Brawling: palmstrike
+  Crossbow: powershot
+  Slings: powershot
+  Small Edged: cleave
+  Large Edged: cleave
+  Twohanded Edged: cleave
+  Small Blunt: crash
+  Large Blunt: crash
+  Twohanded Blunt: crash
+  Staves: twirl
+  Polearms: impale
+dance_threshold: 1
+dance_skill: Small Edged
+use_stealth_attacks: true
+training_abilities:
+  Hunt: 80
+  Perc: 60
+  App Quick: 60
+  Tactics: 20
+fatigue_regen_threshold: 85
+fatigue_regen_action: analyze
+dual_load: true
+training_spells:
+  Warding:
+    abbrev: MAF
+    symbiosis: true
+  Augmentation:
+    abbrev: STW
+    symbiosis: true
+  Utility:
+    abbrev: GAF
+    symbiosis: true
+crossing_training:
+- Locksmithing
+# - Sorcery
+- Thievery
+- Athletics
+- Attunement
+- Engineering
+- Mechanical Lore
+# - First Aid
+- Outdoorsmanship
+# - Scouting
+- Warding
+- Augmentation
+- Utility
+
+loot_additions:
+- stone shard
+- seastars
+- seastar
+- arrows
+loot_subtractions:
+- rock
+
+prep_scaling_factor: 0.95
+lockpick_type: stout
+harvest_traps: false
+lockpick_buffs:
+  spells:
+    - abbrev: hol
+      mana: 20
+      cambrinth:
+      - 20
+      - 20
+      - 20
+      - 20
+lockpick_dismantle: whistle
+pick_blind: true
+mining_buddy_vein_list:
+#- Gold
+#- Platinum
+#- Lumium
+#- Darkstone
+- Damite
+- Kertig
+- Haralun
+- Glaes
+- Animite
+# - Oravir
+crafting_container: bag
+storage_containers:
+- pack
+- quiver
+- duffel bag
+- sheath
+
+sell_loot_pouch: false
+
+safe_room: 19478
+listen: false
+classes_to_teach:
+- First Aid
+- Stealth
+
+engineering_belt:
+  name: carp belt
+  items:
+    - carving knife
+    - shaper
+    - drawknife
+    - rasp
+
+empty_hunting_room_messages:
+- Someone hunting here?
+- Speak now or forever hunt in peace.
+
+performance_monitor_weapons:
+- maul
+- spear
+
+mines_to_mine:
+- warklins
+
+spare_gem_pouch_container: pack
+gem_pouch_adjective: purple
+
+mine_while_training: false
+
+favor_god: Everild
+favor_goal: 30
+
+ignored_npcs:
+- Brokk
+engineering_room: 19478
+
+exp_timers:
+  First Aid: 400
+  Locksmithing: 600
+  Thievery: 600
+  Attunement: 120
+  Utility: 240
+  Augmentation: 240
+
+priority_defense: Evasion
+loot_specials:
+- name: jadeite stones
+  bag: bag
+- name: kyanite stones
+  bag: bag
+
+mining_skip_populated: false
+
+picking_box_source: pack
+picking_box_storage: bag
+textbook: true
+
+quit_on_status_warning: true
+
+darkbox_junk:
+- sharkskin
+- root
+- rockweed
+- kelp
+- flowers
+- apple
+- strawberry
+- root
+- cobra
+- snake
+- coin
+- belt
+- powder
+- sundress
+- earcuff
+- armband
+- anklet
+- shirt
+- cap
+- tooth
+- cloak
+- pants
+- boots
+- tobacco
+- trousers
+
+darkbox_stop_on_wounded: false
+
+pumpkin_junk:
+- socks
+- seeds
+- muffin
+- pumpkins
+- shoe
+- line
+- ribbon
+- necklace
+- mask
+- net
+- cuff
+- earcuff
+- handker
+- nose-stud
+- pin
+- armband
+- wristlet
+- necklace
+- bracelet
+- charm
+- gold ring
+- garter
+- carving knife
+- skeletons
+- wormwood ring
+- earrings
+- steel ring
+- scarf
+- mug
+- bracer
+- copper button
+- torque
+- fuzzy bats
+- blown-glass pumpkin
+- plush maggot
+- bandana
+- gloves
+- zombies
+- jellybeans
+- doll
+- ghosts
+- silver wristcuff
+- cambrinth orb
+- platinum ring
+
+# bleed_bot: selanas
+# bleed_bot_room: 705
+picking_pet_box_source: bag
+waggle_sets:
+  default:
+    Instinct:
+      abbrev: inst
+      recast: 1
+      mana: 20
+      cambrinth:
+      - 20
+      - 20
+      - 20
+      - 20
+    Manifest Force:
+      abbrev: maf
+      recast: 1
+      mana: 20
+      symbiosis: true
+    See the Wind:
+      abbrev: stw
+      recast: 2
+      mana: 20
+      cambrinth:
+      - 20
+      - 20
+      - 20
+      - 20
+    Senses of the Tiger:
+      abbrev: sott
+      recast: 1
+      mana: 20
+      cambrinth:
+      - 20
+      - 20
+      - 20
+      - 20
+    Skein of Shadows:
+      abbrev: sks
+      recast: 1
+      mana: 20
+      cambrinth:
+      - 20
+      - 20
+      - 20
+      - 20
+    Claws of the Cougar:
+      abbrev: cotc
+      recast: -1
+      mana: 20
+      cambrinth:
+      - 20
+      - 20
+      - 20
+      - 20
+    Vigor:
+      abbrev: vigor
+      recast: 1
+      mana: 20
+      cambrinth:
+      - 20
+      - 20
+      - 20
+      - 20
+    Oath of the Firstborn:
+      abbrev: oath
+      recast: 2
+      mana: 20
+      cambrinth:
+      - 20
+      - 20
+      - 20
+      - 20
+
+hide_to_steal: false
+bin_stolen: false
+stealing_bag: pack
+
+offensive_spell_mana_threshold: 50
+training_spell_mana_threshold: 60
+buff_spell_mana_threshold: 50
+quit_on_status_warning: true
+status_monitor_no_window: true
+
+sell_loot_money_on_hand: 1 platinum
+
+hunting_buddies:
+- Kiritan
+- Aurayn
+- Chuno
+
+dump_junk: true
+
+dont_steal_list:
+- 352
+- 353
+- 354
+- 355
+- 356
+- 357
+- 358
+- 359
+- 360
+- 361
+- 362
+
+sort_auto_head: false
+
+repair_timer:
+repair_every: 2
+
+scroll_stackers:
+- tome
+- folio
+- scroll book
+discard_scrolls:
+- Burden
+- Dispel
+- Ease Burden
+- Gauge Flow
+- Imbue
+- Lay Ward
+- Manifest Force
+- Seal Cambrinth
+- Strange Arrow
+- Tremor
+- Rite of Contrition
+- Rite of Grace
+- Awaken
+- Heighten Pain
+- Thoughtcast
+- Rend
+- Eillie's Cry
+- Absolution

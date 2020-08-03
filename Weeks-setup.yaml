@@ -1,0 +1,537 @@
+### HUNTING SETTINGS ###
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Small Edged
+#- Debilitation
+#- Targeted Magic
+
+hunting_file_list:
+#- backtrain2
+- backtrain
+- setup
+
+hunting_info:
+- :zone: warklin
+  stop_on:
+  - Small Edged
+  - Targeted Magic
+hunting_buddies:
+- Jezzail
+- Mistified
+
+### MISC HUNTING SETTINGS ###
+fatigue_regen_threshold: 35
+dance_threshold: 0
+
+### GEAR SETTINGS ###
+gear:
+- :adjective: ring
+  :name: shirt
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: plate
+  :name: mask
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective:
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective:
+  :name: hood
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective:
+  :name: shield
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+- :adjective: 
+  :name: gladius
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+- :adjective: light
+  :name: spear
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+- :adjective: 
+  :name: shortbow
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+- :adjective:
+  :name: nightstick
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+- :adjective: bar
+  :name: mace
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: true
+  :tie_to:
+- :adjective: throwing
+  :name: dagger
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :tie_to:
+  :bound: true
+- :adjective: coarse
+  :name: gloves
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+  :swappable: false
+  :tie_to:
+gear_sets:
+  standard:
+  - ring shirt
+  - hood
+  - plate mask
+  - shield
+  - greaves
+  - coarse gloves
+  - parry stick
+  stealing:
+  - parry stick
+  
+### COMBAT SETTINGS ###
+stances:
+  Heavy Thrown:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+  Bow:
+  - Evasion
+  - Shield Usage
+  - Parry Ability
+
+dance_actions:
+- analyze
+- circle
+- bob
+- weave
+
+### COMBAT - OFFENSIVE ###
+### active ###
+offensive_spells:
+- skill: Debilitation
+  name: Hydra Hex
+  abbrev: hyh
+  before:
+  - message: invoke armb 5
+    matches:
+    - attempting to ready 1 mana stream for your use
+    - indicates its readiness to absorb Holy energy
+    - readying all of its mana for your use
+  mana: 9
+  cambrinth:
+  - 5
+  cyclic: true
+  cast: cast malediction offense
+  expire: Currently lacking the skill to complete the pattern, your spell fails completely.
+  harmless: true
+- skill: Debilitation
+  name: Soul Sickness
+  prep_time: 3
+  abbrev: sick
+  mana: 5
+  harmless: true
+  expire: The spiritual weight lifts off
+  max_threshold: 2
+- skill: Targeted Magic
+  name: Fire of Ushnish
+  abbrev: fou
+  mana: 30
+  cambrinth:
+  - 10
+  - 10
+  prep_time: 16
+  min_threshold: 3
+  harmless: false
+### inactive ###
+#- skill: Targeted Magic
+#  name: Divine Radiance
+#  abbrev: dr
+#  mana: 5
+#  cambrinth:
+#  - 10
+#  - 10
+#  expire: The searing lights fade
+#  harmless: true
+#  max_threshold: 2
+#- skill: Debilitation
+#  name: Malediction
+#  abbrev: maled
+#  before:
+#  - message: invoke armb 1
+#    matches:
+#    - attempting to ready 1 mana stream for your use
+#    - indicates its readiness to absorb Holy energy
+#    - readying all of its mana for your use
+#  mana: 9
+#  expire: The swirling confines of malevolent darkness
+#  harmless: true
+#- skill: Targeted Magic
+#  name: Aesrela Everild
+#  abbrev: ae
+#  target_enemy: geni
+#  before:
+#  - message: invoke armb 10
+#    matches:
+#    - attempting to ready 10 mana streams for your use
+#    - indicates its readiness to absorb Holy energy
+#    - readying all of its mana for your use
+#  mana: 15
+#  harmless: false
+#  cambrinth:
+#  - 6
+#  - 4
+#  - 6
+#- skill: Targeted Magic
+#  name: Harm Horde
+#  abbrev: hh
+#  prep_time: 16
+#  mana: 15
+#  min_threshold: 4
+#  cambrinth:
+#  - 16
+#  - 16
+#  - 16
+#- skill: Targeted Magic
+#  name: Harm Horde
+#  abbrev: hh
+#  prep_time: 16
+#  mana: 15
+#  target_enemy: beast
+#  cambrinth:
+#  - 16
+#  - 16
+#  - 16
+#- skill: Targeted Magic
+#  name: Fists of Faenella
+#  abbrev: ff
+#  mana: 5
+#  max_threshold: 1
+#  cambrinth:
+#  - 3
+#  - 9
+#  - 9
+#  harmless: true
+#- skill: Targeted Magic
+#  name: Harm Evil
+#  abbrev: he
+#  mana: 10
+#    cambrinth:
+#    - 1
+#    - 1
+  
+### COMBAT - DEFENSIVE
+
+buff_spells:
+  Manifest Force:
+    abbrev: maf
+    recast: 3
+    mana: 5
+    cambrinth:
+    - 13
+    - 12
+    - 10
+  Shield of Light:
+    abbrev: sol
+    recast: 3
+    mana: 20
+    cambrinth:
+    - 16
+    - 16
+    - 16
+  Centering:
+    abbrev: centering
+    recast: 3
+    mana: 52
+    cambrinth:
+    - 16
+    - 16
+    - 16
+  Benediction:
+    abbrev: Benediction
+    recast: 3
+    mana: 30
+    cambrinth:
+    - 16
+    - 16
+    - 16
+  Minor Physical Protection:
+    abbrev: mpp
+    recast: 3
+    mana: 52
+    cambrinth:
+    - 16
+    - 16
+    - 16
+  Major Physical Protection:
+    abbrev: mapp
+    recast: 3
+    mana: 30
+    cambrinth:
+    - 16
+    - 16
+    - 16
+### SPECIALTY BUFFS ###
+#  Divine Radiance:
+#    abbrev: dr
+#    recast: 3
+#    mana: 2
+#    cambrinth:
+#    - 8
+#    - 8
+#    - 8
+#  Auspice:
+#    abbrev: auspice
+#    recast: 3
+#    mana: 12
+#    cambrinth:
+#    - 16
+#    - 16
+#    - 16
+#  Sanctify Pattern:
+#    abbrev: sap
+#    recast: 3
+#    mana: 8
+#    cambrinth:
+#    - 16
+#    - 16
+#    - 16
+#    cast: cast debilitation
+#  Bless:
+#    abbrev: bless
+#    recast: 3
+#    mana: 42
+#    cambrinth:
+#    - 16
+#    - 16
+#    - 16
+#  Protection from Evil:
+#    abbrev: pfe
+#    recast: 3
+#    mana: 5
+#    cambrinth:
+#    - 15
+#    - 15
+#    - 14
+
+### COMBAT - TRAINING ABILITIES ###
+training_abilities:
+  Meraud: 3900
+  Pray: 610
+  Tactics: 40
+  Hunt: 120
+  Perc: 120
+  App Quick: 60
+
+weapon_training:
+  Small Edged: gladius
+  Heavy Thrown: light spear
+  Polearms: light spear
+  
+### MISC COMBAT SETTINGS ###
+dump_junk: true
+dance_skill: Small Edged
+
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+use_stealth_attacks: false
+
+  
+### NON-COMBAT SETTINGS ###
+
+### MAGIC SETTINGS ###
+prep_scaling_factor: 0.90
+dedicated_camb_use: spell
+cambrinth: armband
+cambrinth_cap: 48
+
+training_spells:
+  Warding:
+    abbrev: SOS
+    symbiosis: true
+  Utility:
+    abbrev: DR
+    symbiosis: true
+  Augmentation:
+    abbrev: MAPP
+    symbiosis: true
+
+cyclic_training_spells:
+  Warding:
+    abbrev: GHS
+    cyclic: true
+  Utility:
+    abbrev: REV
+    cyclic: true
+  Augmentation:
+    abbrev: REV
+    cyclic: true
+
+
+### TRAINING SETTINGS ###
+
+crossing_training_sorcery_room: 6161
+crossing_training_sorcery: shadows 30
+
+exp_timers:
+  Theurgy: 1800
+  Attunement: 130
+  Thievery: 600
+crossing_training:
+- Utility
+- Warding
+- Augmentation
+- Sorcery
+#- Locksmithing
+- Thievery
+- First Aid
+- Theurgy
+- Athletics
+- Outdoorsmanship
+- Attunement
+#- Alchemy
+cyclic_cycle_skills:
+- Utility
+- Warding
+- Augmentation
+train_workorders:
+- Remedies
+
+#REQUIRES GUAGE FLOW
+#use_research: true
+#research_skills:
+# - Augmentation
+# - Attunement
+# - Holy Magic
+# - Arcana
+
+### CRAFTING ###
+crafting_container: rucksack
+alchemy_tools:
+- pestle
+- mortar
+- sieve
+- bowl
+- mixing stick
+
+### CLERIC SETTINGS ###
+osrel_no_harness: false
+osrel_amount: 15
+favor_god: idon
+immortal_aspect: heron
+tithe: true
+theurgy_supply_container: duffel bag
+flint_lighter: gladius
+water_holder: chalice
+
+### MISC SETTINGS ###
+braid_item: vine
+favor_goal: 5
+textbook: true
+listen: true
+stealing_bag: pack
+safe_room: 6164
+safe_room_id: 6164
+safe_room_empath: Vadok
+picking_pet_box_source: pack
+lockpick_dismantle: pray
+lockpick_type: stout
+
+### LOOT SETTINGS ###
+sell_loot_bundle: true
+storage_containers:
+- duffel bag
+- pack
+- rucksack
+gem_pouch_adjective: green
+spare_gem_pouch_container: rucksack
+
+loot_subtractions:
+- bolt
+- rock
+- rocks
+- coffer
+- strongbox
+- chest
+- caddy
+- trunk
+- casket
+- skippet
+- crate
+- box
+loot_additions:
+- cambrinth lump
+- package
+- sraeth runestone
+- gold ring
+- kirmhiro draught
+- signet ring
+- witch ball
+- satin pillow
+- license
+- writ
+- permit
+- pass
+- profile
+- seastars
+- pendant
+- card
+- jasper
+- heliodor
+- tasialm
+- seastar
+- papyrus roll
+- gold nugget
+- platinum nugget
+- lumium nugget
+- ninium nugget
+- muracite nugget
+- darkstone nugget
+- damite nugget
+- kertig nugget
+- haralun nugget
+- glaes nugget
+- animite nugget

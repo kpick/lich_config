@@ -1,0 +1,21 @@
+---
+training_abilities:
+  Hunt: 80
+  PercMana: 240
+  Stealth: 60
+  Astro: 300
+  App Quick: 60
+  Tactics: 30
+
+offensive_spells:
+- skill: Targeted Magic
+  name: Dinazen Olkar
+  abbrev: do
+  mana: 6
+- skill: Debilitation
+  name: mb
+  abbrev: mb
+  mana: 21
+offensive_spell_cycle:
+- Dinazen Olkar
+- mb

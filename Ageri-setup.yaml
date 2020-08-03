@@ -73,6 +73,11 @@ gear:
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: true
+- :adjective: leather
+  :name: armguard
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true  
 - :adjective: brass
   :name: knuckles
   :is_leather: false
@@ -93,6 +98,11 @@ gear:
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: false
+- :adjective: heavy
+  :name: mallet
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false 
 gear_sets:
   standard:
   - ring shirt
@@ -100,7 +110,7 @@ gear_sets:
   - ring gloves
   - round sipar
   - ring greaves
-  - parry stick
+  - leather armguard
   - brass knuckles
   - elbow spikes
 
@@ -168,7 +178,7 @@ training_abilities:
 weapon_training:
   Brawling: ''
   Heavy Thrown: throwing hammer
-  Large Blunt: throwing hammer
+  Large Blunt: heavy mallet
   Slings: sling
 
 textbook: true

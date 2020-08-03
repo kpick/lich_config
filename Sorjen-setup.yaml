@@ -1,0 +1,281 @@
+---
+# TODOs:
+# Covetous Rebirth (1)
+# Calcified Hide (4)
+# Researcher's Insight (3)
+# Silent Preparation (1)
+
+# Hunting settings
+training_manager_hunting_priority: true
+training_manager_priority_skills:
+- Skinning
+hunting_info:
+- :zone: cave_trolls
+  :duration: 30
+  stop_on:
+  - Skinning
+prehunt_buffs: 2317
+waggle_sets:
+  prehunt_buffs:
+    Manifest Force:
+      cambrinth:
+      - 15
+      - 15
+      - 10
+    Lay Ward:
+      cambrinth:
+      - 10
+      - 10
+      - 10
+
+# Gear settings
+gear:
+- :adjective: light
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: ring
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: scale
+  :name: greaves
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: quilted
+  :name: mask
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: quilted
+  :name: hood
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: quilted
+  :name: shirt
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: plate
+  :name: gauntlets
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: ring
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: scale
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: small
+  :name: shield
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: parry
+  :name: stick
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective: brass
+  :name: knuckles
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: elbow
+  :name: spikes
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: true
+- :adjective:
+  :name: bola
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :lodges: false
+- :adjective: flanged
+  :name: mace
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective:
+  :name: iltesh
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+- :adjective: forester's
+  :name: crossbow
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: true
+gear_sets:
+  standard:
+  - ring greaves
+  - quilted mask
+  - quilted hood
+  - quilted shirt
+  - ring gloves
+  - small shield
+  - parry stick
+  - brass knuckles
+  - elbow spikes
+  - forester's crossbow
+cycle_armors:
+  Plate Armor:
+  - plate gauntlets
+  - light greaves
+  Chain Armor:
+  - ring gloves
+  - ring greaves
+  Brigandine:
+  - scale gloves
+  - scale greaves
+
+# Combat settings
+buff_spells:
+  Obfuscation:
+    cambrinth:
+    - 20
+    - 15
+    - 15
+  Manifest Force:
+    cambrinth:
+    - 15
+    - 15
+    - 10
+  Lay Ward:
+    cambrinth:
+    - 10
+    - 10
+    - 10
+  # Eyes of the Blind:
+  #   cambrinth:
+  #   - 5
+offensive_spells:
+- name: Acid Splash
+  cast_only_to_train: true
+- name: Petrifying Visions
+training_abilities:
+  Stealth: 30
+  Perc: 120
+  App Quick: 60
+  Hunt: 80
+  Tactics: 120
+weapon_training:
+  Small Edged: iltesh
+  Light Thrown: bola
+  Small Blunt: flanged mace
+  Brawling: ''
+  Crossbow: forester's crossbow
+dance_skill: Small Edged
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 5
+  tie_bundle: true
+thanatology:
+  # ritual_type: harvest
+  ritual_type: dissect
+  heal: true
+necromancer_healing:
+  Consume Flesh:
+    abbrev: DEVOUR
+    mana: 30
+    # cambrinth:
+    # - 10
+    # - 10
+loot_subtractions:
+- arrow
+- arrows
+- rock
+# use_weak_attacks: true
+
+# Non-combat settings
+training_spells:
+  Augmentation:
+    abbrev: Obfuscation
+    symbiosis: true
+  Utility:
+    abbrev: EOTB
+    after:
+    - message: release eotb
+      matches:
+      - Your corruption fades, revealing you to the world once more
+    symbiosis: true
+  Warding:
+    abbrev: MAF
+    symbiosis: true
+cyclic_training_spells:
+  Utility:
+    abbrev: ROG
+    cyclic: true
+cyclic_cycle_skills:
+- Utility
+exp_timers:
+  Stealth: 300
+  First Aid: 600
+  Locksmithing: 600
+  Theurgy: 720
+  Thievery: 600
+  Attunement: 240
+crossing_training:
+- Locksmithing
+- First Aid
+- Sorcery
+- Augmentation
+- Utility
+- Warding
+- Attunement
+- Outdoorsmanship
+- Athletics
+# - Scholarship
+- Perception
+# - Appraisal
+# - Mechanical Lore
+cambrinth_cap: 50
+# favor_goal: 30
+# favor_god: Meraud
+picking_box_source: haversack
+picking_box_storage: carryall
+listen: true
+appraisal_training:
+- gear
+sell_loot_pouch: false
+gem_pouch_adjective: suede
+spare_gem_pouch_container: haversack
+classes_to_teach:
+- Athletics
+- Locksmithing
+- Stealth
+- Forging
+- Outfitting
+dedicated_camb_use: spell
+crossing_training_sorcery:
+  abbrev: CV
+  mana: 1
+  symbiosis: true
+
+quit_on_status_warning: true
+braid_item: grass
+saferoom_health_threshold: 25
+status_monitor_no_window: true
+bankbot_deposit_threshold: 0
+
+# From UserVars
+crossing_training_sorcery_room:
+engineering_room:
+outfitting_room:
+safe_room:
+safe_room_id:
+safe_room_empath:
+slack_username:
+bankbot_name:
+bankbot_room_id:
