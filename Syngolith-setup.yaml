@@ -594,7 +594,7 @@ pick_blind: false
 use_lockpick_ring: true
 skip_lockpick_ring_refill: false
 lockpick_container: lockpick ring
-lockpick_type: stout iron #ordinary
+lockpick_type: ordinary #stout iron 
 harvest_traps: false
 picking_box_source: backpack
 picking_box_storage: backpack

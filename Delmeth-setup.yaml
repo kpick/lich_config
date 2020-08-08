@@ -156,12 +156,10 @@ gear:
   :hinders_lockpicking: false
   :is_worn: false
   :swappable: false
-- :adjective: 
-  :name: crossbow
+- :adjective: battle
+  :name: stonebow
   :is_leather: true
-  :hinders_lockpicking: false
-  :is_worn: true
-  :swappable: false
+  :is_worn: true    
 gear_sets:
   standard:
   - quilted hauberk
@@ -171,6 +169,7 @@ gear_sets:
   - parry stick
   - brass knuckles
   - elbow spikes
+  - battle stonebow
   stealing:
   - parry stick
   - brass knuckles
@@ -181,7 +180,7 @@ weapon_training:
   Brawling: ''
   Small Edged: icesteel mambeli
   Light Thrown: throwing club
-  Crossbow: crossbow
+  Crossbow: battle stonebow
   Offhand Weapon: wide dagger  
   Small Blunt: throwing club
   Large Edged: stout broadsword  
@@ -203,6 +202,20 @@ buff_nonspells:
 #  - Prowess
 #  - Avoidance
 
+
+#if false, will skip aiming_trainables for crossbow (non-light stop aim)
+using_light_crossbow: true
+
+#skills to practice offhand during aiming
+aiming_trainables:
+- Tactics
+- Brawling
+- Small Edged
+- Light Thrown
+- Small Blunt
+
+#apply attack overrides during aiming_trainables - advanced option
+use_overrides_for_aiming_trainables: false
 
 skinning:
   skin: true
@@ -296,5 +309,5 @@ stealing_buffs:
   - Hasten
   - Plunder
 
-favor_goal: 10
+favor_goal: 25
 favor_god: Damaris

@@ -269,7 +269,8 @@ offensive_spells:
 - skill: Targeted Magic
   name: Chain Lightning
   abbrev: cl
-  mana: 20
+  use_auto_mana: true
+  #mana: 20
 
 - skill: Debilitation
   name: Electrostatic Eddy
@@ -357,13 +358,6 @@ buff_spells:
     harmless: true
     expire: fissure collapses in on itself, winking out of existence
     cast: cast air
-#  Electrostatic Eddy:
-#    abbrev: EE
-#    recast: 0
-#    mana: 6
-#    harmless: true
-#    cyclic: true
-#    expire: You release your connection to the
   << : *buffs
   Swirling Winds:
     abbrev: SW
@@ -372,10 +366,6 @@ buff_spells:
     abbrev: SUF
     recast: 1
     mana: 40
-#  Zephyr:
-#    abbrev: zephyr
-#    use_auto_mana: true
-#    recast: 1
   Y'ntrel Sechra:
     mana: 40
     recast: 1

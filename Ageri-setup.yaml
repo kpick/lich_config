@@ -21,7 +21,7 @@ training_manager_priority_skills:
 - Shield Usage
 
 hunting_info:
-- :zone: young_ogres
+- :zone: blue_crocs
   stop_on:
   - Heavy Thrown
   - Chain Armor
@@ -267,7 +267,7 @@ prep_scaling_factor: 0.80
 favor_goal: 40
 favor_god: Truffenyi
 water_holder: chalice
-flint_lighter: pine-handled sledgehammer
+flint_lighter: throwing hammer
 theurgy_supply_container: backpack
 
 gem_pouch_adjective: suede

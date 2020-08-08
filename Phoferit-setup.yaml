@@ -363,6 +363,8 @@ picking_lockbox: keepsake box
 
 use_harness_when_arcana_locked: true
  
+worn_instrument: cowbell
+ 
 empath_healing:
   HEAL:
   - 15

@@ -7,17 +7,18 @@ health_threshold: 65
 repair_withdrawal_amount: 30000
 repair_every: 3
 repair_timer:
+#force_healer_town: Fang Cove
 
 training_manager_hunting_priority: true
 training_manager_priority_skills:
 - Light Thrown
 - Twohanded Blunt
-- Large Edged
+#- Large Edged
+- Large Blunt
 - Heavy Thrown
 - Bow
-- Brawl
 hunting_info:
-- :zone:
+- :zone: endrus_serpents
 
   args:
   - d0
@@ -25,112 +26,135 @@ hunting_info:
   stop_on:
   - Twohanded Blunt
   - Light Thrown
-  - Large Edged
+  #- Large Edged
   - Heavy Thrown
-  - Evasion
-  - Shield Usage
-  - Defending
-  - Parry Ability
+
 
 gear_sets:
   standard:
-  - round sipar
+  - steel targe
   - black leathers
-  - black gloves
-  - silverweave cowl
-  - spiked knuckles
-  - parry stick
+  - red gauntlets
+  - chain helm
+  - shalswar handwraps
+  - calcified femur
   - knee spikes
-  - elbow spikes
-  - stomping boots
+  - elbow blades
+  - mistwood longbow
+  - dolomar footwraps
   stealing:
-  - spiked knuckles
-  - parry stick
+  - calcified femur
   - knee spikes
-  - elbow spikes
+  - elbow blades
   naked: []
-cycle_armors:
-  Plate Armor:
-  - sallet
-  Brigandine:
-  - scale balaclava
-  Light Armor:
-  - silverweave cowl
-  Chain Armor:
-  - chain balaclava
+#cycle_armors:
+#  Plate Armor:
+#  - sallet
+#  Brigandine:
+#  - scale balaclava
+#  Light Armor:
+#  - silverweave cowl
+#  Chain Armor:
+#  - chain balaclava
 
 training_abilities:
-  Hunt: 180
-  App Quick: 240
+  Hunt: 120 
+  App Quick: 120
+  Recall: 1800     #small scholarship training
+  Analyze: 120     #Teaches tactics
+  #Barb Research Warding: 200
+  #Barb Research Augmentation: 200
+  Barb Research Debilitation: 200
+
 
 weapon_training:
   Brawling: ''
-  Polearms: allarh
-  Small Edged: throwing axe
-  Large Edged: battle axe
-  Small Blunt: war hammer
-  Large Blunt: throwing hammer
-  Staves: nightstick
-  Twohanded Blunt: kertig maul
-  Twohanded Edged: massive greataxe
-  Bow: nisha shortbow
-  Crossbow: forester stonebow
-  Heavy Thrown: throwing hammer
-  Light Thrown: throwing club
-  Slings: staff sling
+  Polearms: hunting spear
+  #Small Edged: steel sabre
+  #Large Edged: flamewood riste
+  Small Blunt: cudgel
+  Large Blunt: flamewood riste
+  Twohanded Blunt: flamewood riste
+  Twohanded Edged: claymore
+  Bow: mistwood longbow
+  Heavy Thrown: hunting spear
+  Light Thrown: triple bola
+  Slings: sling
 performance_monitor_weapons:
-  - kertig maul
-  - throwing axe
-  - battle axe
-dual_load: true
-use_barb_combos: true
+use_analyze_combos: true
 use_weak_attacks: false
 whirlwind_trainables:
-  - Large Edged
-  - Small Edged
-  - Large Blunt
-  - Small Blunt
-  - Polearms
-  - Staves
-combat_trainer_target_increment: 3
-combat_trainer_action_count: 10
+#  - Small Edged
+#  - Small Blunt
+#  - Polearms
+combat_trainer_target_increment: 6
+combat_trainer_action_count: 25
 dance_skill: Twohanded Blunt
 use_stealth_attacks: false
 priority_defense: Parry Ability
 
 # Combat settings
 buff_nonspells:
-  roar quiet wail: 120
+  roar anger: 120
   barb_buffs:
-  - Contemplation
-  - Python
-  - Piranha
-  - Eagle
-  - Dragon
-  - Monkey
+  #- Contemplation
+  #- Python
+  #- Eagle
   - Tornado
-  - Earthquake
-  - Wildfire
-  - Landslide
-  - Tenacity
+  - Flashflood
 
 # ------- NON-COMBAT SETTINGS -------#
 crossing_training:
   #- Forging
+  - Appraisal
+  - First Aid
+  - Scholarship
+  - Outdoorsmanship
+  - Athletics
+  - Thievery
 
 storage_containers:
-- weapon tote
-- hunting pack
-- hide haversack
+- great sheath
+- pack
 
 footwear: boots
 
-hide_to_steal: false
+textbook: true
+textbook_type: guide
+
+hide_to_steal: true
 listen: true
-safe_room: &safe_room Roomnumber
+safe_room: &safe_room 6003
 
+train_with_burgle: true
+burgle_settings:
+  room: 6202                                 # pick your own room, you should pick a room that no guard will ''ever'' enter.  Picking rooms guards can come to is a failure on setup, not the script.
+  entry_type: lockpick                      # lockpick | rope | cycle
+  use_lockpick_ring: true                   # if you use a worn lockpick stacker
+  lockpick_container: lockpick ring         # name of your lockpick stacker
+  max_search_count: 2                       # max number of total searches to do including retries
+  retry: false                              # retry if you don't find loot.  default: false
+  loot: pawn                                # drop | keep | bin | pawn   default: keep 
+  loot_container: pack                # container to keep loot in while burglering
+  safe_mode: true                           # stop searching and try to get out as quickly as possible when hearing footsteps. Default: true
+  room_blacklist:                           # array of rooms to ignore. Case sensitive.
+    - Kitchen
+  item_whitelist:                           # array of full item names (adj + noun) of items to keep no matter what.  Case Sensitive.  
+    - worn book
+    - memory orb
+    - blunt-tipped bolts
+    - blunt-tipped arrows
+    - blunt stones
+    - keepsake box
+    - quill
+  before:                                   # array of scripts to run, similar to #hunting-buddy, before the burgle (will be called right before buffing)
+  #  - yourscripthere with args here
+  #- put "untie h rope" 
+  after:                                    # array of scripts to run, similar to #hunting-buddy, after the burgle, (will be called right before script ends)
+  #  - anotherscript here
+  #- put "tie h rope to rucksack"
 
-sell_loot_pouch: false
+sell_loot_pouch: true
 gem_pouch_adjective: suede
 spare_gem_pouch_container: hunting pack
 
@@ -141,22 +165,17 @@ skip_lockpick_ring_refill: false
 lockpick_ignore_diffi1culty: false
 stop_pick_on_mindlock: true
 harvest_traps: false
-picking_pet_box_source: hide haversack
+#picking_pet_box_source: 
 picking_box_source: hunting pack
 picking_box_storage: hunting pack
 lockpick_type: stout #iron
 lockpick_dismantle: bash
-lockpick_buffs:
-  meditate:
-    - focus
-  form: 
-    - owl
 
 # -- Crafting -- #
 train_workorders:
-- Blacksmithing
-- Shaping
-crafting_container: weapon tote
+#- Blacksmithing
+#- Shaping
+crafting_container: pack
 forging_belt:
   name: forger belt
   items:
@@ -171,7 +190,7 @@ forging_tools:
 - bellows
 - wide shovel
 - stirring rod
-knitting_tools:
+outfitting_tools:
 - knitting needles
 shaping_tools:
 - carving knife
@@ -199,15 +218,9 @@ mine_use_packet: false
 skinning:
   skin: true
   arrange_all: false
-  arrange_count: 0
+  arrange_count: 1
   tie_bundle: true
-loot_subtractions:
-- rock
-- rocks
-- arrow
-- arrows
-- bolt
-- bolts
+
 loot_additions:
 - dark blade
 - dark blades
@@ -216,11 +229,12 @@ loot_additions:
 - vermilion arrow
 - vermilion arrows
 - tooth
+- steelstars
 loot_specials:
 - name: jadeite stones
-  bag: weapon tote
+  bag: pack
 - name: kyanite stones
-  bag: weapon tote
+  bag: pack
 ignored_npcs:
 - Brokk # black goblin area
 - great owl
@@ -245,26 +259,12 @@ aim_fillers:
 
 gear:
 #ARMOR
-- :adjective: round
-  :name: sipar
-  :is_leather: false
-  :hinders_lockpicking: true
-  :is_worn: true
-- :adjective: silverweave
-  :name: cowl
-  :is_leather: true
+- :adjective: steel
+  :name: targe
   :hinders_lockpicking: true
   :is_worn: true
 - :adjective: chain
-  :name: balaclava
-  :hinders_lockpicking: true
-  :is_worn: true
-- :adjective:
-  :name: sallet
-  :hinders_lockpicking: true
-  :is_worn: true
-- :adjective: scale
-  :name: balaclava
+  :name: helm
   :hinders_lockpicking: true
   :is_worn: true
 - :adjective: black
@@ -272,129 +272,85 @@ gear:
   :is_leather: true
   :hinders_lockpicking: true
   :is_worn: true
-- :adjective: black
-  :name: gloves
-  :is_leather: true
+- :adjective: red
+  :name: gauntlets
   :hinders_lockpicking: true
   :is_worn: true
 #BRAWLING
-- :adjective: parry
-  :name: stick
+- :adjective: calcified
+  :name: femur
   :hinders_lockpicking: false
   :is_worn: true
+  :is_leather: true
 - :adjective: knee
   :name: spikes
   :hinders_lockpicking: false
   :is_worn: true
+  :is_leather: true
 - :adjective: elbow
-  :name: spikes
+  :name: blades
   :hinders_lockpicking: false
   :is_worn: true
-- :adjective: spiked 
-  :name: knuckles
+  :is_leather: true
+- :adjective: shalswar 
+  :name: handwraps
   :hinders_lockpicking: true
   :is_worn: true
-- :adjective: stomping
-  :name: boots
+  :is_leather: true
+- :adjective: dolomar 
+  :name: footwraps
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+#WEAPONS
+- :adjective: mistwood
+  :name: longbow
   :is_leather: true
   :hinders_lockpicking: false
   :is_worn: true
-#WEAPONS
-- :adjective: nisha
-  :name: shortbow
-  :is_leather: true
-  :hinders_lockpicking: false
-  :is_worn: false
-  :wield: true
-- :adjective: forester
-  :name: stonebow
-  :is_leather: true
-  :hinders_lockpicking: false
-  :is_worn: false
-  :wield: true
-- :adjective: staff
+- :adjective: 
   :name: sling
   :is_leather: true
   :hinders_lockpicking: false
   :is_worn: false
   :swappable: false
   :wield: true
+- :adjective: flamewood
+  :name: riste
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: true
 - :adjective: 
-  :name: nightstick
+  :name: claymore
   :hinders_lockpicking: false
   :is_worn: false
   :swappable: false
   :wield: true
-- :adjective: war
-  :name: hammer
+- :adjective: 
+  :name: cudgel
   :hinders_lockpicking: false
   :is_worn: false
   :swappable: false
   :wield: true
-- :adjective: massive
-  :name: greataxe
-  :hinders_lockpicking: false
-  :is_worn: false
-  :swappable: false
-  :wield: true
-- :adjective: bastard
-  :name: sword
-  :hinders_lockpicking: false
-  :is_worn: false
-  :swappable: false
-  :wield: true
-- :adjective: bar
-  :name: mace
-  :hinders_lockpicking: false
-  :is_worn: false
-  :swappable: false
-  :wield: true
-- :adjective: battle
-  :name: axe
-  :hinders_lockpicking: false
-  :is_worn: false
-  :swappable: false
-  :wield: true
-- :adjective:
-  :name: allarh
+- :adjective: hunting
+  :name: spear
   :hinders_lockpicking: false
   :is_worn: false
   :swappable: false
   :wield: true
   :lodges: true
-- :adjective: kertig
-  :name: maul
+- :adjective: steel
+  :name: sabre
   :hinders_lockpicking: false
-  :is_worn: false
-  :swappable: false
-  :wield: true
-- :adjective: throwing
-  :name: axe
-  :is_leather: false
-  :hinders_lockpicking: false
-  :is_worn: false
-  :swappable: false
-  :wield: true
-  :bound: true
-- :adjective: throwing
-  :name: club
-  :hinders_lockpicking: false
-  :is_worn: false
-  :swappable: false
-  :wield: true
-  :lodges: false
-- :adjective: throwing
-  :name: hammer
-  :hinders_lockpicking: false
-  :is_worn: false
-  :swappable: false
-  :wield: true
-  :lodges: false
-- :adjective: silver-plated
+- :adjective: triple
   :name: bola
-  :is_leather: true
   :hinders_lockpicking: false
   :is_worn: false
   :swappable: false
-  :wield: true
-  :lodges: false
+  :lodges: false 
+- :adjective: 
+  :name: steelstars
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :lodges: true
